@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledBlockUpperPart, StyledComment, StyledFeedackContainer, StyledFeedbackBlock, StyledImageContainer } from './styled';
+import { StyledBlockUpperPart, StyledButtonConainer, StyledComment, StyledFeedackContainer, StyledFeedbackBlock, StyledImageContainer } from './styled';
 
 const FeedbackCarousel = ({ feedbackData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,22 +14,24 @@ const FeedbackCarousel = ({ feedbackData }) => {
 
   return (
     <StyledFeedackContainer>
-        <StyledFeedbackBlock>
-            <StyledBlockUpperPart>
-                <StyledImageContainer>
-                    <img src={feedbackData[currentIndex].image} />
-                </StyledImageContainer>
-                <div>
-                    <h3>{feedbackData[currentIndex].name}</h3>
-                    <p>{feedbackData[currentIndex].surname}</p>
-                </div>
-            </StyledBlockUpperPart>
-            <StyledComment>
-                <p>{feedbackData[currentIndex].comment}</p>
-            </StyledComment>
-        </StyledFeedbackBlock>
-        <button onClick={handlePrev}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+        <div>
+            <StyledFeedbackBlock>
+                <StyledBlockUpperPart>
+                    <StyledImageContainer>
+                        <img src={feedbackData[currentIndex].image} />
+                    </StyledImageContainer>
+                    <div>
+                        <h3>{feedbackData[currentIndex].name}</h3>
+                        <p>{feedbackData[currentIndex].surname}</p>
+                    </div>
+                </StyledBlockUpperPart>
+                <StyledComment>
+                    <p>{feedbackData[currentIndex].comment}</p>
+                </StyledComment>
+            </StyledFeedbackBlock>
+            <StyledButtonConainer onClick={handlePrev}>{"<"}</StyledButtonConainer>
+            <StyledButtonConainer onClick={handleNext}>{">"}</StyledButtonConainer>
+        </div>
     </StyledFeedackContainer>
   );
 };
