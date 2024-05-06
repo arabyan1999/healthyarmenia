@@ -8,6 +8,7 @@ import tiensLogo from "../../assets/tiensLogo.jpg";
 import tiensProductLogo from "../../assets/tiens-product.jpeg";
 import tiensResultLogo from "../../assets/results.jpg";
 import Booking from "../../components/booking";
+import Chat from "../../components/chat";
 
 function Home() {
     const images = [
@@ -25,6 +26,7 @@ function Home() {
             <Booking />
             <ReferenceBlock blocks={professors} />
             <Feedback />
+            <Chat />
         </div>
     )
 }
