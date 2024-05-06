@@ -10,6 +10,7 @@ export const StyledReferencesBlocks = styled.section`
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
+    flex-wrap: wrap;
     text-align: ${({ isProfessors }) => (isProfessors && "center")};
 `
 
@@ -27,6 +28,7 @@ export const StyledBlock = styled.div`
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
     cursor: pointer;
     border-radius: 10px;
     transition: all 0.5s ease;

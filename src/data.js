@@ -10,6 +10,7 @@ import doctorImg3 from "./assets/doctor3.jpg";
 import portraitImg1 from "./assets/portrait1.jpg";
 import portraitImg2 from "./assets/portrait2.jpg";
 import portraitImg3 from "./assets/portrait3.jpg";
+import thyroidTreatmentImg from "./assets/thyroidtreatment.webp";
 
 export const CommonDiseases = {
     title: "Տարածված Հիվանդություններ",
@@ -90,3 +91,38 @@ export const feedbackData = [
     { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
 ];
   
+export const threatmentData = {
+    title: "Մեր բուժումները",
+    array: [
+        {
+            image: thyroidTreatmentImg,
+            name: "Thyroid Treatment",
+            shortTitle: "Lorem Ipsum, type lorem then press the shortcut. The default keyboard shortcut is the same for all supported platforms."
+        },
+        {
+            image: thyroidTreatmentImg,
+            name: "Diabetes Treatment",
+            shortTitle: "Lorem Ipsum, type lorem then press the shortcut. The default keyboard shortcut is the same for all supported platforms."
+        },
+        {
+            image: thyroidTreatmentImg,
+            name: "Treatment for Arthritis",
+            shortTitle: "Lorem Ipsum, type lorem then press the shortcut. The default keyboard shortcut is the same for all supported platforms."
+        },
+        {
+            image: thyroidTreatmentImg,
+            name: "Treatment for Asthma",
+            shortTitle: "Lorem Ipsum, type lorem then press the shortcut. The default keyboard shortcut is the same for all supported platforms."
+        },
+        {
+            image: thyroidTreatmentImg,
+            name: "Treatment for Skin",
+            shortTitle: "Lorem Ipsum, type lorem then press the shortcut. The default keyboard shortcut is the same for all supported platforms."
+        },
+        {
+            image: thyroidTreatmentImg,
+            name: "Treatment for Obesity",
+            shortTitle: "Lorem Ipsum, type lorem then press the shortcut. The default keyboard shortcut is the same for all supported platforms."
+        }
+    ]
+}
