@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import NavigationBar from "./components/nav";
 import Home from './pages/Home';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <NavigationBar />
-      <Home />
-    </div>
+    <Suspense fallback="loading">
+      <div className="App">
+        <NavigationBar />
+        <Home />
+      </div>
+    </Suspense>
   );
 }
 
