@@ -17,11 +17,14 @@ export const StyledNavigationBar = styled.nav`
     align-items: center;
 `
 
-export const StyledLink = styled.a`
+export const StyledHomeLink = styled.a`
     color: #333;
     margin-right: 30px;
     line-height: 40px;
     text-decoration: none;
+`
+
+export const StyledLink = styled(StyledHomeLink)`
     &:hover {
         text-decoration: underline;
     }

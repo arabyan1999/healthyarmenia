@@ -126,3 +126,10 @@ export const threatmentData = {
         }
     ]
 }
+
+export const diseases = [
+    { label: 'heart', link: '/' },
+    { label: 'liver', link: '/about' },
+    { label: '', link: '/services' },
+    { label: 'Contact', link: '/contact' },
+];
