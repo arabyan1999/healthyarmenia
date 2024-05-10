@@ -8,11 +8,13 @@ function ReferenceBlock({ blocks }) {
             <StyledReferencesBlocks isProfessors={blocks.isProfessors}>
                 {
                     blocks.array.map((block) => (
+                        <a href={`products/${block.id}`}>
                         <StyledBlock>
                             <StyledImage src={block.image}  isProfessors={blocks.isProfessors} />
                             <StyledMenuTitle>{block.name}</StyledMenuTitle>
                             <p>{blocks.isProfessors ? block.role : block.shortTitle + "..."}</p>
                         </StyledBlock>
+                </a>
                     ))
                 }
             </StyledReferencesBlocks>
