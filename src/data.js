@@ -16,7 +16,7 @@ export const CommonDiseases = {
     title: "Տարածված Հիվանդություններ",
     array: [
         {
-            id: 1,
+            id: "1",
             name: "Սրտային առիթմիա",
             shortTitle: "Սրտի ռիթմի խանգարումները կարող են առաջանալ ամենատարբեր պատճառներից՝ ինչպես սրտային, այնպես էլ արտասրտային ծագման",
             image: heartLogo,
@@ -24,7 +24,7 @@ export const CommonDiseases = {
             treatment: "Սովորաբար, բուժում պահանջվում է միայն այն դեպքում, երբ առիթմիան"
         },
         {
-            id: 2,
+            id: "2",
             name: "Ճնշման տատանումներ",
             shortTitle: "Հաճախ մարդիկ գանգատվում են զարկերակային ճնշման բարձրացումից կամ իջեցումից",
             image: tempLogo,
@@ -32,7 +32,7 @@ export const CommonDiseases = {
             treatment: "Սովորաբար, բուժում պահանջվում է միայն այն դեպքում, երբ առիթմիան"
         },
         {
-            id: 3,
+            id: "3",
             name: "Լյարդի ցիռոզ",
             shortTitle: "Հիվանդություն, որի ժամանակ լյարդը չի կարողանում նորմալ գործել երկարատև վնասման պատճառով",
             image: liverLogo,
@@ -43,24 +43,40 @@ export const CommonDiseases = {
 }
 
 export const foods = {
+    product: true,
     title: "Կենսաբանական ակտիվ հավելումներ",
     array: [
         {
+            id: "1",
             name: "Կալցիում",
             shortTitle: "հատուկ նախատեսված է արյան մեջ շաքարի բարձր մակարդակ ունեցող մարդկանց, դիետիկների և դիաբետիկների համար",
             image: calciumLogo,
+            category: "recovery",
+            compound: "compound_calcium",
+            function: "function_calcium",
+            healing_properties: "healing_properties_calcium",
             about: "",
         },
         {
+            id: "2",
             name: "Կարդիցեպս",
             shortTitle: "Բարելավում է մարդու օրգանիզմի իմունային համակարգի վիճակը, մեծացնում է դիմադրողականությունը տարբեր պաթոգեն բակտերիաների և այլ միկրոօրգանիզմների նկատմամբ, մեծացնում է օրգանիզմի հարմարվողական կարողությունները",
             image: cordycepsLogo,
+            category: "replenishment",
+            compound: "compound_cordyceps",
+            function: "function_cordyceps",
+            healing_properties: "healing_properties_cordyceps",
             about: "",
         },
         {
+            id: "3",
             name: "Խիտոզան",
-            shortTitle: "Препарат подавляет размножение и препятствует метастазированию раковых клеток. Снижает артериальное давление, путем регуляции уровня холестерина и предотвращения развития атеросклероза",
+            shortTitle: "Դեղը արգելակում է տարածումը և կանխում քաղցկեղի բջիջների մետաստազիզացումը: Նվազեցնում է արյան ճնշումը՝ կարգավորելով խոլեստերինի մակարդակը և կանխելով աթերոսկլերոզի զարգացումը",
             image: chitozanLogo,
+            category: "cleansing",
+            compound: "compound_chitozan",
+            function: "function_chitozan",
+            healing_properties: "healing_properties_chitozan",
             about: "",
         }
     ]
@@ -71,16 +87,19 @@ export const professors = {
     isProfessors: true,
     array: [
         {
+            id: "1",
             name: "Մարինե Մարուքյան",
             role: "Ավագ մասնագետ",
             image: doctorImg1
         },
         {
+            id: "2",
             name: "Ստեփան Փարթամյան",
             role: "Մասնագետ",
             image: doctorImg2
         },
         {
+            id: "3",
             name: "Տաթև Սարգսյան",
             role: "Խորհրդատու Մասնագետ",
             image: doctorImg3

@@ -1,13 +1,41 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { foods } from "../../data";
+import { useTranslation } from "react-i18next";
+import { StyledContentText, StyledLine, StyledProductUpperLeftPart, StyledProductContainer, StyledProductImg, StyledProductUpperPart, StyledTitle, StyledLowerPart, StyledLineSpace } from "./styled";
 
 function Product() {
-    const params = useParams();
-    console.log("params + ", params);
+    const { id } = useParams();
+    const { t } = useTranslation();
+    const product = foods.array.find((itm) => itm.id === id);
+
     return (
-        <div>
-            Product + {params.id}
-        </div>
+        <StyledProductContainer>
+            <StyledProductUpperPart>
+                <StyledProductImg src={product.image} />
+                <StyledProductUpperLeftPart>
+                    <StyledTitle>{product.name}</StyledTitle>
+                    <StyledLine />
+                    <StyledContentText><span>{t("category_title")}:</span> {t(product.category)}</StyledContentText>
+                    <StyledLine />
+                    <StyledContentText>
+                        <span>{t("compound_title")}: </span>
+                        {t(product.compound)}
+                    </StyledContentText>
+                </StyledProductUpperLeftPart>
+            </StyledProductUpperPart>
+            <StyledLowerPart>
+                <StyledContentText>
+                    <span>{t("function_title")}: </span>
+                    {t(product.function)}
+                </StyledContentText>
+                <StyledLineSpace />
+                <StyledContentText>
+                    <span>{t("healing_properties_title")}: </span>
+                    {t(product.healing_properties)}
+                </StyledContentText>
+            </StyledLowerPart>
+        </StyledProductContainer>
     )
 }
 

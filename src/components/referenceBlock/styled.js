@@ -37,11 +37,15 @@ export const StyledBlock = styled.div`
     }
 `
 
-export const StyledRef = styled.a`
+export const StyledRefBlock = styled.a`
+    text-decoration: none;
+    color: #000;
+`
+
+export const StyledRef = styled(StyledRefBlock)`
     color: #333;
     margin-right: 30px;
     line-height: 40px;
-    text-decoration: none;
     cursor: pointer;
     font-size: 18px;
     font-weight: 700;

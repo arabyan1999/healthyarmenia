@@ -12,7 +12,8 @@ import { initReactI18next } from 'react-i18next';
       .use(initReactI18next)
       .init({
         supportedLngs: ['en', 'am', 'ru'],
-        fallbackLng: 'am',
+        fallbackLng: 'en',
+        lng: "am",
         debug: false,
         detection: {
           order: ['path', 'cookie', 'htmlTag'],
