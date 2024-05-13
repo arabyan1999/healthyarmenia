@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Product from './pages/Product';
 import ProductsPage from './pages/Products';
+import DiseasesPage from './pages/Diseases';
 import './App.css';
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="products/:id" element={<Product />} />
-            <Route path="products/" element={<ProductsPage />} />
+            <Route path="products" element={<ProductsPage />} />
+            <Route path="diseases" element={<DiseasesPage />} />
             <Route path="*" element={<h2>Ресурс не найден</h2>} />
           </Routes>
         </BrowserRouter>
