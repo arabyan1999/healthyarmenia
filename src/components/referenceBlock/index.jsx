@@ -9,24 +9,26 @@ function ReferenceBlock({ blocks }) {
             <StyledMainTitle>{blocks.title}</StyledMainTitle>
             <StyledReferencesBlocks isProfessors={blocks.isProfessors}>
                 {
-                    blocks.array.map((block) => {
+                    blocks.array.map((block, index) => {
                         console.log("block ", block);
-                        if (!!blocks.product) {
-                            return (
-                                <StyledBlock key={block.id} onClick={() => navigate(`/products/${block.id}`)}>
-                                    <StyledImage src={block.image}  isProfessors={blocks.isProfessors} />
-                                    <StyledMenuTitle>{block.name}</StyledMenuTitle>
-                                    <p>{block.shortTitle + "..."}</p>
-                                </StyledBlock>
-                            )
-                        } else {
-                            return (
-                                <StyledBlock>
-                                    <StyledImage src={block.image}  isProfessors={blocks.isProfessors} />
-                                    <StyledMenuTitle>{block.name}</StyledMenuTitle>
-                                    <p>{blocks.isProfessors ? block.role : block.shortTitle + "..."}</p>
-                                </StyledBlock>
-                            )
+                        if (index <=2) {
+                            if (!!blocks.product) {
+                                return (
+                                    <StyledBlock key={block.id} onClick={() => navigate(`/products/${block.id}`)}>
+                                        <StyledImage src={block.image}  isProfessors={blocks.isProfessors} />
+                                        <StyledMenuTitle>{block.name}</StyledMenuTitle>
+                                        <p>{block.shortTitle + "..."}</p>
+                                    </StyledBlock>
+                                )
+                            } else {
+                                return (
+                                    <StyledBlock>
+                                        <StyledImage src={block.image}  isProfessors={blocks.isProfessors} />
+                                        <StyledMenuTitle>{block.name}</StyledMenuTitle>
+                                        <p>{blocks.isProfessors ? block.role : block.shortTitle + "..."}</p>
+                                    </StyledBlock>
+                                )
+                            }
                         }
                     })
                 }
