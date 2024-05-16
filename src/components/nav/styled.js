@@ -23,7 +23,7 @@ export const StyledNavigationBar = styled.nav`
 
     @media only screen and (max-width: 1119px) {
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top: 60px;
         bottom: 0;
         background: #fff;

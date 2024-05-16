@@ -9,6 +9,10 @@ export const StyledBookingContainer = styled.div`
 export const StyledDoctorImgContainer = styled.div`
     position: relative;
     width: 350px;
+
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
 `
 
 export const StyledDoctorImg = styled.img`

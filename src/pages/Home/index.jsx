@@ -36,7 +36,7 @@ function Home() {
             <Booking />
             <ReferenceBlock blocks={professors} />
             <Feedback />
-            <Chat />
+            {/* <Chat /> */}
         </div>
     )
 }

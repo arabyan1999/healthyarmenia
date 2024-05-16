@@ -19,12 +19,17 @@ export const StyledInput = styled.input`
     border: none;
     padding: .5rem;
     margin: 5px;
+    width: 100%;
 `
 
 export const StyledFlex = styled.div`
     display: flex;
     justify-content: space-around;
     margin-bottom: 12px;
+    @media screen and (max-width: 550px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const StyledSubmitButton = styled.button`

@@ -7,15 +7,27 @@ export const StyledContainer = styled.div`
 `
 
 export const StyledReferencesBlocks = styled.section`
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
     margin: 20px 0;
-    flex-wrap: wrap;
     text-align: ${({ isProfessors }) => (isProfessors && "center")};
+    justify-items: center;
+    @media screen and (max-width: 1240px) {
+        grid-template-columns: auto auto;
+        margin: 20px 20px;
+    }
+    @media screen and (max-width: 840px) {
+        grid-template-columns: 100%;
+    }
 `
 
 export const StyledMainTitle = styled.h2`
-
+    margin-left: 20px;
+    @media screen and (max-width: 840px) {
+        margin-left: 0;
+        text-align: center;
+    }
 `
 
 export const StyledMenuTitle = styled.h3`
@@ -23,7 +35,7 @@ export const StyledMenuTitle = styled.h3`
 `
 
 export const StyledBlock = styled.div`
-    width: 400px;
+    width: 100%;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     padding: 20px;
     display: flex;
