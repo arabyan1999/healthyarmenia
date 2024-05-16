@@ -10,7 +10,6 @@ function ReferenceBlock({ blocks }) {
             <StyledReferencesBlocks isProfessors={blocks.isProfessors}>
                 {
                     blocks.array.map((block, index) => {
-                        console.log("block ", block);
                         if (index <=2) {
                             if (!!blocks.product) {
                                 return (
