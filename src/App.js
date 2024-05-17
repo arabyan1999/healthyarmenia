@@ -6,6 +6,8 @@ import About from './pages/About';
 import Product from './pages/Product';
 import ProductsPage from './pages/Products';
 import DiseasesPage from './pages/Diseases';
+import DiseasePage from './pages/Disease';
+import Footer from './components/footer_component';
 import './App.css';
 
 function App() {
@@ -20,9 +22,11 @@ function App() {
             <Route path="products/:id" element={<Product />} />
             <Route path="products" element={<ProductsPage />} />
             <Route path="diseases" element={<DiseasesPage />} />
+            <Route path="diseases/:id" element={<DiseasePage />} />
             <Route path="*" element={<h2>Ресурс не найден</h2>} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </div>
     </Suspense>
   );

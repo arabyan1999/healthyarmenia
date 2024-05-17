@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import Carousel from "../../components/carousel";
 import ReferenceBlock from "../../components/referenceBlock";
@@ -8,10 +8,10 @@ import tiensLogo from "../../assets/tiensLogo.jpg";
 import tiensProductLogo from "../../assets/tiens-product.jpeg";
 import tiensResultLogo from "../../assets/results.jpg";
 import Booking from "../../components/booking";
-import Chat from "../../components/chat";
+// import Chat from "../../components/chat";
 
 function Home() {
-    const [products, setProducts] = useState([]);
+    // const [products, setProducts] = useState([]);
 
     useEffect(() => {
         axios.get('/products')
@@ -30,8 +30,8 @@ function Home() {
     return (
         <div>
             <Carousel images={images} />
-            <ReferenceBlock blocks={CommonDiseases} />
-            <ReferenceBlock blocks={foods} />
+            <ReferenceBlock blocks={CommonDiseases} link="diseases" />
+            <ReferenceBlock blocks={foods} link="products" />
             <ReferenceBlock blocks={threatmentData} />
             <Booking />
             <ReferenceBlock blocks={professors} />

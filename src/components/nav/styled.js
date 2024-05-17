@@ -57,6 +57,7 @@ export const StyledBurger = styled.div`
     height: 22px;
     position: relative;
     cursor: pointer;
+    margin-right: 20px;
     .bar1, .bar2, .bar3 {
         width: 100%;
         height: 3px;
