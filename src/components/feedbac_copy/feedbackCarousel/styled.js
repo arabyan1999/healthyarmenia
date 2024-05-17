@@ -2,19 +2,15 @@ import styled from "styled-components";
 
 export const StyledFeedackContainer = styled.div`
     background: #b3ffb3;
-    padding: 40px 100px;
-    /* display: flex; */
+    height: 300px;
+    padding: 40px;
+    display: flex;
     justify-content: center;
 `
 
 export const StyledFeedbackBlock = styled.div`
-    /* max-width: 400px; */
-    margin-bottom: 40px;
-    background: #fff;
-    border-radius: 6px;
-    padding: 10px;
+    max-width: 400px;
 `
-
 
 export const StyledBlockUpperPart = styled.div`
     display: flex;
@@ -40,9 +36,9 @@ export const StyledImageContainer = styled.div`
 export const StyledComment = styled.div`
     margin-top: 20px;
     margin-bottom: 20px;
-    /* background: #fff; */
+    background: #fff;
     padding: 10px;
-    /* border-radius: 5px; */
+    border-radius: 5px;
 `
 
 export const StyledButtonConainer = styled.button`

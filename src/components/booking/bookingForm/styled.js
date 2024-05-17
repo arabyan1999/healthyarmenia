@@ -20,6 +20,9 @@ export const StyledInput = styled.input`
     padding: .5rem;
     margin: 5px;
     width: 100%;
+    @media screen and (max-width: 550px) {
+        margin: 0 0 16px 0;
+    }
 `
 
 export const StyledFlex = styled.div`
@@ -29,6 +32,7 @@ export const StyledFlex = styled.div`
     @media screen and (max-width: 550px) {
         flex-direction: column;
         align-items: center;
+        margin-bottom: 0;
     }
 `
 
