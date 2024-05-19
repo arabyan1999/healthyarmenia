@@ -8,13 +8,13 @@ export const StyledContainer = styled.div`
 
 export const StyledReferencesBlocks = styled.section`
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin: 20px 0;
     text-align: ${({ isProfessors }) => (isProfessors && "center")};
     justify-items: center;
     @media screen and (max-width: 1240px) {
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, 1fr);
         margin: 20px 20px;
     }
     @media screen and (max-width: 840px) {
