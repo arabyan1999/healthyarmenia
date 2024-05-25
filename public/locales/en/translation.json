@@ -33,6 +33,7 @@
     "surname": "Surname",
     "email": "e-mail",
     "telephone": "Telephone",
+    "select_service": "Service type",
     "narrow_specialist_advice": "Narrow specialist advice",
     "general_advice_consultation": "General advice from a consultant specialist",
     "prophylactic_examination": "Prophylactic examination",

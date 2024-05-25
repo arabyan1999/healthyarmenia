@@ -33,8 +33,9 @@
     "surname": "Ազգանուն",
     "email": "Էլ․ հասցե",
     "telephone": "Հեռախոսահամար",
+    "select_service": "Ծառայության տեսակ",
     "narrow_specialist_advice": "Նեղ մասնագետի խորհրդատվություն",
-    "general_advice_consultation": "Խորհրդատու մասնագետների կողմից ընդհանուր խորհրդատվություն",
+    "general_advice_consultation": "Խորհրդատու մասնագետի ընդհանուր խորհրդատվություն",
     "prophylactic_examination": "Պրոֆիլակտիկ հետազոտություն",
     "comment": "Մեկնաբանություն",
     "book": "Պատվիրել"

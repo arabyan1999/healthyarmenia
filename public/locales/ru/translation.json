@@ -33,6 +33,7 @@
     "surname": "Фамилия",
     "email": "Адрес электронной почты",
     "telephone": "Телефон",
+    "select_service": "Тип услуги",
     "narrow_specialist_advice": "Консультация узких специалистов",
     "general_advice_consultation": "Общие консультации от специалиста-консультанта",
     "prophylactic_examination": "Профилактический осмотр",

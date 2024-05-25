@@ -5,6 +5,7 @@ export const StyledBookingForm = styled.div`
     text-align: center;
     background-color: #fff;
     width: fit-content;
+    max-width: 500px;
 `
 
 export const StyledTitle = styled.h2`
@@ -14,12 +15,13 @@ export const StyledTitle = styled.h2`
 export const StyledForm = styled.form``
 
 export const StyledInput = styled.input`
-    background-color: #dedede;
+    background-color: ${({ error }) => error ? "#ffdfdf" : "#dedede"};
     border-radius: 5px;
-    border: none;
+    border: ${({ error }) => error ? "1px solid red" : "none"};
     padding: .5rem;
     margin: 5px;
     width: 100%;
+    font-size: 14px;
     &.input::placeholder {
         color: #777;
     }
@@ -35,9 +37,6 @@ export const StyledSelect = styled.select`
     padding: .5rem;
     margin: 5px;
     width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     cursor: pointer;
     @media screen and (max-width: 550px) {
         margin: 0 0 16px 0;
@@ -50,20 +49,28 @@ export const StyledCustomSelect = styled.div`
     width: 100%;
     margin: 5px;
     text-align: left;
+    font-size: 14px;
 `
 
 export const StyledSelected = styled.div`
     background-color: #dedede;
-    color: #777;
+    color: ${({ not_empty }) => not_empty ? "#000" : "#777"};
     padding: .5rem;
     cursor: pointer;
     border-radius: 5px;
+    table {
+        table-layout: fixed;width: 100%;word-wrap: break-word;
+    }
+    p {
+        /* inline-size: min-content; */
+        /* overflow-wrap: break-word; */
+        width: 100%;
+    }
 `
 
 export const SelectItems = styled.div`
     position: absolute;
-    /* display: none; */
-    background-color: #d88181;
+    background-color: #c8c8c8;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     z-index: 1;
@@ -73,7 +80,8 @@ export const SelectItems = styled.div`
         cursor: pointer;
     }
     div:hover {
-        background-color: #c69c9c;
+        background-color: #dedede;
+        opacity: .7;
     }
 `
 
@@ -105,6 +113,7 @@ export const StyledTextarea = styled.textarea`
     padding: .5rem;
     margin: 5px;
     resize: none;
+    font-size: 14px;
     &.input::placeholder {
         color: #777;
     }

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledFlex, StyledForm, StyledInput, StyledOption, StyledSelect, StyledSelected, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
+import axios from "axios";
+import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledOption, StyledSelect, StyledSelected, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
 
 function BookingForm() {
     const [data, setData] = useState({});
     const [open, setOpen] = useState(false);
+    const [nameError, setNameError] = useState(false);
+    const [surnameError, setSurnameError] = useState(false);
+    const [phoneError, setPhoneError] = useState(false);
     const { t } = useTranslation();
 
     const typeOfService = [t("narrow_specialist_advice"), t("general_advice_consultation"), t("prophylactic_examination"),]
@@ -12,9 +16,36 @@ function BookingForm() {
     const setNewData = (prevState, objectKey, objectValue) => {
         let newData = Object.assign({}, prevState);
         newData[objectKey] = objectValue;
-        console.log(newData);
         return newData;
     }
+
+    const onSubmit = () => {
+        console.log(data.name);
+        if (!data?.name) {
+            setNameError(true);
+        }
+        if (!data?.surname) {
+            setSurnameError(true);
+        }
+        if (!data?.phone) {
+            setPhoneError(true);
+        }
+        const headers = {
+            'Content-Type': 'text/xml; Charset=utf-16',
+            'Cache-Control': 'no-cache',
+        };
+        const http = axios.create({
+            baseURL: 'http://localhost:8000/api',
+            responseType: 'json',
+            headers,
+        });
+        console.log(nameError)
+        if (data.name && data.surname && data.phone) {
+            http.post('/create_call_request', data)
+                .then(res => console.log(res))
+                .catch(error => console.log(error))
+        }
+    };
 
     return (
         <StyledBookingForm>
@@ -26,28 +57,40 @@ function BookingForm() {
                     <StyledInput
                         className="input"
                         type="text"
+                        error={nameError}
                         placeholder={t("name")}
-                        onChange={(e) => setData(prev => setNewData(prev, "name", e.target.value))}
+                        onChange={(e) => {
+                            setData(prev => setNewData(prev, "name", e.target.value));
+                            setNameError(false);
+                        }}
                     />
                     <StyledInput
                         className="input"
                         type="text"
+                        error={surnameError}
                         placeholder={t("surname")}
-                        onChange={(e) => setData(prev => setNewData(prev, "surname", e.target.value))}
+                        onChange={(e) => {
+                            setData(prev => setNewData(prev, "surname", e.target.value));
+                            setSurnameError(false);
+                        }}
                     />
                 </StyledBlockFlex>
                 <StyledBlockFlex>
-                    <StyledInput
+                    {/* <StyledInput
                         className="input"
                         type="text"
                         placeholder={t("email")}
                         onChange={(e) => setData(prev => setNewData(prev, "email", e.target.value))}
-                    />
+                    /> */}
                     <StyledInput
                         className="input"
                         type="text"
+                        error={phoneError}
                         placeholder={t("telephone")}
-                        onChange={(e) => setData(prev => setNewData(prev, "phone", e.target.value))}
+                        onChange={(e) => {
+                            setData(prev => setNewData(prev, "phone", e.target.value));
+                            setPhoneError(false);
+                        }}
                     />
                 </StyledBlockFlex>
                 {/* <StyledBlockFlex>
@@ -59,10 +102,11 @@ function BookingForm() {
                 </StyledBlockFlex> */}
                 <StyledBlockFlex>
                     <StyledCustomSelect class="custom-select">
-                        <StyledSelected class="select-selected" onClick={() => setOpen(prev => !prev)}>
-                            {data?.service ?? "Select item"}
+                        <StyledSelected class="select-selected" not_empty={!!data.service} onClick={() => setOpen(prev => !prev)}>
+                            {data?.service ?? t("select_service")}
                         </StyledSelected>
-                        {!!open && (<SelectItems class="select-items">
+                        {!!open && (
+                        <SelectItems class="select-items">
                             {typeOfService.map(item => (
                                 <div
                                     key={item}
@@ -78,14 +122,18 @@ function BookingForm() {
                     </StyledCustomSelect>
                 </StyledBlockFlex> 
                 <StyledBlockFlex>
-                    <StyledTextarea className="input" placeholder={t("comment")} />
-                </StyledBlockFlex>
-                <StyledBlockFlex>
-                    <StyledSubmitButton type="submit">
-                        {t("book")}
-                    </StyledSubmitButton>
+                    <StyledTextarea
+                        className="input"
+                        placeholder={t("comment")}
+                        onChange={(e) => setData(prev => setNewData(prev, "comment", e.target.value))}
+                    />
                 </StyledBlockFlex>
             </StyledForm>
+            <StyledBlockFlex>
+                <StyledSubmitButton type="submit" onClick={onSubmit}>
+                    {t("book")}
+                </StyledSubmitButton>
+            </StyledBlockFlex>
         </StyledBookingForm>
     )
 }

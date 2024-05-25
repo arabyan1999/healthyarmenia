@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import Carousel from "../../components/carousel";
 import ReferenceBlock from "../../components/referenceBlock";
 import Feedback from "../../components/feedback";
@@ -8,19 +7,8 @@ import tiensLogo from "../../assets/tiensLogo.jpg";
 import tiensProductLogo from "../../assets/tiens-product.jpeg";
 import tiensResultLogo from "../../assets/results.jpg";
 import Booking from "../../components/booking";
-// import Chat from "../../components/chat";
 
 function Home() {
-    // const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        axios.get('/products')
-            .then(res => console.log("res ", res))
-            .catch(error => {
-                console.error("error ", error);
-            });
-    }, []);
-
     const images = [
         tiensLogo,
         tiensProductLogo,
@@ -36,7 +24,6 @@ function Home() {
             <Booking />
             <ReferenceBlock blocks={professors} />
             <Feedback />
-            {/* <Chat /> */}
         </div>
     )
 }
