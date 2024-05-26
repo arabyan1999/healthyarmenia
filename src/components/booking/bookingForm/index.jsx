@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
 import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledOption, StyledSelect, StyledSelected, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
+import SuccessModal from "../successModal";
+import { useScrollingElement } from "../../../hooks/use-scrolling-element";
 
 function BookingForm() {
     const [data, setData] = useState({});
@@ -9,7 +11,9 @@ function BookingForm() {
     const [nameError, setNameError] = useState(false);
     const [surnameError, setSurnameError] = useState(false);
     const [phoneError, setPhoneError] = useState(false);
+    const [success, setSuccess] = useState(false);
     const { t } = useTranslation();
+    useScrollingElement(success);
 
     const typeOfService = [t("narrow_specialist_advice"), t("general_advice_consultation"), t("prophylactic_examination"),]
 
@@ -20,7 +24,6 @@ function BookingForm() {
     }
 
     const onSubmit = () => {
-        console.log(data.name);
         if (!data?.name) {
             setNameError(true);
         }
@@ -42,10 +45,21 @@ function BookingForm() {
         console.log(nameError)
         if (data.name && data.surname && data.phone) {
             http.post('/create_call_request', data)
-                .then(res => console.log(res))
+                .then(res => {
+                    console.log(res);
+                })
                 .catch(error => console.log(error))
+            setSuccess(true);
         }
     };
+
+    useEffect(() => {
+        if (success) {
+            setTimeout(() => {
+                setSuccess(false);
+            }, 5000);
+        }
+    }, [success]);
 
     return (
         <StyledBookingForm>
@@ -134,6 +148,7 @@ function BookingForm() {
                     {t("book")}
                 </StyledSubmitButton>
             </StyledBlockFlex>
+            {success && <SuccessModal />}
         </StyledBookingForm>
     )
 }
