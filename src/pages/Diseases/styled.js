@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledDiseasesPage = styled.div`
-    width: 100%;
+    width: 1330px;
     margin: 0 auto;
 `
 
