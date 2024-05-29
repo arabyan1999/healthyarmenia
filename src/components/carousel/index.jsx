@@ -1,29 +1,23 @@
 import React, { useState } from 'react';
-import { CarouselWrapper, Slide, Image, Button } from "./styled"
+import SimpleImageSlider from "react-simple-image-slider";
+import { CarouselWrapper} from "./styled"
 import './Carousel.css';
 
 function Carousel({ images }) {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const goToPrevSlide = () => {
-    const newIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
-    setCurrentImageIndex(newIndex);
-  };
-
-  const goToNextSlide = () => {
-    const newIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
-    setCurrentImageIndex(newIndex);
-  };
+  const [, setImageNum] = useState(1);
 
   return (
     <CarouselWrapper className="carousel">
-      <button className="prev" onClick={goToPrevSlide}>&#10094;</button>
-      {images.map((image, index) => (
-        <Slide key={index} className={index === currentImageIndex ? "slide active" : "slide"}>
-          <Image src={image} objectFit="scale-down" alt={`Slide ${index}`} />
-        </Slide>
-      ))}
-      <Button className="next" onClick={goToNextSlide}>&#10095;</Button>
+      <SimpleImageSlider
+        width="100%"
+        height="100%"
+        images={images}
+        autoPlay={true}
+        onStartSlide = {(index) => {
+          setImageNum(index);
+        }}
+        autoPlayDelay={6}
+      />
     </CarouselWrapper>
   );
 }

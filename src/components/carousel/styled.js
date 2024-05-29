@@ -5,7 +5,6 @@ export const CarouselWrapper = styled.div`
   width: 100%;
   overflow: hidden;
   height: 600px;
-  border-radius: 20px;
   @media screen and (max-width: 1200px) {
     height: auto;
     border-radius: 0;

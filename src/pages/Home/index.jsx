@@ -7,6 +7,7 @@ import tiensLogo from "../../assets/tiensLogo.jpg";
 import tiensProductLogo from "../../assets/tiens-product.jpeg";
 import tiensResultLogo from "../../assets/results.jpg";
 import Booking from "../../components/booking";
+import { StyledContainer } from "./styled";
 
 function Home() {
     const images = [
@@ -18,12 +19,14 @@ function Home() {
     return (
         <div>
             <Carousel images={images} />
-            <ReferenceBlock blocks={CommonDiseases} link="diseases" />
-            <ReferenceBlock blocks={foods} link="products" />
-            <ReferenceBlock blocks={threatmentData} />
-            <Booking />
-            <ReferenceBlock blocks={professors} />
-            <Feedback />
+            <StyledContainer>
+                <ReferenceBlock blocks={CommonDiseases} link="diseases" />
+                <ReferenceBlock blocks={foods} link="products" />
+                <ReferenceBlock blocks={threatmentData} />
+                <Booking />
+                <ReferenceBlock blocks={professors} />
+                <Feedback />
+            </StyledContainer>
         </div>
     )
 }
