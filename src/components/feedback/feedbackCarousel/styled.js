@@ -5,14 +5,23 @@ export const StyledFeedackContainer = styled.div`
     padding: 40px 100px;
     /* display: flex; */
     justify-content: center;
+    @media screen and (max-width: 800px) {
+        padding: 40px 60px;
+    }
+    @media screen and (max-width: 500px) {
+        padding: 0;
+    }
 `
 
 export const StyledFeedbackBlock = styled.div`
-    /* max-width: 400px; */
     margin-bottom: 40px;
     background: #fff;
     border-radius: 6px;
     padding: 10px;
+    @media screen and (max-width: 500px) {
+        margin: 0;
+        border-radius: 0;
+    }
 `
 
 

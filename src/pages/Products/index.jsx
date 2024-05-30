@@ -4,10 +4,12 @@ import { StyledBlock,  StyledImage, StyledMenuTitle } from "../../components/ref
 import { foods } from "../../data";
 import { StyledProductsPage } from "./styled";
 import Loader from "../../components/loader";
+import { useScrollingElement } from "../../hooks/use-scrolling-element";
 
 function ProductsPage() {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
+    useScrollingElement(loading);
 
     useEffect(() => {
         setTimeout(() => {

@@ -4,10 +4,15 @@ export const CarouselWrapper = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 600px;
-  @media screen and (max-width: 1200px) {
-    height: auto;
-    border-radius: 0;
+  height: 400px;
+  @media screen and (max-width: 1000px) {
+    height: 350px;
+  }
+  @media screen and (max-width: 700px) {
+    height: 250px;
+  }
+  @media screen and (max-width: 442px) {
+    height: 200px;
   }
 `;
 

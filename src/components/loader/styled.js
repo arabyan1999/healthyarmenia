@@ -4,7 +4,7 @@ import { keyframes } from 'styled-components'
 export const StyledLoderContainer = styled.div`
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
     position: fixed;
     top: 0;
