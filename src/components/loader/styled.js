@@ -14,18 +14,16 @@ export const StyledLoderContainer = styled.div`
 `
 
 const rotateAnimaion = keyframes`
-    rotating {
-        from{
-            -webkit-transform: rotate(0deg);
-        }
-        to{
-            -webkit-transform: rotate(360deg);
-        }
-    }
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
 `
 
 export const LoaderImg = styled.img`
     width: 100px;
     height: 100px;
-    animation: ${rotateAnimaion} 2s linear infinite;
+    /* animation-name: ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; */
+    -webkit-animation: spin 2s linear infinite;
+  animation: ${rotateAnimaion} 2s linear infinite;
 `

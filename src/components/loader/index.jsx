@@ -1,11 +1,11 @@
 import React from "react";
-import { LoaderImg, StyledLoderContainer } from "./styled";
-import loaderImg from "../../assets/loader.png"
+import { StyledLoderContainer } from "./styled";
+import { TailSpin } from 'react-loader-spinner';
 
 function Loader() {
     return (
         <StyledLoderContainer>
-            <LoaderImg src={loaderImg} />
+            <TailSpin />
         </StyledLoderContainer>
     )
 }
