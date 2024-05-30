@@ -16,7 +16,7 @@ function Carousel({ images }) {
         onStartSlide = {(index) => {
           setImageNum(index);
         }}
-        autoPlayDelay={2}
+        autoPlayDelay={4}
       />
     </CarouselWrapper>
   );

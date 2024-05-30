@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const StyledDiseasesPage = styled.div`
-    width: 1330px;
+    max-width: 1330px;
     margin: 0 auto;
+    @media screen and (max-width: 1300px) {
+        max-width: 1200px;
+    }
 `
 
 export const StyledMainTitle = styled.h2`
@@ -12,9 +15,15 @@ export const StyledMainTitle = styled.h2`
 
 export const StyledDiseasesContainer = styled.div`
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     margin-top: 30px;
     grid-gap: 20px;
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 export const StyledSecondaryTitle = styled.h2`
