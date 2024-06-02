@@ -8,6 +8,7 @@ import ProductsPage from './pages/Products';
 import DiseasesPage from './pages/Diseases';
 import DiseasePage from './pages/Disease';
 import Footer from './components/footer_component';
+import NotFound from './pages/Not_found';
 import './App.css';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
             <Route path="products" element={<ProductsPage />} />
             <Route path="diseases" element={<DiseasesPage />} />
             <Route path="diseases/:id" element={<DiseasePage />} />
-            <Route path="*" element={<h2>Ресурс не найден</h2>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
         <Footer />

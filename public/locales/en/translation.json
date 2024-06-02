@@ -40,5 +40,8 @@
     "comment": "Comment",
     "book": "Book",
 
+    "page_not_found": "PAGE NOT FOUND",
+    "requested_page_not_found": "THE PAGE YOU REQUESTED WAS NOT FOUND",
+
     "footer_text": "All rights reserved. The information on the site is protected by copyright law."
 }
