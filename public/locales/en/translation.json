@@ -38,5 +38,7 @@
     "general_advice_consultation": "General advice from a consultant specialist",
     "prophylactic_examination": "Prophylactic examination",
     "comment": "Comment",
-    "book": "Book"
+    "book": "Book",
+
+    "footer_text": "All rights reserved. The information on the site is protected by copyright law."
 }

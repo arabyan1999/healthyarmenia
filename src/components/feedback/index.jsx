@@ -5,7 +5,7 @@ import { StyledContainer, StyledTitle } from "./styled";
 
 function Feedback() {
     return (
-        <StyledContainer>
+        <StyledContainer id="feedback">
             <StyledTitle>Հաճախորդների կարծիքները</StyledTitle>
             <FeedbackCarousel feedbackData={feedbackData} />
         </StyledContainer>

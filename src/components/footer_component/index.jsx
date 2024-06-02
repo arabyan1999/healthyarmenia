@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import { StyledFoot } from "./styled";
 
 function Footer() {
+    const { t } = useTranslation();
     return (
         <StyledFoot>
-            © Все права защищены. Информация сайта защищена законом об авторских правах.
+            © {t("footer_text")}
         </StyledFoot>
     )
 }

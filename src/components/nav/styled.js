@@ -15,6 +15,10 @@ export const StyledNavigationBar = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 20px;
+    @media only screen and (max-width: 1120px) {
+        margin-right: 0;
+    }
     .mobileLogo {
         @media only screen and (min-width: 1120px) {
             display: none;

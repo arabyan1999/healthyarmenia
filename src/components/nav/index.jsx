@@ -27,8 +27,8 @@ function NavigationBar() {
             <StyledLink href="about">{t("about")}</StyledLink>
             <StyledLink href="/diseases">{t("diseases")}</StyledLink>
             <StyledLink href="/products">{t("product")}</StyledLink>
-            <StyledLink href="#contact">{t("contact")}</StyledLink>
-            <StyledLink href="#feedback">{t("feedback")}</StyledLink>
+            {/* <StyledLink href="#contact">{t("contact")}</StyledLink> */}
+            <StyledLink href={window.location.pathname === "/" ? "#feedback" : "/feedback"}>{t("feedback")}</StyledLink>
             <LanguageDropdown />
         </StyledNavigationBar>
     </StyledHeader>

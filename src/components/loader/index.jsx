@@ -1,12 +1,14 @@
 import React from "react";
-import { StyledLoderContainer } from "./styled";
-import { TailSpin } from 'react-loader-spinner';
+import { StyledEmptyContainer, StyledLoderContainer } from "./styled";
+import { DNA } from 'react-loader-spinner';
 
 function Loader() {
     return (
-        <StyledLoderContainer>
-            <TailSpin />
-        </StyledLoderContainer>
+        <StyledEmptyContainer>
+            <StyledLoderContainer>
+                <DNA height={100} width={100} />
+            </StyledLoderContainer>
+        </StyledEmptyContainer>
     )
 }
 

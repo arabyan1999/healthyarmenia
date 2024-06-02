@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useScrollingElement } from "../../hooks/use-scrolling-element";
+import Loader from "../../components/loader";
 import { StyledDiseasesContainer, StyledDiseasesPage, StyledMainTitle, StyledSecondaryTitle, StyledUl, StyledUlContainer } from "./styled";
 import { diseases } from "../../data";
 
 function DiseasesPage() {
+    const [loading, setLoading] = useState(true);
+    useScrollingElement(loading);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 4000);
+    })
+
+    if (loading) {
+        return (
+            <Loader />
+        )
+    }
     return (
         <StyledDiseasesPage>
             <StyledMainTitle>{diseases.title}</StyledMainTitle>
