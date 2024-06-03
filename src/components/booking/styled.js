@@ -4,7 +4,8 @@ export const StyledBookingContainer = styled.div`
     background: url(${({ img }) => img });
     width: 100%;
     padding: 30px;
-    `
+    margin-bottom: 50px;
+`
 
 export const StyledDoctorImgContainer = styled.div`
     position: relative;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import axios from "axios";
-import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledOption, StyledSelect, StyledSelected, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
+import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledSelected, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
 import SuccessModal from "../successModal";
 import { useScrollingElement } from "../../../hooks/use-scrolling-element";
 
@@ -72,7 +72,7 @@ function BookingForm() {
                         className="input"
                         type="text"
                         error={nameError}
-                        placeholder={t("name")}
+                        placeholder={t("name") + "*"}
                         onChange={(e) => {
                             setData(prev => setNewData(prev, "name", e.target.value));
                             setNameError(false);
@@ -82,7 +82,7 @@ function BookingForm() {
                         className="input"
                         type="text"
                         error={surnameError}
-                        placeholder={t("surname")}
+                        placeholder={t("surname") + " *"}
                         onChange={(e) => {
                             setData(prev => setNewData(prev, "surname", e.target.value));
                             setSurnameError(false);
@@ -100,7 +100,7 @@ function BookingForm() {
                         className="input"
                         type="text"
                         error={phoneError}
-                        placeholder={t("telephone")}
+                        placeholder={t("telephone") + " *"}
                         onChange={(e) => {
                             setData(prev => setNewData(prev, "phone", e.target.value));
                             setPhoneError(false);

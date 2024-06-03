@@ -16,17 +16,19 @@ function App() {
     <Suspense fallback="loading">
       <div className="App">
         <NavigationBar />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="products/:id" element={<Product />} />
-            <Route path="products" element={<ProductsPage />} />
-            <Route path="diseases" element={<DiseasesPage />} />
-            <Route path="diseases/:id" element={<DiseasePage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <div className='content'>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="products/:id" element={<Product />} />
+              <Route path="products" element={<ProductsPage />} />
+              <Route path="diseases" element={<DiseasesPage />} />
+              <Route path="diseases/:id" element={<DiseasePage />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
         <Footer />
       </div>
     </Suspense>

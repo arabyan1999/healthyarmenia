@@ -1,4 +1,5 @@
 import React from "react";
+import successIcon from "../../../assets/success.svg";
 import { StyledFlex, StyledImageContainer, StyledModal, StyledModalBackground, StyledText, StyledTitle } from "./styled";
 
 function SuccessModal() {
@@ -6,7 +7,9 @@ function SuccessModal() {
         <StyledModalBackground>
             <StyledModal>
                 <StyledFlex>
-                    <StyledImageContainer>Img</StyledImageContainer>
+                    <StyledImageContainer>
+                        <img src={successIcon} alt="success" />
+                    </StyledImageContainer>
                     <div>
                         <StyledTitle>Success</StyledTitle>
                         <StyledText>You're booked call successfuly</StyledText>

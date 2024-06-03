@@ -10,4 +10,6 @@ button {
     cursor: pointer;
 }
 
-.App {}
+.content {
+    margin-top: 60px;
+}

@@ -6,6 +6,9 @@ export const StyledBookingForm = styled.div`
     background-color: #fff;
     width: fit-content;
     max-width: 500px;
+    @media screen and (max-width: 560px) {
+        width: 100%;
+    }
 `
 
 export const StyledTitle = styled.h2`
