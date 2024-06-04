@@ -21,7 +21,7 @@ function Home() {
         <div>
             <Carousel images={images} />
             <StyledContainer>
-                <Foreword ></Foreword>
+                <Foreword />
                 <ReferenceBlock blocks={CommonDiseases} link="diseases" />
                 <ReferenceBlock blocks={foods} link="products" />
                 {/* <ReferenceBlock blocks={threatmentData} /> */}

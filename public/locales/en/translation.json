@@ -1,9 +1,10 @@
 {
     "about": "About us",
-    "product": "Product",
+    "product": "Food",
     "discount": "Discount",
     "contact": "Contact",
     "feedback": "Feedback",
+    "health_school": "Health school",
 
     "common_diseases_title": "Common diseases",
     "diseases": "Diseases",

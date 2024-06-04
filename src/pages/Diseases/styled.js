@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledDiseasesPage = styled.div`
     max-width: 1330px;
     margin: 0 auto 40px;
+    padding-top: 2px;
     @media screen and (max-width: 1300px) {
         max-width: 1200px;
     }

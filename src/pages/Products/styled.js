@@ -7,4 +7,5 @@ export const StyledProductsPage = styled(StyledContainer)`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    padding-top: 20px;
 `

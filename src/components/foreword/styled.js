@@ -12,10 +12,15 @@ export const StyledTitle = styled.h1`
     @media screen and (max-width: 700px) {
         font-size: 26px;   
     }
-` 
+`
+
+export const StyledSecondaryTitle = styled.h3`
+    font-size: 24px;
+    margin-top: 20px;
+`
 
 export const StyledText = styled.h3`
-    margin-bottom: ${({ first }) => first && "10px"};
+    margin-bottom: ${({ mb }) => mb && "10px"};
     font-weight: 400;
     font-size: 20px;
     @media screen and (max-width: 700px) {

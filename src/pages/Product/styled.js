@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledProductContainer = styled.div`
     max-width: 1100px;
     margin: 40px auto;
+    padding-top: 20px;
 `
 
 export const StyledTitle = styled.h2`
