@@ -17,6 +17,7 @@ export const StyledTitle = styled.h1`
 export const StyledSecondaryTitle = styled.h3`
     font-size: 24px;
     margin-top: 20px;
+    margin-bottom: 10px;
 `
 
 export const StyledText = styled.h3`

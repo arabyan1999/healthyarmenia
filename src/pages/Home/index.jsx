@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Carousel from "../../components/carousel";
 import ReferenceBlock from "../../components/referenceBlock";
 import Feedback from "../../components/feedback";

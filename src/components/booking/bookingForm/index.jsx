@@ -4,6 +4,7 @@ import axios from "axios";
 import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledSelected, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
 import SuccessModal from "../successModal";
 import { useScrollingElement } from "../../../hooks/use-scrolling-element";
+import { createBookRequestApi } from "../../../request/requests";
 
 function BookingForm() {
     const [data, setData] = useState({});
@@ -33,23 +34,10 @@ function BookingForm() {
         if (!data?.phone) {
             setPhoneError(true);
         }
-        const headers = {
-            'Content-Type': 'text/xml; Charset=utf-16',
-            'Cache-Control': 'no-cache',
-        };
-        const http = axios.create({
-            baseURL: 'http://localhost:8000/api',
-            responseType: 'json',
-            headers,
-        });
+        
         console.log(nameError)
         if (data.name && data.surname && data.phone) {
-            http.post('/create_call_request', data)
-                .then(res => {
-                    console.log(res);
-                })
-                .catch(error => console.log(error))
-            setSuccess(true);
+            createBookRequestApi(data);
         }
     };
 
@@ -72,7 +60,7 @@ function BookingForm() {
                         className="input"
                         type="text"
                         error={nameError}
-                        placeholder={t("name") + "*"}
+                        placeholder={t("name") + " *"}
                         onChange={(e) => {
                             setData(prev => setNewData(prev, "name", e.target.value));
                             setNameError(false);
