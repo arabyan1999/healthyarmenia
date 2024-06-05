@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { CommonDiseases } from "../../data";
+import { diseases } from "../../data";
 import { StyledContentText } from "../Product/styled";
 import { StyledBlock, StyledBlockTitle, StyledContainer, StyledImgContainer, StyledMainTitle } from "./styled";
 
 function DiseasePage() {
     const { id } = useParams();
-    const disease = CommonDiseases.array.find(el => el.id === id);
+    const disease = diseases.array.find(el => el.id === id);
     return (
         <StyledContainer>
             <StyledMainTitle>
