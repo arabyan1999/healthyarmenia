@@ -1,6 +1,10 @@
 import styled from "styled-components";
+import signIcon from "../../assets/lijisign.png"
+import map from "../../assets/map.svg"
 
-export const StyledAboutPage = styled.div``
+export const StyledAboutPage = styled.div`
+    padding-top: 40px;
+`
 
 export const StyledTitle = styled.h1`
     text-align: center;
@@ -8,11 +12,17 @@ export const StyledTitle = styled.h1`
     margin-bottom: 20px;
 `
 
+export const StyledSecondaryTitle = styled.h2`
+    color: #137d52;
+    margin-bottom: 10px; 
+`
+
 export const StyledBlock = styled.div`
     margin: 40px 0 60px;
 `
 
-export const StyledImage = styled.img``
+export const StyledImage = styled.img`
+`
 
 export const StyledBlockTitle = styled.h2`
     font-size: 30px;
@@ -29,6 +39,16 @@ export const StyledText = styled.p`
 
 export const StyledLeftText = styled(StyledText)`
     text-align: left;
+`
+
+export const StyledRightAlignText = styled(StyledLeftText)`
+    text-align: right;
+    background: url(${signIcon}) no-repeat right center;
+    height: 100px;
+`
+
+export const StyledSignContainer = styled.div`
+    width: 100%;
 `
 
 export const StyledFlex = styled.div`
@@ -59,6 +79,8 @@ export const StyledCircle = styled.div`
     width: 300px;
     height: 300px;
     margin: 45px 0 30px;
+    background-image: url(${map});
+    background-size: contain;
     p {
         font-size: 74px;
         font-weight: 700;
@@ -67,4 +89,25 @@ export const StyledCircle = styled.div`
 
 export const StyledHeadImage = styled.img`
     margin-left: 30px;
+    object-fit: contain;
+`
+
+export const StyledMarginBottom = styled.div`
+    margin-bottom: 20px;
+    width: 100%;
+`
+
+export const StyledCertificates = styled.div`
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+`
+
+export const StyledCertificateImg = styled.img`
+    padding: 0 5px;
+    cursor: pointer;
+    width: 205px;
+    width: 25%;
 `

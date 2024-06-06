@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import axios from "axios";
-import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledSelected, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
+import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledSelected, StyledSpan, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
 import SuccessModal from "../successModal";
 import { useScrollingElement } from "../../../hooks/use-scrolling-element";
 import { createBookRequestApi } from "../../../request/requests";
@@ -16,7 +15,7 @@ function BookingForm() {
     const { t } = useTranslation();
     useScrollingElement(success);
 
-    const typeOfService = [t("narrow_specialist_advice"), t("general_advice_consultation"), t("prophylactic_examination"),]
+    const typeOfService = [t("narrow_specialist_advice"), t("general_advice_consultation")];
 
     const setNewData = (prevState, objectKey, objectValue) => {
         let newData = Object.assign({}, prevState);
@@ -136,6 +135,7 @@ function BookingForm() {
                     {t("book")}
                 </StyledSubmitButton>
             </StyledBlockFlex>
+            <StyledSpan>&#9432; Մասնագետի խորհրդատվությունն անվճար է</StyledSpan>
             {success && <SuccessModal />}
         </StyledBookingForm>
     )

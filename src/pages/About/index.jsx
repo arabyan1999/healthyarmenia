@@ -1,13 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { StyledBlock, StyledBlockTitle, StyledCenter, StyledCenterFlex, StyledCircle, StyledFlex, StyledHeadImage, StyledImage, StyledLeftText, StyledText, StyledTitle } from "./styled";
+import CountUp from 'react-countup';
+import { StyledAboutPage, StyledBlock, StyledBlockTitle, StyledCenter, StyledCenterFlex, StyledCertificates, StyledCertificateImg, StyledCircle, StyledFlex, StyledHeadImage, StyledImage, StyledLeftText, StyledMarginBottom, StyledRightAlignText, StyledSecondaryTitle, StyledSignContainer, StyledText, StyledTitle } from "./styled";
 import headquarterLogo from "../../assets/tiens_headquarter.jpg";
 import headLogo from "../../assets/head.png";
+
+const certificates = ["certificate1", "certificate2", "certificate3", "certificate4", "certificate5", "certificate6", "certificate7"];
 
 function About() {
     const { t } = useTranslation();
     return (
-        <div>
+        <StyledAboutPage>
             <StyledTitle>TIENS</StyledTitle>
             <StyledBlock>
                 <StyledImage src={headquarterLogo} alt="headquarter" />
@@ -22,7 +25,7 @@ function About() {
                 <StyledCenterFlex>
                     <StyledCenter>
                         <StyledCircle>
-                            <p>195</p>
+                            <p><CountUp end={195}/></p>
                         </StyledCircle>
                         <StyledText>
                             СТРАН МИРА РАЗВИВАЮТ БИЗНЕС С "ТЯНЬШИ"
@@ -30,7 +33,7 @@ function About() {
                     </StyledCenter>
                     <StyledCenter>
                         <StyledCircle>
-                            <p>110</p>
+                            <p><CountUp end={110} /></p>
                         </StyledCircle>
                         <StyledText>
                             СТРАН И РЕГИОНОВ ИМЕЮТ ФИЛИАЛЫ "ТЯНЬШИ"
@@ -38,7 +41,7 @@ function About() {
                     </StyledCenter>
                     <StyledCenter>
                         <StyledCircle>
-                            <p>46</p>
+                            <p><CountUp end={46} /></p>
                         </StyledCircle>
                         <StyledText>
                             МЛН ПОСТАЯННЫХ ПОТРЕБИТЕЛЕЙ И БИЗНЕС-ПАРТНЕРЕВ
@@ -58,6 +61,22 @@ function About() {
                         перипетий, сложностей и неудач – от нескольких небольших заводов в родном поселке до бизнеса, 
                         охватывающего более 190 стран мира.
                     </StyledLeftText>
+                </StyledFlex>
+                <StyledMarginBottom />
+                <StyledFlex>
+                    <div>
+                        <h2>Message From Chairman Li</h2>
+                        <StyledMarginBottom />
+                        <StyledSecondaryTitle>Health Dream Tiens Dream My Dream</StyledSecondaryTitle>
+                        <div>
+                            <StyledLeftText>
+                                In 1963, Martin Luther King delivered a famous speech titled 'I Have a Dream', motivating billions of people around the world to strive for their dreams. Since childhood, I also have a dream, which is to use my own efforts to safeguard the happiness and health of more people. So, for decades, with dreams in mind, we have adhered to our original aspirations, led Tiens, and forged ahead, always committed to the big health industry. So far, our business has covered 224 countries and regions. We have provided high-quality health products, health care services, and a happy life.
+                            </StyledLeftText>
+                            <StyledSignContainer>
+                                <StyledRightAlignText>Chairman of Tiens Group: Li Jinyuan</StyledRightAlignText>
+                            </StyledSignContainer>
+                        </div>
+                    </div>
                     <StyledHeadImage src={headLogo} alt="" />
                 </StyledFlex>
             </StyledBlock>
@@ -90,7 +109,21 @@ function About() {
                     </StyledLeftText>
                 </StyledFlex>
             </StyledBlock>
-        </div>
+            <StyledBlockTitle>
+                Certificates
+            </StyledBlockTitle>
+            <StyledMarginBottom />
+            <StyledFlex>
+                <StyledCertificates>
+                    {/* <StyledCertificateImg src={certificate1} /> */}
+                    {
+                        certificates.map((el) => (
+                          <StyledCertificateImg src={require(`../../assets/${el}.jpg`)} />  
+                        ))
+                    }
+                </StyledCertificates>
+            </StyledFlex>
+        </StyledAboutPage>
     )
 }
 

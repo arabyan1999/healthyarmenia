@@ -108,6 +108,10 @@ export const StyledBlockFlex = styled(StyledFlex)`
     justify-content: space-between;
 `
 
+export const StyledSpan = styled.span`
+    color: #777;
+`
+
 export const StyledTextarea = styled.textarea`
     width: 100%;
     background-color: #dedede;
