@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledFeedackContainer = styled.div`
-    background: #b3ffb3;
+    background: #137d52;
     padding: 40px 100px;
     /* display: flex; */
     justify-content: center;

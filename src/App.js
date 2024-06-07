@@ -28,8 +28,8 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
-        </div>
         <Footer />
+        </div>
       </div>
     </Suspense>
   );

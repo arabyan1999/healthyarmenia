@@ -16,64 +16,60 @@ function About() {
                 <StyledImage src={headquarterLogo} alt="headquarter" />
             </StyledBlock>
             <StyledBlock>
-                <StyledBlockTitle>
+                {/* <StyledBlockTitle>
                     {t("one_business")}
-                </StyledBlockTitle>
+                </StyledBlockTitle> */}
                 <StyledText>
-                   {t("little_about_tiense")}
+                   {t("little_about_tiens")}
                 </StyledText>
                 <StyledCenterFlex>
                     <StyledCenter>
                         <StyledCircle>
-                            <p><CountUp end={195}/></p>
+                            <p><CountUp end={195} duration={6} /></p>
                         </StyledCircle>
                         <StyledText>
-                            СТРАН МИРА РАЗВИВАЮТ БИЗНЕС С "ТЯНЬШИ"
+                            {t("countries_develop_tiens")}
                         </StyledText>
                     </StyledCenter>
                     <StyledCenter>
                         <StyledCircle>
-                            <p><CountUp end={110} /></p>
+                            <p><CountUp end={110} duration={6} /></p>
                         </StyledCircle>
                         <StyledText>
-                            СТРАН И РЕГИОНОВ ИМЕЮТ ФИЛИАЛЫ "ТЯНЬШИ"
+                            {t("countries_regions_have_branches_tiens")}
                         </StyledText>
                     </StyledCenter>
                     <StyledCenter>
                         <StyledCircle>
-                            <p><CountUp end={46} /></p>
+                            <p><CountUp end={46} duration={6} /></p>
                         </StyledCircle>
                         <StyledText>
-                            МЛН ПОСТАЯННЫХ ПОТРЕБИТЕЛЕЙ И БИЗНЕС-ПАРТНЕРЕВ
+                            {t("mln_regular_consumer")}
                         </StyledText>
                     </StyledCenter>
                 </StyledCenterFlex>
             </StyledBlock>
             <StyledBlock>
                 <StyledBlockTitle>
-                    ПРЕДСЕДАТЕЛЬ ЛИ
+                    {t("chairman_li")}
                 </StyledBlockTitle>
                 <StyledFlex>
                     <StyledLeftText>
-                        Основатель компании «Тяньши», китайский предприниматель Ли Цзиньюань родился в 1958 году в деревне 
-                        Лилунтунь в провинции Хэбэй в Китае. Очень рано в нем проявился незаурядный коммерческий талант, 
-                        твердый характер и стремление улучшить жизнь всех людей мира. Г-н Ли Цзиньюань прошел путь, полный 
-                        перипетий, сложностей и неудач – от нескольких небольших заводов в родном поселке до бизнеса, 
-                        охватывающего более 190 стран мира.
+                        {t("about_li")}
                     </StyledLeftText>
                 </StyledFlex>
                 <StyledMarginBottom />
                 <StyledFlex>
                     <div>
-                        <h2>Message From Chairman Li</h2>
+                        <h2>{t("message_from_chairman_li")}</h2>
                         <StyledMarginBottom />
-                        <StyledSecondaryTitle>Health Dream Tiens Dream My Dream</StyledSecondaryTitle>
+                        <StyledSecondaryTitle>{t("health_dream")}</StyledSecondaryTitle>
                         <div>
                             <StyledLeftText>
-                                In 1963, Martin Luther King delivered a famous speech titled 'I Have a Dream', motivating billions of people around the world to strive for their dreams. Since childhood, I also have a dream, which is to use my own efforts to safeguard the happiness and health of more people. So, for decades, with dreams in mind, we have adhered to our original aspirations, led Tiens, and forged ahead, always committed to the big health industry. So far, our business has covered 224 countries and regions. We have provided high-quality health products, health care services, and a happy life.
+                                {t("chairman_message_content")}
                             </StyledLeftText>
                             <StyledSignContainer>
-                                <StyledRightAlignText>Chairman of Tiens Group: Li Jinyuan</StyledRightAlignText>
+                                <StyledRightAlignText>{t("chairman_of_tiens_group")}</StyledRightAlignText>
                             </StyledSignContainer>
                         </div>
                     </div>
@@ -82,37 +78,20 @@ function About() {
             </StyledBlock>
             <StyledBlock>
                 <StyledBlockTitle>
-                    ВЫСОКИЙ СТАНДАРТ - ВЫСОКАЯ НАДЕЖНОСТЬ
+                    {t("hight_standard")}
                 </StyledBlockTitle>
                 <StyledFlex>
                     <StyledLeftText>
-                        Глобальная система менеджмента качества и безопасности продукции была разработана с учетом законодательных и нормативных актов государств, где представлена продукция «Тяньши».
+                        {t("global_system")}
                         <br/>
                         <br/>
-                        Продукция компании «Тяньши» сертифицирована в соответствии с законодательством РФ, прошла проверку в НИИ питания РАМН, исламскую сертификацию HALAL, имеет исламский индонезийский сертификат Syariah, а также более 50 патентов и регистрационных свидетельств на БАД.
-                    </StyledLeftText>
-                </StyledFlex>
-            </StyledBlock>
-            <StyledBlock>
-                <StyledBlockTitle>
-                    МИССИЯ - ЗДОРОВЬЕ
-                </StyledBlockTitle>
-                <StyledFlex>
-                    <StyledLeftText>
-                        Ассортимент продукции «Тяньши» разнообразен: биологически активные добавки к пище, косметические средства, средства личной гигиены, средства для ухода за домом и приборы.
-                        <br/>
-                        <br/>
-                        В основе деятельности компании – глубокая и многогранная восточная культура поддержания здоровья и в сочетании с новейшими биотехнологиями. Наша эффективная и безопасная продукция для здоровья: биологически активные добавки, косметика, предметы домашнего обихода и моющие средства – пользуется признанием и любовью потребителей. Именно благодаря ей они получают возможность жить красивой и разнообразной жизнью.
-                        <br/>
-                        <br/>
-                        Сырье для производства корпорация «Тяньши» выбирает по всему миру. Сухое молоко поступает из Новой Зеландии, которая славится превосходными естественными пастбищами, какао-порошок закупается в Индонезии, овсяную и яблочную клетчатку поставляет Германия, фруктозу – Финляндия, лактозу – США. Качественные ингредиенты - лучшая гарантия безопасности продукции. В 2021 году кальциевая серия «Тяньши» получила золотую медаль Международной выставки Panama World Expo.
+                        {t("product_sertfied")}
                     </StyledLeftText>
                 </StyledFlex>
             </StyledBlock>
             <StyledBlockTitle>
-                Certificates
+                {t("certificates")}
             </StyledBlockTitle>
-            <StyledMarginBottom />
             <StyledFlex>
                 <StyledCertificates>
                     {/* <StyledCertificateImg src={certificate1} /> */}
@@ -123,6 +102,24 @@ function About() {
                     }
                 </StyledCertificates>
             </StyledFlex>
+            <StyledBlock>
+                <StyledBlockTitle>
+                    {t("mission_health")}
+                </StyledBlockTitle>
+                <StyledFlex>
+                    <StyledLeftText>
+                        {t("goods_range")}
+                        <br/>
+                        <br/>
+                        {t("company_activities")}
+                        <br/>
+                        <br/>
+                        {t("selects_row_materials_for_production")}
+                    </StyledLeftText>
+                </StyledFlex>
+            </StyledBlock>
+            
+            <StyledMarginBottom />
         </StyledAboutPage>
     )
 }

@@ -49,6 +49,7 @@ export const StyledRightAlignText = styled(StyledLeftText)`
 
 export const StyledSignContainer = styled.div`
     width: 100%;
+    margin-top: 10px;
 `
 
 export const StyledFlex = styled.div`
@@ -82,7 +83,7 @@ export const StyledCircle = styled.div`
     background-image: url(${map});
     background-size: contain;
     p {
-        font-size: 74px;
+        font-size: 92px;
         font-weight: 700;
     }
 `

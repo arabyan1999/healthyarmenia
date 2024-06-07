@@ -130,7 +130,9 @@ export const StyledSubmitButton = styled.button`
     border-radius: 5px;
     width: 100%;
     border: none;
-    background-color: #b3ffb3;
+    background-color: #137d52;
+    color: #fff;
+    font-size: 16px;
     padding: .5rem;
     margin: 5px;
 `
