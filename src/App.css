@@ -13,5 +13,5 @@ button {
 .content {
     margin-top: 60px;
     background: #e5eae3 url(./assets/bgimage.jpg) no-repeat center top;
-    background-size: contain;
+    background-size: auto;
 }

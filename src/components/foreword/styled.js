@@ -17,6 +17,9 @@ export const StyledTitle = styled.h1`
 export const StyledFirstTitle = styled(StyledTitle)`
     font-size: 34px;
     text-align: center;
+    @media screen and (max-width: 600px) {
+        font-size: 29px;
+    }
 `
 
 export const StyledSecondaryTitle = styled.h3`

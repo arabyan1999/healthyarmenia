@@ -4,6 +4,15 @@ export const StyledContainer = styled.div`
     margin:  60px 0;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    @media screen and (max-width: 1240px) {
+        border-radius: 0; 
+    }
+    @media screen and (max-width: 600px) {
+        padding: 20px 0; 
+    }
 `
 
 export const StyledReferencesBlocks = styled.section`
@@ -58,7 +67,7 @@ export const StyledRefBlock = styled.a`
 export const StyledRef = styled(StyledRefBlock)`
     color: #333;
     margin-right: 30px;
-    line-height: 40px;
+    line-height: 20px;
     cursor: pointer;
     font-size: 18px;
     font-weight: 700;

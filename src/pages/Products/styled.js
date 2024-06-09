@@ -10,7 +10,7 @@ export const StyledNavigation = styled.div`
     margin-top: 30px;
     display: flex;
     border-radius: 5px;
-    background-color: #b3ffb3;
+    background-color: #137d52;
     padding: 30px 15px;
 `
 
@@ -20,11 +20,25 @@ export const StyledButton = styled.button`
     font-size: 22px;
     margin-right: 20px;
     font-weight: 700;
-    &:hover  {
-        text-decoration: underline;
+    color: #fff;
+    position: relative;
+    &:hover::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
     }
-    &.active  {
-        text-decoration: underline;
+    &.active::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
     }
 `
 

@@ -146,7 +146,8 @@ export const diseases = {
 
 export const foods = {
     product: true,
-    title: "Կենսաբանական ակտիվ հավելումներ",
+    title: "Կենսաբանական ակտիվ հավելումներ, որոնք կօգնեն մաքրել օրգանիզմը",
+    // title: "",
     array: [
         {
             id: "1",

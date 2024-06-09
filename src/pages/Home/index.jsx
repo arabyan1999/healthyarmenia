@@ -9,6 +9,7 @@ import tiensResultLogo from "../../assets/results.jpg";
 import Booking from "../../components/booking";
 import Foreword from "../../components/foreword";
 import { StyledContainer } from "./styled";
+import FourReason from "../../components/fourReasons";
 
 function Home() {
     const images = [
@@ -22,6 +23,7 @@ function Home() {
             <Carousel images={images} />
             <StyledContainer>
                 <Foreword />
+                <FourReason />
                 <ReferenceBlock blocks={CommonDiseases} link="diseases" />
                 <ReferenceBlock blocks={foods} link="products" />
                 {/* <ReferenceBlock blocks={threatmentData} /> */}
