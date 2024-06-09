@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { StyledBlock,  StyledImage, StyledMenuTitle } from "../../components/referenceBlock/styled";
 import { foods } from "../../data";
-import { StyledButton, StyledNavigation, StyledProductsContainer, StyledProductsPage } from "./styled";
+import { StyledBackgroundTransparent, StyledButton, StyledNavigation, StyledProductsContainer, StyledProductsPage } from "./styled";
 import Loader from "../../components/loader";
 import { useScrollingElement } from "../../hooks/use-scrolling-element";
 
@@ -40,32 +40,34 @@ function ProductsPage() {
     }
 
     return (
-        <StyledProductsPage>
-            <StyledNavigation>
-                <StyledButton onClick={() => setActiveTab("all")} className={activeTab === "all" && "active"}>
-                    {t("all")}
-                </StyledButton>
-                <StyledButton onClick={() => setActiveTab("forSportsmen")} className={activeTab === "forSportsmen" && "active"}>
-                    {t("for_sportsmen")}
-                </StyledButton>
-                <StyledButton onClick={() => setActiveTab("forLoseWeight")} className={activeTab === "forLoseWeight" && "active"}>
-                    {t("for_lose_weight")}
-                </StyledButton>
-            </StyledNavigation>
-            <StyledProductsContainer>
-                {
-                    foodsState.map((product) => 
-                            (
-                                <StyledBlock key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
-                                    <StyledImage src={product.image} />
-                                    <StyledMenuTitle>{product.name}</StyledMenuTitle>
-                                    <p>{product.shortTitle + "..."}</p>
-                                </StyledBlock>
+        <StyledBackgroundTransparent>
+            <StyledProductsPage>
+                    <StyledNavigation>
+                        <StyledButton onClick={() => setActiveTab("all")} className={activeTab === "all" && "active"}>
+                            {t("all")}
+                        </StyledButton>
+                        <StyledButton onClick={() => setActiveTab("forSportsmen")} className={activeTab === "forSportsmen" && "active"}>
+                            {t("for_sportsmen")}
+                        </StyledButton>
+                        <StyledButton onClick={() => setActiveTab("forLoseWeight")} className={activeTab === "forLoseWeight" && "active"}>
+                            {t("for_lose_weight")}
+                        </StyledButton>
+                    </StyledNavigation>
+                    <StyledProductsContainer>
+                        {
+                            foodsState.map((product) => 
+                                    (
+                                        <StyledBlock key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
+                                            <StyledImage src={product.image} />
+                                            <StyledMenuTitle>{product.name}</StyledMenuTitle>
+                                            <p>{product.shortTitle + "..."}</p>
+                                        </StyledBlock>
+                                    )
                             )
-                    )
-                }
-            </StyledProductsContainer>
-        </StyledProductsPage>
+                        }
+                    </StyledProductsContainer>
+            </StyledProductsPage>
+        </StyledBackgroundTransparent>
     )
 }
 

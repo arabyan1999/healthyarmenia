@@ -53,6 +53,9 @@ export const StyledCustomSelect = styled.div`
     margin: 5px;
     text-align: left;
     font-size: 14px;
+    @media screen and (max-width: 550px) {
+        margin: 0 0 16px 0;
+    }
 `
 
 export const StyledSelected = styled.div`
@@ -124,6 +127,9 @@ export const StyledTextarea = styled.textarea`
     &.input::placeholder {
         color: #777;
     }
+    @media screen and (max-width: 550px) {
+        margin: 0 0 16px 0;
+    }
 `
 
 export const StyledSubmitButton = styled.button`
@@ -135,4 +141,7 @@ export const StyledSubmitButton = styled.button`
     font-size: 16px;
     padding: .5rem;
     margin: 5px;
+    @media screen and (max-width: 550px) {
+        margin: 0 0 12px 0;
+    }
 `

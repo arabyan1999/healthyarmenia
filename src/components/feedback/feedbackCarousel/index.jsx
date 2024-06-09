@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledBlockUpperPart, StyledButtonConainer, StyledComment, StyledFeedackContainer, StyledFeedbackBlock, StyledImageContainer } from './styled';
+import { StyledBlockUpperPart, StyledComment, StyledFeedackContainer, StyledFeedbackBlock, StyledFeedbackRef, StyledImageContainer } from './styled';
 
 const FeedbackCarousel = ({ feedbackData }) => {
   // const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,6 +31,7 @@ const FeedbackCarousel = ({ feedbackData }) => {
             </StyledComment>
         </StyledFeedbackBlock>
       ))}
+      <StyledFeedbackRef href={"/feedback"}>Բոլոր մեկնաբանությունները {">"}</StyledFeedbackRef>
         {/* <StyledButtonConainer onClick={handlePrev}>{"<"}</StyledButtonConainer>
         <StyledButtonConainer onClick={handleNext}>{">"}</StyledButtonConainer> */}
       {/* </div> */}

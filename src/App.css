@@ -6,12 +6,16 @@
     scroll-behavior: smooth;
 }
 
+.App {
+    min-height: calc(100vh - 60px);
+    background: #e5eae3 url(./assets/bgimage.jpg) no-repeat center top;
+    background-size: 100% 100%;
+}
+
 button {
     cursor: pointer;
 }
 
 .content {
     margin-top: 60px;
-    background: #e5eae3 url(./assets/bgimage.jpg) no-repeat center top;
-    background-size: auto;
 }

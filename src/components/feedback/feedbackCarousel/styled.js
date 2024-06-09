@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { StyledRef } from '../../referenceBlock/styled';
 
 export const StyledFeedackContainer = styled.div`
     background: #137d52;
     padding: 40px 100px;
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     @media screen and (max-width: 800px) {
         padding: 40px 60px;
@@ -61,4 +63,17 @@ export const StyledButtonConainer = styled.button`
     cursor: pointer;
     width: 30px;
     height: 30px;
+`
+
+export const StyledFeedbackRef = styled(StyledRef)`
+    color: #fff;
+    width: max-content;
+    @media screen and (max-width: 500px) {
+        color: #000;
+        background-color: #fff;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
 `

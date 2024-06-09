@@ -75,6 +75,10 @@ export const StyledRef = styled(StyledRefBlock)`
     &:hover {
         text-decoration: underline;
     }
+    @media screen and (max-width: 500px) {
+        align-self: center;
+        margin: 0;
+    }
 `
 
 export const StyledImage = styled.img`

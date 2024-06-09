@@ -5,6 +5,7 @@ import Loader from "../../components/loader";
 import { StyledDiseasesContainer, StyledDiseasesPage, StyledMainTitle, StyledSecondaryTitle, StyledUl, StyledUlContainer } from "./styled";
 import { diseases } from "../../data";
 import { StyledBlock, StyledImage, StyledMenuTitle } from "../../components/referenceBlock/styled";
+import { StyledBackgroundTransparent } from "../Products/styled";
 
 function DiseasesPage() {
     const [loading, setLoading] = useState(true);
@@ -23,35 +24,37 @@ function DiseasesPage() {
         )
     }
     return (
-        <StyledDiseasesPage>
-            {/* <StyledMainTitle>{diseases.title}</StyledMainTitle>
-            <p>{diseases.prologue}</p> */}
-            <StyledDiseasesContainer>
-                {/* {diseases.typeOfDiseases.map(el => (
-                        <StyledUlContainer key={el.id}>
-                            <StyledSecondaryTitle>{el.category}</StyledSecondaryTitle>
-                            <StyledUl>
-                                {
-                                    el.diseases.map(diseas => (
-                                        <li>{diseas.title}</li>
-                                    ))
-                                }
-                            </StyledUl>
-                        </StyledUlContainer>
-                ))} */}
-                {
-                    diseases.array.map((disease) => 
-                            (
-                                <StyledBlock key={disease.id} onClick={() => navigate(`/diseases/${disease.id}`)}>
-                                    <StyledImage src={disease.image} />
-                                    <StyledMenuTitle>{disease.name}</StyledMenuTitle>
-                                    <p>{disease.shortTitle + "..."}</p>
-                                </StyledBlock>
-                            )
-                    )
-                }
-            </StyledDiseasesContainer>
-        </StyledDiseasesPage>
+        <StyledBackgroundTransparent>
+            <StyledDiseasesPage>
+                {/* <StyledMainTitle>{diseases.title}</StyledMainTitle>
+                <p>{diseases.prologue}</p> */}
+                <StyledDiseasesContainer>
+                    {/* {diseases.typeOfDiseases.map(el => (
+                            <StyledUlContainer key={el.id}>
+                                <StyledSecondaryTitle>{el.category}</StyledSecondaryTitle>
+                                <StyledUl>
+                                    {
+                                        el.diseases.map(diseas => (
+                                            <li>{diseas.title}</li>
+                                        ))
+                                    }
+                                </StyledUl>
+                            </StyledUlContainer>
+                    ))} */}
+                    {
+                        diseases.array.map((disease) => 
+                                (
+                                    <StyledBlock key={disease.id} onClick={() => navigate(`/diseases/${disease.id}`)}>
+                                        <StyledImage src={disease.image} />
+                                        <StyledMenuTitle>{disease.name}</StyledMenuTitle>
+                                        <p>{disease.shortTitle + "..."}</p>
+                                    </StyledBlock>
+                                )
+                        )
+                    }
+                </StyledDiseasesContainer>
+            </StyledDiseasesPage>
+        </StyledBackgroundTransparent>
     )
 }
 

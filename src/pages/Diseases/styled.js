@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { StyledContainer } from "../../components/referenceBlock/styled";
 
-export const StyledDiseasesPage = styled.div`
+export const StyledDiseasesPage = styled(StyledContainer)`
     max-width: 1330px;
     margin: 0 auto 40px;
     padding-top: 2px;

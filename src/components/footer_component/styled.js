@@ -8,8 +8,15 @@ export const StyledFoot = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 554px) {
+        flex-direction: column;
+    }
 `
 
 export const StyledText = styled.p`
     margin-right: 45px;
+    @media screen and (max-width: 554px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 `
