@@ -55,7 +55,10 @@ export const StyledBlock = styled.div`
     border-radius: 10px;
     transition: all 0.5s ease;
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
+        @media screen and (max-width: 700px) {
+            transform: unset;
+        }
     }
 `
 
@@ -78,6 +81,10 @@ export const StyledRef = styled(StyledRefBlock)`
     @media screen and (max-width: 500px) {
         align-self: center;
         margin: 0;
+    }
+    svg {
+        width: 10px;
+        height: 10px;
     }
 `
 

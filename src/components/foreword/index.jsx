@@ -13,16 +13,16 @@ function Foreword() {
                 </StyledCentrelizedText> */}
                 <ol>
                     <StyledLi>
-                        Reason
+                        Էկո սնունդը չունի կողմնակի և բացասական ազդեցություն օրգանների և օգանիզմի վրա
                     </StyledLi>
                     <StyledLi>
-                        Reason
+                        Չի առաջացնում կախվածություն
                     </StyledLi>
                     <StyledLi>
-                        Reason
+                        Չի պարունակում հորմոններ, կոնսերվանտներ և ներկանյութեր, որի շնորհիվ պահպանվում է բուժական բարձր ազդեցություն
                     </StyledLi>
                     <StyledLi>
-                        Reason
+                        Բուժական ազդեղությունը պահպանվում է տարիներ շարունակ
                     </StyledLi>
                 </ol>
             </StyledBlock>

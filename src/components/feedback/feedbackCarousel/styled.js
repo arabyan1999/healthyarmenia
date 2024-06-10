@@ -68,6 +68,13 @@ export const StyledButtonConainer = styled.button`
 export const StyledFeedbackRef = styled(StyledRef)`
     color: #fff;
     width: max-content;
+    svg {
+        height: 10px;
+        width: 10px;
+        path {
+            fill: #fff;
+        }
+    }
     @media screen and (max-width: 500px) {
         color: #000;
         background-color: #fff;

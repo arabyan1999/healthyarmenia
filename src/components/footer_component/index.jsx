@@ -6,9 +6,10 @@ import { ReactComponent as InstaIcon } from "../../assets/instagram.svg";
 
 function Footer() {
     const { t } = useTranslation();
+    const year = (new Date()).getFullYear();
     return (
         <StyledFoot>
-            <StyledText>© 1992-2024 Tiens Group Co. Ltd. All Rights Reserved.</StyledText>
+            <StyledText>© 1992-{year} {t("footer_text_second_variant")}</StyledText>
             {/* © {t("footer_text")} */}
             <div>
                 <a href="https://www.instagram.com/tiens_official_armenia/" target="_blank"><InstaIcon /></a>

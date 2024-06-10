@@ -291,6 +291,10 @@ export const feedbackData = [
     { image: portraitImg1, name: 'Alice', surname: "Johnson", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris." },
     { image: portraitImg2, name: 'Jane', surname: "Smith", comment: "Content is intended to stand out on a page. So, if a designer or client is reviewing a template and its layout, they can easily become distracted by the writing and lose focus of the design itself." },
     { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
+    { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
+    { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
+    { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
+    { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
 ];
   
 export const threatmentData = {

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { StyledBlock, StyledContainer, StyledRef, StyledReferencesBlocks, StyledMainTitle, StyledMenuTitle, StyledImage } from "./styled";
+import { ReactComponent as RightArrow } from "../../assets/right-arrow-svgrepo-com.svg";
 
 function ReferenceBlock({ blocks, link }) {
     const navigate = useNavigate();
@@ -22,7 +23,7 @@ function ReferenceBlock({ blocks, link }) {
                     })
                 }
             </StyledReferencesBlocks>
-            <StyledRef href={link && `/${link}`}>Ավելին {">"}</StyledRef>
+            <StyledRef href={link && `/${link}`}>Ավելին <RightArrow /></StyledRef>
         </StyledContainer>
     )
 }

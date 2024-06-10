@@ -138,7 +138,7 @@ export const StyledCertificates = styled.div`
 `
 
 export const StyledCertificateImg = styled.img`
-    padding: 0 5px;
+    padding: 5px;
     cursor: pointer;
     /* width: 25%; */
     width: 269px;

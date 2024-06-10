@@ -94,6 +94,11 @@ function About() {
                     {t("certificates")}
                 </StyledBlockTitle>
                 <StyledFlex>
+                    <StyledText>
+                        {t("best_eastern_technologies")}
+                    </StyledText>
+                </StyledFlex>
+                <StyledFlex>
                     <StyledCertificates>
                         {/* <StyledCertificateImg src={certificate1} /> */}
                         {

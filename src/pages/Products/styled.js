@@ -20,6 +20,13 @@ export const StyledNavigation = styled.div`
     border-radius: 5px;
     background-color: #137d52;
     padding: 30px 15px;
+    @media screen and (max-width: 810px) {
+        justify-content: center;
+    }
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        align-items: start;   
+    }
 `
 
 export const StyledButton = styled.button`
@@ -48,6 +55,15 @@ export const StyledButton = styled.button`
         bottom: -2px;
         left: 0;
     }
+    @media screen and (max-width: 810px) {
+        margin: 0 10px; 
+    }
+    @media screen and (max-width: 600px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 500px) {
+        margin: 10px 0;   
+    }
 `
 
 export const StyledProductsContainer = styled.div`
@@ -55,4 +71,10 @@ export const StyledProductsContainer = styled.div`
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin-top: 30px;
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
 `
