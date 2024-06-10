@@ -3,7 +3,7 @@ import { StyledContainer } from "../../components/referenceBlock/styled";
 
 export const StyledDiseasesPage = styled(StyledContainer)`
     max-width: 1330px;
-    margin: 0 auto 40px;
+    margin: 40px auto;
     padding-top: 2px;
     @media screen and (max-width: 1300px) {
         max-width: 1200px;

@@ -7,6 +7,7 @@ export const StyledTitle = styled.h2`
 
 export const StyledLi = styled.li`
     margin-left: 40px;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 10px;
+    font-weight: 700;
 `

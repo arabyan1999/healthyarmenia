@@ -8,6 +8,7 @@ export const StyledEmptyContainer = styled.div`
     left: 0;
     right: 0;
     background: #fff;
+    z-index: 999;
 `
 
 export const StyledLoderContainer = styled.div`

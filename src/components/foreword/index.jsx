@@ -1,15 +1,30 @@
 import React from "react";
 import { StyledBlock, StyledCentrelizedText, StyledContainer, StyledFirstTitle, StyledSecondaryTitle, StyledText, StyledTitle } from "./styled";
 import FourReason from "../fourReasons";
+import { StyledLi } from "../fourReasons/styled";
 
 function Foreword() {
     return (
         <StyledContainer>
             <StyledBlock>
                 <StyledFirstTitle>ԻՆՉՈՒ՞ ՕԳՏՎԵԼ ՄԵՐ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԻՑ</StyledFirstTitle>
-                <StyledCentrelizedText>
+                {/* <StyledCentrelizedText>
                     Stex klini mi hat poqr text
-                </StyledCentrelizedText>
+                </StyledCentrelizedText> */}
+                <ol>
+                    <StyledLi>
+                        Reason
+                    </StyledLi>
+                    <StyledLi>
+                        Reason
+                    </StyledLi>
+                    <StyledLi>
+                        Reason
+                    </StyledLi>
+                    <StyledLi>
+                        Reason
+                    </StyledLi>
+                </ol>
             </StyledBlock>
             <StyledTitle>Главная идея предприятия: «Усердный труд, честность в бизнесе, любовь и искреннее стремление служить человечеству»</StyledTitle>
             <StyledText mb>Ухудшение экологических условий, системные стрессовые ситуации, употребление алкоголя и никотина, многочисленные болезни увеличивают потребность в витаминах, микроэлементах, антиоксидантах и других жизненноважных веществах, хронический дефицит которых делает организм уязвимым для недугов. Но желание оставаться здоровым и молодым присутствует у каждого. Чем раньше вы начнете следовать советам по оздоровлению, тем быстрее ощутите на себе их благотворное воздействие.</StyledText>

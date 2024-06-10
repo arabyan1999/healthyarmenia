@@ -12,6 +12,10 @@ export const StyledTitle = styled.h1`
     margin-bottom: 20px;
 `
 
+export const StyledContent = styled.div`
+    margin: 0 20px;
+`
+
 export const StyledSecondaryTitle = styled.h2`
     color: #137d52;
     margin-bottom: 10px; 
@@ -19,9 +23,18 @@ export const StyledSecondaryTitle = styled.h2`
 
 export const StyledBlock = styled.div`
     margin: 40px 0 60px;
+    @media screen and (max-width: 984px) {
+        margin: 30px 0 40px;
+    }
 `
 
 export const StyledImage = styled.img`
+    @media screen and (max-width: 984px) {
+        height: 200px;
+    }
+    @media screen and (max-width: 584px) {
+        height: 160px;
+    }
 `
 
 export const StyledBlockTitle = styled.h2`
@@ -35,6 +48,11 @@ export const StyledText = styled.p`
     text-align: center;
     font-size: 20px;
     line-height: 28px;
+`
+
+export const StyledNumbersText = styled(StyledText)`
+    font-weight: 700;
+    font-size: 24px;
 `
 
 export const StyledLeftText = styled(StyledText)`
@@ -57,10 +75,18 @@ export const StyledFlex = styled.div`
     margin: 40px 0;
     margin: 0 auto;
     max-width: 1100px;
+    @media screen and (max-width: 900px) {
+        flex-direction: column;
+    }
 `
 
 export const StyledCenterFlex = styled(StyledFlex)`
     justify-content: space-around;
+    flex-wrap: wrap;
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+        align-items: center;   
+    }
 `
 
 export const StyledCenter = styled.div`
@@ -91,6 +117,9 @@ export const StyledCircle = styled.div`
 export const StyledHeadImage = styled.img`
     margin-left: 30px;
     object-fit: contain;
+    @media screen and (max-width: 900px) {
+        margin-left: 0;
+    }
 `
 
 export const StyledMarginBottom = styled.div`
@@ -100,15 +129,17 @@ export const StyledMarginBottom = styled.div`
 
 export const StyledCertificates = styled.div`
     display: flex;
-    /* justify-content: space-between; */
     width: 100%;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    @media screen and (max-width: 700px) {
+        justify-content: center;
+    }
 `
 
 export const StyledCertificateImg = styled.img`
     padding: 0 5px;
     cursor: pointer;
-    width: 205px;
-    width: 25%;
+    /* width: 25%; */
+    width: 269px;
 `

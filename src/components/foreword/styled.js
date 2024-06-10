@@ -35,7 +35,7 @@ export const StyledBlock = styled.div`
 export const StyledText = styled.h3`
     margin-bottom: ${({ mb }) => mb && "10px"};
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22px;
     @media screen and (max-width: 700px) {
         font-size: 16px;
     }
@@ -43,4 +43,8 @@ export const StyledText = styled.h3`
 
 export const StyledCentrelizedText = styled(StyledText)`
     text-align: center;
+`
+
+export const StyledOl = styled.ol`
+
 `

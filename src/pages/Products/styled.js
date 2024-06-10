@@ -8,7 +8,10 @@ export const StyledProductsPage = styled(StyledContainer)`
 
 export const StyledBackgroundTransparent = styled.div`
     background: transparent;
-    padding-top: 40px;
+    padding-top: 1px;
+    @media screen and (max-width: 1330px) {
+        padding-top: 0;
+    }
 `
 
 export const StyledNavigation = styled.div`
