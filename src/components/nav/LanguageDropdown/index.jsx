@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 // import { StyledLanguageFropdown } from './styled';
 
@@ -28,6 +28,7 @@ import { useTranslation } from 'react-i18next';
 import './dropdown.css'; // Import your CSS file for styling
 
 const Dropdown = () => {
+  const items = [{title: "ՀԱՅ", value: "am"}, {title: "ENG", value: "en"}, {title: "РУС", value: "ru"}]
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState("ՀԱՅ");
   const { i18n } = useTranslation();
@@ -39,9 +40,16 @@ const Dropdown = () => {
   const changeLanguage = (item) => {
     setSelectedLang(item.title);
     i18n.changeLanguage(item.value);
+    localStorage.setItem("lang", item.value);
   }
 
-  const items = [{title: "ՀԱՅ", value: "am"}, {title: "ENG", value: "en"}, {title: "РУС", value: "ru"}]
+  useEffect(() => {
+    const lang = localStorage.getItem("lang");
+    console.log(lang);
+    const newLang = items.find(el => el.value === lang);
+    i18n.changeLanguage(lang);
+    setSelectedLang(newLang.title);
+  }, []);
 
   return (
     <div className="dropdown" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>

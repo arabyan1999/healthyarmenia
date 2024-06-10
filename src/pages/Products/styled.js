@@ -3,12 +3,13 @@ import { StyledContainer } from "../../components/referenceBlock/styled";
 
 export const StyledProductsPage = styled(StyledContainer)`
     max-width: 1330px;
-    margin: 60px auto;
+    margin: 40px auto;
 `
 
 export const StyledBackgroundTransparent = styled.div`
     background: transparent;
     padding-top: 1px;
+    min-height: calc(100vh - 160px);
     @media screen and (max-width: 1330px) {
         padding-top: 0;
     }

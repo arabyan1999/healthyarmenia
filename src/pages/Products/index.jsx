@@ -10,22 +10,21 @@ import { useScrollingElement } from "../../hooks/use-scrolling-element";
 function ProductsPage() {
     const [loading, setLoading] = useState(true);
     const [activeTab, setActiveTab] = useState("all");
-    const [foodsState, setFoodsState] = useState(foods.array);
+    const [filteredStat, setFilteredState] = useState(foods.array);
     const { t } = useTranslation();
     const navigate = useNavigate();
     useScrollingElement(loading);
 
-    // useEffect(() => {
-    //     console.log(activeTab);
-    //     if (activeTab === "all") {
-    //         return
-    //     } else {
-    //         const f = foodsState.filter((el) => {
-    //             return el?.service === activeTab
-    //         })
-    //         setFoodsState(f);
-    //     }
-    // }, [activeTab]);
+    useEffect(() => {
+        if (activeTab === "all") {
+            setFilteredState(foods.array)
+        } else {
+            const f = foods.array.filter((el) => {
+                return el?.filter.find((fil) => fil === activeTab)
+            })
+            setFilteredState(f);
+        }
+    }, [activeTab]);
 
     useEffect(() => {
         setTimeout(() => {
@@ -42,30 +41,30 @@ function ProductsPage() {
     return (
         <StyledBackgroundTransparent>
             <StyledProductsPage>
-                    <StyledNavigation>
-                        <StyledButton onClick={() => setActiveTab("all")} className={activeTab === "all" && "active"}>
-                            {t("all")}
-                        </StyledButton>
-                        <StyledButton onClick={() => setActiveTab("forSportsmen")} className={activeTab === "forSportsmen" && "active"}>
-                            {t("for_sportsmen")}
-                        </StyledButton>
-                        <StyledButton onClick={() => setActiveTab("forLoseWeight")} className={activeTab === "forLoseWeight" && "active"}>
-                            {t("for_lose_weight")}
-                        </StyledButton>
-                    </StyledNavigation>
-                    <StyledProductsContainer>
-                        {
-                            foodsState.map((product) => 
-                                    (
-                                        <StyledBlock key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
-                                            <StyledImage src={product.image} />
-                                            <StyledMenuTitle>{product.name}</StyledMenuTitle>
-                                            <p>{product.shortTitle + "..."}</p>
-                                        </StyledBlock>
-                                    )
+                <StyledNavigation>
+                    <StyledButton onClick={() => setActiveTab("all")} className={activeTab === "all" && "active"}>
+                        {t("all")}
+                    </StyledButton>
+                    <StyledButton onClick={() => setActiveTab("forSportsmen")} className={activeTab === "forSportsmen" && "active"}>
+                        {t("for_sportsmen")}
+                    </StyledButton>
+                    <StyledButton onClick={() => setActiveTab("forLoseWeight")} className={activeTab === "forLoseWeight" && "active"}>
+                        {t("for_lose_weight")}
+                    </StyledButton>
+                </StyledNavigation>
+                <StyledProductsContainer>
+                    {
+                        filteredStat.map((product) => 
+                            (
+                                <StyledBlock key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
+                                    <StyledImage src={product.image} />
+                                    <StyledMenuTitle>{product.name}</StyledMenuTitle>
+                                    <p>{product.shortTitle + "..."}</p>
+                                </StyledBlock>
                             )
-                        }
-                    </StyledProductsContainer>
+                        )
+                    }
+                </StyledProductsContainer>
             </StyledProductsPage>
         </StyledBackgroundTransparent>
     )
