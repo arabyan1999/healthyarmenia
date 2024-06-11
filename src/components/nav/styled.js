@@ -15,6 +15,10 @@ export const StyledHeader = styled.div`
 
 export const StyledTitle = styled.h2`
     margin-left: 30px;
+    height: 44px;
+    svg path {
+        fill: #137d52;
+    }
 `
 
 export const StyledNavigationBar = styled.nav`
@@ -52,8 +56,8 @@ export const StyledNavigationBar = styled.nav`
 export const StyledHomeLink = styled.a`
     color: #333;
     margin-right: 30px;
-    line-height: 40px;
     text-decoration: none;
+    height: fit-content;
 `
 
 export const StyledLink = styled(StyledHomeLink)`

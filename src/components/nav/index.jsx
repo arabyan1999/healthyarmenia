@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 // import { useScrollingElement } from '../../hooks/use-scrolling-element';
 import { StyledBurger, StyledHeader, StyledHomeLink, StyledLink, StyledNavigationBar, StyledTitle } from './styled';
 import LanguageDropdown from './LanguageDropdown';
+import { ReactComponent as TiensLogo } from "../../assets/logo.svg";
 
 function NavigationBar() {
   const { t } = useTranslation();
@@ -10,11 +11,11 @@ function NavigationBar() {
   // useScrollingElement(isOpen);
   return (
     <StyledHeader>
-      <StyledTitle>
         <StyledHomeLink href="/">
-          HealthyArmenia
-        </StyledHomeLink>
+      <StyledTitle>
+          <TiensLogo />
       </StyledTitle>
+        </StyledHomeLink>
       <StyledBurger is_open={isOpen} onClick={() => setIsOpen(prev => !prev)}>
         <div className="bar1"></div>
         <div className="bar2"></div>
