@@ -54,6 +54,9 @@ export const StyledComment = styled.div`
     /* background: #fff; */
     padding: 10px;
     /* border-radius: 5px; */
+    @media screen and (max-width: 500px) {
+        margin-top: 0;
+    }
 `
 
 export const StyledButtonConainer = styled.button`
@@ -82,5 +85,10 @@ export const StyledFeedbackRef = styled(StyledRef)`
         width: 100%;
         text-align: center;
         padding: 20px 0;
+        svg {
+            path {
+                fill: #000;
+            }
+        }
     }
 `

@@ -5,6 +5,9 @@ export const StyledBookingContainer = styled.div`
     width: 100%;
     padding: 30px;
     margin-bottom: 50px;
+    @media screen and (max-width: 500px) {
+        padding: 0;
+    }
 `
 
 export const StyledDoctorImgContainer = styled.div`

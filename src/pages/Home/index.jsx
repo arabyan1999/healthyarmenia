@@ -5,7 +5,7 @@ import Feedback from "../../components/feedback";
 import { CommonDiseases, foods } from "../../data";
 import tiensLogo from "../../assets/tiensLogo.jpg";
 import tiensProductLogo from "../../assets/tiens-product.jpeg";
-import tiensResultLogo from "../../assets/results.jpg";
+// import tiensResultLogo from "../../assets/results.jpg";
 import Booking from "../../components/booking";
 import Foreword from "../../components/foreword";
 import { StyledContainer } from "./styled";
@@ -14,9 +14,9 @@ import Loader from "../../components/loader";
 
 function Home() {
     const images = [
-        tiensLogo,
         tiensProductLogo,
-        tiensResultLogo
+        tiensLogo,
+        // tiensResultLogo
     ]
 
     const [loading, setLoading] = useState(true);

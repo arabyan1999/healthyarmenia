@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { StyledBlockUpperPart, StyledComment, StyledFeedackContainer, StyledFeedbackBlock, StyledFeedbackRef, StyledImageContainer } from './styled';
 import { ReactComponent as RightArrow } from "../../../assets/right-arrow-svgrepo-com.svg";
 
 const FeedbackCarousel = ({ feedbackData }) => {
+  const { t } = useTranslation();
   const Feedback = ({ el }) => (
     <StyledFeedbackBlock>
       <StyledBlockUpperPart>
@@ -36,7 +38,7 @@ const FeedbackCarousel = ({ feedbackData }) => {
         }
       })}
       {(window.location.pathname !== "/feedback") ? (
-        <StyledFeedbackRef href={"/feedback"}>Բոլոր մեկնաբանությունները <RightArrow /></StyledFeedbackRef>
+        <StyledFeedbackRef href={"/feedback"}>{t("all_feedbacks")} <RightArrow /></StyledFeedbackRef>
       ) : null}
     </StyledFeedackContainer>
   );

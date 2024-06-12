@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const CarouselWrapper = styled.div`
   position: relative;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   overflow: hidden;
   height: 500px;
   @media screen and (max-width: 1000px) {
