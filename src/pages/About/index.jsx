@@ -103,7 +103,7 @@ function About() {
                         {/* <StyledCertificateImg src={certificate1} /> */}
                         {
                             certificates.map((el) => (
-                            <StyledCertificateImg src={require(`../../assets/${el}.jpg`)} />  
+                                <StyledCertificateImg src={require(`../../assets/${el}.jpg`)} onClick={() => window.open(require(`../../assets/${el}.jpg`))} />  
                             ))
                         }
                     </StyledCertificates>

@@ -11,11 +11,11 @@ function NavigationBar() {
   // useScrollingElement(isOpen);
   return (
     <StyledHeader>
-        <StyledHomeLink href="/">
-      <StyledTitle>
+      <StyledHomeLink href="/">
+        <StyledTitle>
           <TiensLogo />
-      </StyledTitle>
-        </StyledHomeLink>
+        </StyledTitle>
+      </StyledHomeLink>
       <StyledBurger is_open={isOpen} onClick={() => setIsOpen(prev => !prev)}>
         <div className="bar1"></div>
         <div className="bar2"></div>
@@ -24,7 +24,7 @@ function NavigationBar() {
       <StyledNavigationBar is_open={isOpen}>
         <StyledTitle>
           <StyledHomeLink href="/" className='mobileLogo'>
-            HealthyArmenia
+            <TiensLogo />
           </StyledHomeLink>
         </StyledTitle>
         <StyledLink href="/about">{t("about")}</StyledLink>

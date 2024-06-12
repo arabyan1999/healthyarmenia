@@ -7,4 +7,5 @@ export const StyledContainer = styled.div`
 export const StyledTitle = styled.h2`
     margin-left: 20px;
     margin-bottom: 20px;
+    padding-top: 20px;
 `

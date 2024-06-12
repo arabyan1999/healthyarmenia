@@ -12,7 +12,7 @@ function Carousel({ images }) {
         width="100%"
         height="100%"
         images={images}
-        autoPlay={true}
+        // autoPlay={true}
         onStartSlide = {(index) => {
           setImageNum(index);
         }}

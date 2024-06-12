@@ -11,14 +11,15 @@ import Footer from './components/footer_component';
 import NotFound from './pages/Not_found';
 import './App.css';
 import Feedback from './components/feedback';
+import AddingDataToBack from './components/addingDataToBackAsAnAdmin';
 
 function App() {
   return (
     <Suspense fallback="loading">
+      <BrowserRouter>
       <div className="App">
         <NavigationBar />
         <div className='content'>
-          <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="about" element={<About />} />
@@ -28,11 +29,12 @@ function App() {
               <Route path="diseases/:id" element={<DiseasePage />} />
               <Route path="feedback" element={<Feedback />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="/add-data" element={<AddingDataToBack />} />
             </Routes>
-          </BrowserRouter>
         </div>
         <Footer />
       </div>
+      </BrowserRouter>
     </Suspense>
   );
 }

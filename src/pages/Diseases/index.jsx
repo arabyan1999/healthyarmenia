@@ -26,8 +26,9 @@ function DiseasesPage() {
     return (
         <StyledBackgroundTransparent>
             <StyledDiseasesPage>
-                {/* <StyledMainTitle>{diseases.title}</StyledMainTitle>
-                <p>{diseases.prologue}</p> */}
+            {/* <StyledTitle>Հիվանդություններ</StyledTitle> */}
+                <StyledMainTitle>{diseases.title}</StyledMainTitle>
+                {/* <p>{diseases.prologue}</p> */}
                 <StyledDiseasesContainer>
                     {/* {diseases.typeOfDiseases.map(el => (
                             <StyledUlContainer key={el.id}>

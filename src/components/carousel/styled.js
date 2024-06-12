@@ -4,7 +4,7 @@ export const CarouselWrapper = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: 400px;
+  height: 500px;
   @media screen and (max-width: 1000px) {
     height: 350px;
   }

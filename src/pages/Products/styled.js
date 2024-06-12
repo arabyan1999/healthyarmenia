@@ -15,12 +15,16 @@ export const StyledBackgroundTransparent = styled.div`
     }
 `
 
+export const StyledTitle = styled.h2`
+    text-align: center;
+`
+
 export const StyledNavigation = styled.div`
     margin-top: 30px;
     display: flex;
     border-radius: 5px;
     background-color: #137d52;
-    padding: 30px 15px;
+    padding: 20px 15px;
     @media screen and (max-width: 810px) {
         justify-content: center;
     }

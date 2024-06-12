@@ -12,7 +12,7 @@ export const StyledDiseasesPage = styled(StyledContainer)`
 
 export const StyledMainTitle = styled.h2`
     text-align: center;
-    margin: 30px 0;
+    margin-top: 30px;
 `
 
 export const StyledDiseasesContainer = styled.div`

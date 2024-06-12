@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { StyledBlock,  StyledImage, StyledMenuTitle } from "../../components/referenceBlock/styled";
 import { foods } from "../../data";
-import { StyledBackgroundTransparent, StyledButton, StyledNavigation, StyledProductsContainer, StyledProductsPage } from "./styled";
+import { StyledBackgroundTransparent, StyledButton, StyledNavigation, StyledProductsContainer, StyledProductsPage, StyledTitle } from "./styled";
 import Loader from "../../components/loader";
 import { useScrollingElement } from "../../hooks/use-scrolling-element";
 
@@ -41,6 +41,7 @@ function ProductsPage() {
     return (
         <StyledBackgroundTransparent>
             <StyledProductsPage>
+                <StyledTitle>Պահպանեք ձեր առողջությունը</StyledTitle>
                 <StyledNavigation>
                     <StyledButton onClick={() => setActiveTab("all")} className={activeTab === "all" && "active"}>
                         {t("all")}
@@ -59,7 +60,7 @@ function ProductsPage() {
                                 <StyledBlock key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
                                     <StyledImage src={product.image} />
                                     <StyledMenuTitle>{product.name}</StyledMenuTitle>
-                                    <p>{product.shortTitle + "..."}</p>
+                                    {/* <p>{product.shortTitle + "..."}</p> */}
                                 </StyledBlock>
                             )
                         )
