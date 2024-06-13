@@ -7,6 +7,7 @@ import { ReactComponent as RightArrow } from "../../assets/right-arrow-svgrepo-c
 function ReferenceBlock({ blocks, link }) {
     const { t } = useTranslation();
     const navigate = useNavigate();
+
     return (
         <StyledContainer>
             <StyledMainTitle>{link === "products" ? t("biologic_actives_that_help") : t("common_diseases_title")}</StyledMainTitle>
