@@ -45,9 +45,11 @@ const Dropdown = () => {
 
   useEffect(() => {
     const lang = localStorage.getItem("lang");
-    const newLang = items.find(el => el.value === lang);
-    i18n.changeLanguage(lang);
-    setSelectedLang(newLang?.title);
+    if (!!lang) {
+      const newLang = items.find(el => el.value === lang);
+      i18n.changeLanguage(lang);
+      setSelectedLang(newLang?.title);
+    }
   }, []);
 
   return (

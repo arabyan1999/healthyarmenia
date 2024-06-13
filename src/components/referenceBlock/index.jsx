@@ -1,13 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { StyledBlock, StyledContainer, StyledRef, StyledReferencesBlocks, StyledMainTitle, StyledMenuTitle, StyledImage } from "./styled";
 import { ReactComponent as RightArrow } from "../../assets/right-arrow-svgrepo-com.svg";
 
 function ReferenceBlock({ blocks, link }) {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     return (
         <StyledContainer>
-            <StyledMainTitle>{blocks.title}</StyledMainTitle>
+            <StyledMainTitle>{link === "products" ? t("biologic_actives_that_help") : t("common_diseases_title")}</StyledMainTitle>
             <StyledReferencesBlocks isProfessors={blocks.isProfessors}>
                 {
                     blocks.array.map((block, index) => {

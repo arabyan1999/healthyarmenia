@@ -37,6 +37,10 @@ export const StyledMainTitle = styled.h2`
         margin-left: 0;
         text-align: center;
     }
+    @media screen and (max-width: 500px) {
+        font-size: 22px;
+        margin: 0 20px;
+    }
 `
 
 export const StyledMenuTitle = styled.h3`

@@ -22,11 +22,11 @@ function NavigationBar() {
         <div className="bar3"></div>
       </StyledBurger>
       <StyledNavigationBar is_open={isOpen}>
-        <StyledTitle>
+        {/* <StyledTitle>
           <StyledHomeLink href="/" className='mobileLogo'>
             <TiensLogo />
           </StyledHomeLink>
-        </StyledTitle>
+        </StyledTitle> */}
         <StyledLink href="/about">{t("about")}</StyledLink>
         <StyledLink href="/diseases">{t("diseases")}</StyledLink>
         <StyledLink href="/products">{t("product")}</StyledLink>

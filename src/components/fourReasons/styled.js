@@ -10,4 +10,7 @@ export const StyledLi = styled.li`
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: 700;
+    @media screen and (max-width: 500px) {
+        font-size: 20px;
+    }
 `
