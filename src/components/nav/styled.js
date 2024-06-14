@@ -12,6 +12,9 @@ export const StyledHeader = styled.div`
     z-index: 999;
     width: 100%;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),0 2px 2px 0 rgba(0, 0, 0, 0.14),0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    @media screen and (max-width: 500px) {
+        padding: 17px 5px;
+    }
 `
 
 export const StyledTitle = styled.h2`
@@ -19,6 +22,10 @@ export const StyledTitle = styled.h2`
     height: 44px;
     svg path {
         fill: #137d52;
+    }
+    @media screen and (max-width: 500px) {
+        height: 30px;
+        margin-left: 0;
     }
 `
 
@@ -59,6 +66,11 @@ export const StyledHomeLink = styled.a`
     margin-right: 30px;
     text-decoration: none;
     height: fit-content;
+    @media screen and (max-width: 500px) {
+        svg {
+            height: 30px;
+        }
+    }
 `
 
 export const StyledLink = styled(StyledHomeLink)`

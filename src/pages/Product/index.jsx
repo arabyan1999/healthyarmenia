@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { foods } from "../../data";
 import { useTranslation } from "react-i18next";
-import { StyledContentText, StyledLine, StyledProductUpperLeftPart, StyledProductContainer, StyledProductImg, StyledProductUpperPart, StyledTitle, StyledLowerPart, StyledLineSpace } from "./styled";
+import { StyledContentText, StyledLine, StyledProductUpperLeftPart, StyledProductContainer, StyledProductImg, StyledProductUpperPart, StyledTitle, StyledLowerPart, StyledLineSpace, StyledMobileTitle } from "./styled";
 
 function Product() {
     const { id } = useParams();
@@ -12,6 +12,7 @@ function Product() {
     return (
         <StyledProductContainer>
             <StyledProductUpperPart>
+                <StyledMobileTitle>{product.name}</StyledMobileTitle>
                 <StyledProductImg src={product.image} />
                 <StyledProductUpperLeftPart>
                     <StyledTitle>{product.name}</StyledTitle>
