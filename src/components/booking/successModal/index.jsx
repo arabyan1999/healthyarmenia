@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import successIcon from "../../../assets/success.svg";
 import { StyledFlex, StyledImageContainer, StyledModal, StyledModalBackground, StyledText, StyledTitle } from "./styled";
 
 function SuccessModal() {
+    const { t } = useTranslation();
     return (
         <StyledModalBackground>
             <StyledModal>
@@ -11,8 +13,8 @@ function SuccessModal() {
                         <img src={successIcon} alt="success" />
                     </StyledImageContainer>
                     <div>
-                        <StyledTitle>Success</StyledTitle>
-                        <StyledText>You're booked call successfuly</StyledText>
+                        <StyledTitle>{t("success")}</StyledTitle>
+                        <StyledText>{t("booked_successfully")}</StyledText>
                     </div>
                 </StyledFlex>
             </StyledModal>

@@ -55,7 +55,7 @@ export const StyledNavigationBar = styled.nav`
         justify-content: start;
         right: ${({ is_open }) => is_open ? 0 : '-150%'};
         transition: all 0.5s ease;
-        a, h2, div {
+        a, h2, div, button {
             margin: 0 0 12px 0;
         }
     }
@@ -74,6 +74,17 @@ export const StyledHomeLink = styled.a`
 `
 
 export const StyledLink = styled(StyledHomeLink)`
+    &:hover {
+        text-decoration: underline;
+    }
+`
+
+export const StyledButton = styled.button`
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    margin-right: 30px;
     &:hover {
         text-decoration: underline;
     }

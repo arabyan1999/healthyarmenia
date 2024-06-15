@@ -84,6 +84,8 @@
     "prophylactic_examination": "Prophylactic examination",
     "comment": "Comment",
     "book": "Book",
+    "success": "Success",
+    "booked_successfully": "You're booked call successfuly",
 
     "page_not_found": "PAGE NOT FOUND",
     "requested_page_not_found": "THE PAGE YOU REQUESTED WAS NOT FOUND",

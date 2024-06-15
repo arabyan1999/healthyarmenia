@@ -85,6 +85,8 @@
     "prophylactic_examination": "Профилактический осмотр",
     "comment": "Коментарий",
     "book": "Заказать",
+    "success": "Успешное бронирование",
+    "booked_successfully": "Вы успешно забронировали звонок",
 
     "page_not_found": "СТРАНИЦА НЕ НАЙДЕНО",
     "requested_page_not_found": "ЗАПРОШЕННАЯ ВАМИ СТРАНИЦА НЕ НАЙДЕНА",

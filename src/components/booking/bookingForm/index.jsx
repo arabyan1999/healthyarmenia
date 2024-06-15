@@ -5,7 +5,7 @@ import SuccessModal from "../successModal";
 import { useScrollingElement } from "../../../hooks/use-scrolling-element";
 import { createBookRequestApi } from "../../../request/requests";
 
-function BookingForm() {
+function BookingForm({ setModal }) {
     const [data, setData] = useState({});
     const [open, setOpen] = useState(false);
     const [nameError, setNameError] = useState(false);
@@ -37,6 +37,7 @@ function BookingForm() {
         console.log(nameError)
         if (data.name && data.surname && data.phone) {
             createBookRequestApi(data);
+            setSuccess(true);
         }
     };
 
@@ -44,6 +45,9 @@ function BookingForm() {
         if (success) {
             setTimeout(() => {
                 setSuccess(false);
+                if (setModal !== undefined) {
+                    setModal(false);
+                }
             }, 5000);
         }
     }, [success]);
