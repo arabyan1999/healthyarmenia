@@ -12,6 +12,9 @@ function DiseasePage() {
             <StyledMainTitle>
                 {disease.name}
             </StyledMainTitle>
+            <StyledBlockTitle>
+                Նկարագիր
+            </StyledBlockTitle>
             <StyledContentText>
                 {disease.about}
             </StyledContentText>
@@ -34,14 +37,14 @@ function DiseasePage() {
                     {disease.diagnosis}
                 </StyledContentText>
             </StyledBlock>
-            <StyledBlockTitle>
+            {/* <StyledBlockTitle>
                 Բուժումը
             </StyledBlockTitle>
             <StyledBlock>
                 <StyledContentText>
                     {disease.treatment}
                 </StyledContentText>
-            </StyledBlock>
+            </StyledBlock> */}
         </StyledContainer>
     )
 }

@@ -34,7 +34,6 @@ function BookingForm({ setModal }) {
             setPhoneError(true);
         }
         
-        console.log(nameError)
         if (data.name && data.surname && data.phone) {
             createBookRequestApi(data);
             setSuccess(true);
