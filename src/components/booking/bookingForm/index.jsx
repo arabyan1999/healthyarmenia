@@ -116,7 +116,7 @@ function BookingForm({ setModal }) {
                                     key={item}
                                     onClick={() => {
                                         setOpen(false);
-                                        setData(prev => setNewData(prev, "service", item))
+                                        setData(prev => setNewData(prev, "service_type", item))
                                     }
                                 }>
                                     {item}

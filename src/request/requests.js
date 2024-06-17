@@ -38,7 +38,7 @@ export const getDiseaseByIdApi = (id) => {
     }
 }
 
-export const getProductApi = (id) => {
+export const getProductByIdApi = (id) => {
     try {
         http.get(`/get_product/${id}`)
             .then((res) => {
@@ -69,6 +69,16 @@ export const getProductsApi = () => {
 export const createBookRequestApi = (data) => {
     try {
         http.post('/create_call_request', data)
+            .then(res => console.log(res))
+            .catch(error => console.log(error))
+    } catch (e) {
+        throw e;
+    }
+}
+
+export const createProductApi = (data) => {
+    try {
+        http.post("/add_product", data)
             .then(res => console.log(res))
             .catch(error => console.log(error))
     } catch (e) {

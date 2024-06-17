@@ -162,7 +162,7 @@ export const foods = {
     array: [
         {
             id: "1",
-            name: "Ուղեղային կալցիում",
+            name: "Գլխուղեղի սնուցման կալցիում",
             shortTitle: "հատուկ նախատեսված է արյան մեջ շաքարի բարձր մակարդակ ունեցող մարդկանց, դիետիկների և դիաբետիկների համար",
             image: mindcalciumLogo,
             category: "recovery",

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { foods } from "../../data";
 import { useTranslation } from "react-i18next";
 import { StyledContentText, StyledLine, StyledProductUpperLeftPart, StyledProductContainer, StyledProductImg, StyledProductUpperPart, StyledTitle, StyledLowerPart, StyledLineSpace, StyledMobileTitle } from "./styled";
+import { getProductByIdApi } from "../../request/requests";
 
 function Product() {
     const { id } = useParams();
     const { t } = useTranslation();
     const product = foods.array.find((itm) => itm.id === id);
+
+    useEffect(() => {
+        const getProduct = () => (
+            getProductByIdApi(1)
+        )
+
+        getProduct();
+    }, []);
 
     return (
         <StyledProductContainer>
