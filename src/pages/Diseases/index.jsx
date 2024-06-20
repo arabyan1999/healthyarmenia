@@ -6,6 +6,8 @@ import { StyledDiseasesContainer, StyledDiseasesPage, StyledMainTitle, StyledSec
 import { diseases } from "../../data";
 import { StyledBlock, StyledImage, StyledMenuTitle } from "../../components/referenceBlock/styled";
 import { StyledBackgroundTransparent } from "../Products/styled";
+import { t } from "i18next";
+import { sliceText } from "../../helpers/helper";
 
 function DiseasesPage() {
     const [loading, setLoading] = useState(true);
@@ -48,7 +50,7 @@ function DiseasesPage() {
                                     <StyledBlock key={disease.id} onClick={() => navigate(`/diseases/${disease.id}`)}>
                                         <StyledImage src={disease.image} />
                                         <StyledMenuTitle>{disease.name}</StyledMenuTitle>
-                                        <p>{disease.shortTitle + "..."}</p>
+                                        <p>{sliceText(disease.about, 17)}</p>
                                     </StyledBlock>
                                 )
                         )

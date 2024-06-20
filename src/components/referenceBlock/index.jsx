@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { StyledBlock, StyledContainer, StyledRef, StyledReferencesBlocks, StyledMainTitle, StyledMenuTitle, StyledImage } from "./styled";
 import { ReactComponent as RightArrow } from "../../assets/right-arrow-svgrepo-com.svg";
+import { sliceText } from "../../helpers/helper";
 
 function ReferenceBlock({ blocks, link }) {
     const { t } = useTranslation();
@@ -11,15 +12,15 @@ function ReferenceBlock({ blocks, link }) {
     return (
         <StyledContainer>
             <StyledMainTitle>{link === "products" ? t("biologic_actives_that_help") : t("common_diseases_title")}</StyledMainTitle>
-            <StyledReferencesBlocks isProfessors={blocks.isProfessors}>
+            <StyledReferencesBlocks>
                 {
                     blocks.array.map((block, index) => {
                         if (index <=2) {
                                 return (
                                     <StyledBlock key={block.id} onClick={!!link ? () => navigate(`/${link}/${block.id}`) : () => {}}>
-                                        <StyledImage src={block.image} isProfessors={blocks.isProfessors} />
+                                        <StyledImage src={block.image} />
                                         <StyledMenuTitle>{block.name}</StyledMenuTitle>
-                                        <p>{blocks.isProfessors ? block.role : block.shortTitle + "..."}</p>
+                                        <p>{sliceText(t(block.about) || t(block.function), 10)}</p>
                                     </StyledBlock>
                                 )
                         }

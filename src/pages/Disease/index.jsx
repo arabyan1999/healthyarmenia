@@ -29,14 +29,14 @@ function DiseasePage() {
                     {disease.symptoms}
                 </StyledContentText>
             </StyledBlock>
-            <StyledBlockTitle>
+            {/* <StyledBlockTitle>
                 Ախտորոշումը
             </StyledBlockTitle>
             <StyledBlock>
                 <StyledContentText>
                     {disease.diagnosis}
                 </StyledContentText>
-            </StyledBlock>
+            </StyledBlock> */}
             {/* <StyledBlockTitle>
                 Բուժումը
             </StyledBlockTitle>

@@ -1,0 +1,1 @@
+export const sliceText = (text, count) => text.split(' ').slice(0, count).join(' ') + "...";

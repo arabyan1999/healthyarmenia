@@ -6,6 +6,7 @@ import { foods } from "../../data";
 import { StyledBackgroundTransparent, StyledButton, StyledNavigation, StyledProductsContainer, StyledProductsPage, StyledTitle } from "./styled";
 import Loader from "../../components/loader";
 import { useScrollingElement } from "../../hooks/use-scrolling-element";
+import { sliceText } from "../../helpers/helper";
 
 function ProductsPage() {
     const [loading, setLoading] = useState(true);
@@ -60,7 +61,7 @@ function ProductsPage() {
                                 <StyledBlock key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
                                     <StyledImage src={product.image} />
                                     <StyledMenuTitle>{product.name}</StyledMenuTitle>
-                                    {/* <p>{product.shortTitle + "..."}</p> */}
+                                    <p>{sliceText(t(product.function), 17)}</p>
                                 </StyledBlock>
                             )
                         )
