@@ -39,6 +39,7 @@ function BookingForm({ setModal }) {
             setSuccess(true);
         }
     };
+    console.log(open);
 
     useEffect(() => {
         if (success) {

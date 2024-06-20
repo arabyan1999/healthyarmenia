@@ -7,12 +7,25 @@
 }
 
 .App {
+    position: relative;
     min-height: calc(100vh - 60px);
-    background: #e5eae3 url(./assets/bgimage.jpg) no-repeat center top;
+    /* background: #e5eae3 url(./assets/bgimage.jpg) no-repeat center top; */
+    background: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url(./assets/bgimage.jpg) no-repeat center top;
     background-size: cover;
     @media screen and (max-width: 1400px) {
         background-size: auto;
     }
+}
+
+.App::before {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
 }
 
 button {

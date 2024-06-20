@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { StyledBlock, StyledCentrelizedText, StyledContainer, StyledFirstTitle, StyledSecondaryTitle, StyledText, StyledTitle } from "./styled";
+import { StyledBlock, StyledCentrelizedText, StyledContainer, StyledFirstTitle, StyledFlex, StyledImg, StyledSecondaryTitle, StyledText, StyledTitle } from "./styled";
 import FourReason from "../fourReasons";
 import { StyledLi } from "../fourReasons/styled";
+import detoxImage from "../../assets/detox.jpg";
 
 function Foreword() {
     const { t } = useTranslation();
@@ -28,15 +29,19 @@ function Foreword() {
                     </StyledLi>
                 </ol>
             </StyledBlock>
-            <StyledTitle>{t("main_idea")} {t("hard_work")}</StyledTitle>
+            {/* <StyledTitle>{t("main_idea")} {t("hard_work")}</StyledTitle>
             <StyledText mb>{t("deteriorating_environmental_conditions")}</StyledText>
-            <StyledText mb>{t("site_provides_valuable_information")}</StyledText>
+            <StyledText mb>{t("site_provides_valuable_information")}</StyledText> */}
+
             <StyledSecondaryTitle>
                 {t("detox")}
             </StyledSecondaryTitle>
-            <StyledText>
-                {t("detox_is")}
-            </StyledText>
+            <StyledFlex>
+                <StyledText>
+                    {t("detox_is")}
+                </StyledText>
+                <StyledImg src={detoxImage} alt="" />
+            </StyledFlex>
             <FourReason />
         </StyledContainer>
     )

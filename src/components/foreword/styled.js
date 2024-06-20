@@ -45,6 +45,33 @@ export const StyledCentrelizedText = styled(StyledText)`
     text-align: center;
 `
 
+export const StyledFlex = styled.div`
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    @media screen and (max-width: 900px) {
+        flex-direction: column-reverse;
+    }
+`
+
+export const StyledImg = styled.img`
+    width: 400px;
+    height: 300px;
+    margin-left: 20px;
+    @media screen and (max-width: 900px) {
+        margin: 0 0 30px 0;
+        width: 450px;
+    }
+    @media screen and (max-width: 900px) {
+        margin: 0 auto 30px;
+    }
+    @media screen and (max-width: 520px) {
+        margin: 0 0 30px 0;
+        width: 100%;
+        height: auto;
+    }
+`
+
 export const StyledOl = styled.ol`
 
 `

@@ -9,6 +9,9 @@ export const StyledBookingForm = styled.div`
     @media screen and (max-width: 560px) {
         width: 100%;
     }
+    @media screen and (max-width: 420px) {
+        padding: 50px 20px;
+    }
 `
 
 export const StyledTitle = styled.h2`
