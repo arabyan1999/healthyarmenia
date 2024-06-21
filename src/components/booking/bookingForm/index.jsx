@@ -62,7 +62,7 @@ function BookingForm({ setModal }) {
                     <StyledInput
                         className="input"
                         type="text"
-                        error={nameError}
+                        error={nameError ? 1 : undefined}
                         placeholder={t("name") + " *"}
                         onChange={(e) => {
                             setData(prev => setNewData(prev, "name", e.target.value));
@@ -72,7 +72,7 @@ function BookingForm({ setModal }) {
                     <StyledInput
                         className="input"
                         type="text"
-                        error={surnameError}
+                        error={surnameError ? 1 : undefined}
                         placeholder={t("surname") + " *"}
                         onChange={(e) => {
                             setData(prev => setNewData(prev, "surname", e.target.value));
@@ -90,7 +90,7 @@ function BookingForm({ setModal }) {
                     <StyledInput
                         className="input"
                         type="text"
-                        error={phoneError}
+                        error={phoneError ? 1 : undefined}
                         placeholder={t("telephone") + " *"}
                         onChange={(e) => {
                             setData(prev => setNewData(prev, "phone", e.target.value));
@@ -106,16 +106,17 @@ function BookingForm({ setModal }) {
                     </StyledSelect>
                 </StyledBlockFlex> */}
                 <StyledBlockFlex>
-                    <StyledCustomSelect class="custom-select">
-                        <StyledSelected class="select-selected" not_empty={!!data.service} onClick={() => setOpen(prev => !prev)}>
-                            {data?.service ?? t("select_service")}
+                    <StyledCustomSelect className="custom-select">
+                        <StyledSelected className="select-selected" not_empty={!!data.service_type  ? true : undefined} onClick={() => setOpen(prev => !prev)}>
+                            {data?.service_type ?? t("select_service")}
                         </StyledSelected>
                         {!!open && (
-                        <SelectItems class="select-items">
+                        <SelectItems className="select-items">
                             {typeOfService.map(item => (
                                 <div
                                     key={item}
                                     onClick={() => {
+                                        console.log(data?.service);
                                         setOpen(false);
                                         setData(prev => setNewData(prev, "service_type", item))
                                     }

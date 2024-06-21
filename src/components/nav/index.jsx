@@ -18,12 +18,12 @@ function NavigationBar() {
           <TiensLogo />
         </StyledTitle>
       </StyledHomeLink>
-      <StyledBurger is_open={isOpen} onClick={() => setIsOpen(prev => !prev)}>
+      <StyledBurger is_open={isOpen ? 1 : undefined} onClick={() => setIsOpen(prev => !prev)}>
         <div className="bar1"></div>
         <div className="bar2"></div>
         <div className="bar3"></div>
       </StyledBurger>
-      <StyledNavigationBar is_open={isOpen}>
+      <StyledNavigationBar is_open={isOpen ? 1 : undefined}>
         {/* <StyledTitle>
           <StyledHomeLink href="/" className='mobileLogo'>
             <TiensLogo />

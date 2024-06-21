@@ -53,7 +53,7 @@ export const StyledNavigationBar = styled.nav`
         z-index: 999;
         padding: 20px 0;
         justify-content: start;
-        right: ${({ is_open }) => is_open ? 0 : '-150%'};
+        right: ${({ is_open }) => !!is_open ? 0 : '-150%'};
         transition: all 0.5s ease;
         a, h2, div, button {
             margin: 0 0 12px 0;
@@ -105,15 +105,15 @@ export const StyledBurger = styled.div`
     }
 
     .bar1 {
-        transform: ${({ is_open }) => is_open && "rotate(-45deg) translate(-4px, 4px)"};
+        transform: ${({ is_open }) => !!is_open && "rotate(-45deg) translate(-4px, 4px)"};
     }
 
     .bar2 {
-        opacity: ${({ is_open }) => is_open && 0};
+        opacity: ${({ is_open }) => !!is_open && 0};
     }
 
     .bar3 {
-        transform: ${({ is_open }) => is_open && "rotate(45deg) translate(-5px, -5px)"};
+        transform: ${({ is_open }) => !!is_open && "rotate(45deg) translate(-5px, -5px)"};
     }
 
     @media only screen and (min-width: 1120px) {

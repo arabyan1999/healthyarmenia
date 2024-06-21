@@ -28,12 +28,12 @@ const FeedbackCarousel = ({ feedbackData }) => {
         if (window.location.pathname !== "/feedback") {
           if (index <= 2) {
             return (
-              <Feedback el={el} />
+              <Feedback el={el} key={index} />
             )  
           }
         } else {
           return (
-            <Feedback el={el} />
+            <Feedback el={el} key={index} />
           )
         }
       })}

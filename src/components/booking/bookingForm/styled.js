@@ -21,7 +21,7 @@ export const StyledTitle = styled.h2`
 export const StyledForm = styled.form``
 
 export const StyledInput = styled.input`
-    background-color: ${({ error }) => error ? "#ffdfdf" : "#dedede"};
+    background-color: ${({ error }) => !!error ? "#ffdfdf" : "#dedede"};
     border-radius: 5px;
     border: ${({ error }) => error ? "1px solid red" : "none"};
     padding: .5rem;
@@ -63,7 +63,7 @@ export const StyledCustomSelect = styled.div`
 
 export const StyledSelected = styled.div`
     background-color: #dedede;
-    color: ${({ not_empty }) => not_empty ? "#000" : "#777"};
+    color: ${({ not_empty }) => !!not_empty ? "#000" : "#777"};
     padding: .5rem;
     cursor: pointer;
     border-radius: 5px;
