@@ -86,6 +86,7 @@
     "book": "Book",
     "success": "Success",
     "booked_successfully": "You're booked call successfuly",
+    "expert_advice": "Expert advice is free",
 
     "page_not_found": "PAGE NOT FOUND",
     "requested_page_not_found": "THE PAGE YOU REQUESTED WAS NOT FOUND",

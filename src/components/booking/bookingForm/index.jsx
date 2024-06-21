@@ -39,7 +39,6 @@ function BookingForm({ setModal }) {
             setSuccess(true);
         }
     };
-    console.log(open);
 
     useEffect(() => {
         if (success) {
@@ -116,7 +115,6 @@ function BookingForm({ setModal }) {
                                 <div
                                     key={item}
                                     onClick={() => {
-                                        console.log(data?.service);
                                         setOpen(false);
                                         setData(prev => setNewData(prev, "service_type", item))
                                     }
@@ -140,7 +138,7 @@ function BookingForm({ setModal }) {
                     {t("book")}
                 </StyledSubmitButton>
             </StyledBlockFlex>
-            <StyledSpan>&#9432; Մասնագետի խորհրդատվությունն անվճար է</StyledSpan>
+            <StyledSpan>&#9432; {t("expert_advice")}</StyledSpan>
             {success && <SuccessModal />}
         </StyledBookingForm>
     )
