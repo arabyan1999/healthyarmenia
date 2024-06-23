@@ -1,13 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { diseases } from "../../data";
 import { StyledContentText } from "../Product/styled";
-import { StyledBlock, StyledBlockTitle, StyledContainer, StyledImgContainer, StyledMainTitle } from "./styled";
-import { useTranslation } from "react-i18next";
+import { StyledBlock, StyledBlockTitle, StyledCenterText, StyledContainer, StyledImgContainer, StyledMainTitle, StyledRefButton } from "./styled";
+// import { ContactModal } from "../../components/nav/contactModal";
 
 function DiseasePage() {
     const { t } = useTranslation();
     const { id } = useParams();
+    // const [modal, setModal] = useState(false);
     const disease = diseases.array.find(el => el.id === id);
     return (
         <StyledContainer>
@@ -47,6 +49,8 @@ function DiseasePage() {
                     {disease.treatment}
                 </StyledContentText>
             </StyledBlock> */}
+            {/* <StyledCenterText>Հիվանդության կանխարգելման և/կամ բուժման մասին տեղեկություն ստանալու համար <StyledRefButton onClick={() => setModal(true)}>գրանցվեք հղումով</StyledRefButton></StyledCenterText>
+            {modal && <ContactModal setModal={setModal} />} */}
         </StyledContainer>
     )
 }

@@ -4,7 +4,6 @@ import { StyledTitle } from "../Product/styled";
 export const StyledContainer = styled.div`
     max-width: 1100px;
     margin: 40px auto;
-    padding-top: 20px;
     @media screen and (max-width: 1100px) {
         margin: 20px;
     }
@@ -41,4 +40,17 @@ export const StyledBlock = styled.div`
 export const StyledBlockTitle = styled.h3`
     font-size: 24px;
     margin-bottom: 20px;
+`
+
+export const StyledCenterText = styled.p`
+    text-align: center;
+    padding-top: 40px;
+    font-size: 18px;
+`
+
+export const StyledRefButton = styled.button`
+    border: unset;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 700;
 `
