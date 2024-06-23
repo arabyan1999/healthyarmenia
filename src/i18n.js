@@ -6,6 +6,7 @@ import { initReactI18next } from 'react-i18next';
 
 // export const useInitI18n = () => {
 //   useMount(() => {
+    const lang = localStorage.getItem("lang");
     i18next
       .use(HttpApi)
       .use(LanguageDetector)
@@ -13,7 +14,7 @@ import { initReactI18next } from 'react-i18next';
       .init({
         supportedLngs: ['en', 'am', 'ru'],
         fallbackLng: 'en',
-        lng: "am",
+        lng: lang || "am",
         debug: false,
         detection: {
           order: ['path', 'cookie', 'htmlTag'],

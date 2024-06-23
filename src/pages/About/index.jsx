@@ -51,9 +51,9 @@ function About() {
                     </StyledCenterFlex>
                 </StyledBlock>
                 <StyledBlock>
-                    <StyledBlockTitle>
+                    {/* <StyledBlockTitle>
                         {t("chairman_li")}
-                    </StyledBlockTitle>
+                    </StyledBlockTitle> */}
                     <StyledFlex>
                         <StyledLeftText>
                             {t("about_li")}

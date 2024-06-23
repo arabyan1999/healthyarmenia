@@ -10,6 +10,7 @@ function NavigationBar() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [modal, setModal] = useState(false);
+  console.log(t("about"));
   // useScrollingElement(isOpen);
   return (
     <StyledHeader>

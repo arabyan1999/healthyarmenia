@@ -14,6 +14,7 @@ import Feedback from './components/feedback';
 import AddingDataToBack from './components/addingDataToBackAsAnAdmin';
 
 function App() {
+
   return (
     <Suspense fallback="loading">
       <BrowserRouter>
@@ -32,8 +33,8 @@ function App() {
               <Route path="/add-data" element={<AddingDataToBack />} />
             </Routes>
         </div>
-        <Footer />
       </div>
+      <Footer />
       </BrowserRouter>
     </Suspense>
   );

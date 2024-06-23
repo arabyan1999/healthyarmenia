@@ -8,6 +8,10 @@ export const StyledFoot = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: flex-end;
+    /* position: absolute;
+    bottom: 0;
+    margin-top: 100px; */
     @media screen and (max-width: 554px) {
         flex-direction: column;
     }

@@ -31,6 +31,9 @@ export const StyledInput = styled.input`
     &.input::placeholder {
         color: #777;
     }
+    &.input:focus-visible {
+        outline: 1px solid #7a7a7a;
+    }
     @media screen and (max-width: 550px) {
         margin: 0 0 16px 0;
     }
@@ -130,6 +133,9 @@ export const StyledTextarea = styled.textarea`
     font-size: 14px;
     &.input::placeholder {
         color: #777;
+    }
+    &.input:focus-visible {
+        outline: 1px solid #7a7a7a;
     }
     @media screen and (max-width: 550px) {
         margin: 0 0 16px 0;

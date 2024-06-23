@@ -21,6 +21,10 @@ export const StyledModal = styled.div`
     @media screen and (max-width: 500px) {
         width: 100%;
         margin: 0 20px;
+        padding: 20px;
+    }
+    @media screen and (max-width: 415px) {
+        margin: 0;
     }
 `
 
@@ -42,4 +46,5 @@ export const StyledTitle = styled.h1`
 
 export const StyledText = styled.p`
     font-size: 18px;
+    text-align: left;
 `
