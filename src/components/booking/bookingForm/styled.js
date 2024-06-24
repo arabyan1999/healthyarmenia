@@ -147,10 +147,14 @@ export const StyledSubmitButton = styled.button`
     width: 100%;
     border: none;
     background-color: #137d52;
+    opacity: ${({ disabled }) => !!disabled && 0.8};
     color: #fff;
     font-size: 16px;
     padding: .5rem;
     margin: 5px;
+    .button:disabled {
+        background-color: red;
+    }
     @media screen and (max-width: 550px) {
         margin: 0 0 12px 0;
     }

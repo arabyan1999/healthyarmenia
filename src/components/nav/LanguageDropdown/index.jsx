@@ -48,8 +48,6 @@ const Dropdown = () => {
     if (!!lang) {
       const newLang = items.find(el => el.value === lang);
       i18n.changeLanguage(lang);
-      console.log(lang);
-      console.log(i18n.language);
       setSelectedLang(newLang?.title);
     }
   }, []);

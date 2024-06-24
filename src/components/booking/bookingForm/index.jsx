@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { TailSpin } from "react-loader-spinner";
 import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledSelected, StyledSpan, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
 import SuccessModal from "../successModal";
 import { useScrollingElement } from "../../../hooks/use-scrolling-element";
 import { createBookRequestApi } from "../../../request/requests";
+import ErrorModal from "../errorModal";
 
 function BookingForm({ setModal }) {
     const [data, setData] = useState({});
@@ -11,7 +13,9 @@ function BookingForm({ setModal }) {
     const [nameError, setNameError] = useState(false);
     const [surnameError, setSurnameError] = useState(false);
     const [phoneError, setPhoneError] = useState(false);
+    const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
     const { t } = useTranslation();
     useScrollingElement(success);
 
@@ -35,8 +39,18 @@ function BookingForm({ setModal }) {
         }
         
         if (data.name && data.surname && data.phone) {
-            createBookRequestApi(data);
-            setSuccess(true);
+            setLoading(true);
+            try {
+                createBookRequestApi(data)
+                    .then(() => setSuccess(true))
+                    .catch(() => setError(true))
+                    .finally(() => setLoading(false))
+            } catch(err) {
+                setError(true);
+                setLoading(false);
+                throw err;
+            }
+
         }
     };
 
@@ -50,6 +64,17 @@ function BookingForm({ setModal }) {
             }, 5000);
         }
     }, [success]);
+
+    useEffect(() => {
+        if (error) {
+            setTimeout(() => {
+                setError(false);
+                if (setModal !== undefined) {
+                    setModal(false);
+                }
+            }, 5000);
+        }
+    }, [error]);
 
     return (
         <StyledBookingForm>
@@ -134,12 +159,19 @@ function BookingForm({ setModal }) {
                 </StyledBlockFlex>
             </StyledForm>
             <StyledBlockFlex>
-                <StyledSubmitButton type="submit" onClick={onSubmit}>
-                    {t("book")}
+                <StyledSubmitButton type="submit" onClick={onSubmit} disabled={loading} className="button">
+                    {
+                        !loading ? t("book") : (
+                            <div style={{ margin: "0 auto", width: "20px" }} >
+                                <TailSpin color="white" height="20px" width="20px" strokeWidth="4px" />
+                            </div>
+                        )
+                    }
                 </StyledSubmitButton>
             </StyledBlockFlex>
             <StyledSpan>&#9432; {t("expert_advice")}</StyledSpan>
             {success && <SuccessModal />}
+            {error && <ErrorModal />}
         </StyledBookingForm>
     )
 }

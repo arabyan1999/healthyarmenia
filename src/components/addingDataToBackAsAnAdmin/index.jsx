@@ -6,16 +6,12 @@ function AddingDataToBack() {
     const [data, setData] = useState([{}, {}, {}, "[]"]);
 
     const setNewData = (prevState, objectKey, objectValue, index) => {
-        // let newData = Object.assign({}, prevState);
-        // newData[objectKey] = objectValue;
-        // console.log(prevState)
         let newData = [...prevState];
         newData[index][objectKey] = objectValue;
         return newData;
     }
 
     const onSubmit = () => {
-        console.log({ data });
         createProductApi({ data });
     }
 

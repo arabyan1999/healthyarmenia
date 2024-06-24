@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-// import { useScrollingElement } from '../../hooks/use-scrolling-element';
 import { StyledBurger, StyledButton, StyledHeader, StyledHomeLink, StyledLink, StyledNavigationBar, StyledTitle } from './styled';
 import LanguageDropdown from './LanguageDropdown';
 import { ReactComponent as TiensLogo } from "../../assets/logo.svg";
@@ -10,8 +9,6 @@ function NavigationBar() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [modal, setModal] = useState(false);
-  console.log(t("about"));
-  // useScrollingElement(isOpen);
   return (
     <StyledHeader>
       <StyledHomeLink href="/">

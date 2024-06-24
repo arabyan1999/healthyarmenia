@@ -89,6 +89,8 @@
     "book": "Book",
     "success": "Success",
     "booked_successfully": "You're booked call successfuly",
+    "error": "Error",
+    "something_went_rong": "Please, repeat again",
     "expert_advice": "Expert advice is free",
 
     "page_not_found": "PAGE NOT FOUND",

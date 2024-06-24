@@ -27,11 +27,11 @@ export const getDiseaseByIdApi = (id) => {
         http.get(`/get_disease/${id}`)
         .then(function (response) {
             // handle success
-            console.log("disease id response", response);
+            // console.log("disease id response", response);
         })
         .catch(function (error) {
             // handle error
-            console.log("disease id error", error);
+            // console.log("disease id error", error);
         })
     } catch (e) {
         throw e;
@@ -43,11 +43,11 @@ export const getProductByIdApi = (id) => {
         http.get(`/get_product/${id}`)
             .then((res) => {
                 // handle success
-                console.log("product res", res);
+                // console.log("product res", res);
             })
             .catch((e) => {
                 // handle error
-                console.log("product e", e);
+                // console.log("product e", e);
             })
     } catch (e) {
         throw e;
@@ -66,14 +66,14 @@ export const getProductsApi = () => {
     }
 }
 
-export const createBookRequestApi = (data) => {
-    try {
-        http.post('/create_call_request', data)
-            .then(res => console.log(res))
-            .catch(error => console.log(error))
-    } catch (e) {
-        throw e;
-    }
+export const createBookRequestApi = async (data) => {
+    // try {
+        await http.post('/create_call_request', data)
+            // .then(res => res)
+            // .catch(error => error)
+    // } catch (e) {
+    //     throw e;
+    // }
 }
 
 export const createProductApi = (data) => {
