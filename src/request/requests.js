@@ -1,8 +1,10 @@
 import axios from "axios";
 
+// 'Content-Type': 'text/xml; Charset=utf-8',
+// 'Cache-Control': 'no-cache',
 const headers = {
-    'Content-Type': 'text/xml; Charset=utf-8',
-    'Cache-Control': 'no-cache',
+    "Content-Type" : "application/json",
+    "Accept" : "application/json"
 };
 
 const http = axios.create({
@@ -11,6 +13,8 @@ const http = axios.create({
     // withCredentials: true,
     headers,
 });
+
+
 
 export const getDiseaseApi = () => {
     try {
@@ -66,14 +70,8 @@ export const getProductsApi = () => {
     }
 }
 
-export const createBookRequestApi = async (data) => {
-    // try {
-        await http.post('/create_call_request', data)
-            // .then(res => res)
-            // .catch(error => error)
-    // } catch (e) {
-    //     throw e;
-    // }
+export const createBookRequestApi = (data) => {
+    return http.post('/create_call_request', data)
 }
 
 export const createProductApi = (data) => {
@@ -82,6 +80,18 @@ export const createProductApi = (data) => {
             .then(res => console.log(res))
             .catch(error => console.log(error))
     } catch (e) {
+        throw e;
+    }
+}
+
+export const createDiseaseApi = (data) => {
+    console.log("data", data);
+    try {
+        http.post("/add_disease", data)
+            .then(res => console.log(res))
+            .catch(error => console.log(error))
+    } catch (e) {
+        console.log(e);
         throw e;
     }
 }

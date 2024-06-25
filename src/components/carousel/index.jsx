@@ -12,11 +12,13 @@ function Carousel({ images }) {
         width="100%"
         height="100%"
         images={images}
-        // autoPlay={true}
+        autoPlay={true}
+        showBullets
+        showNavs
         onStartSlide = {(index) => {
           setImageNum(index);
         }}
-        autoPlayDelay={2}
+        autoPlayDelay={4}
       />
     </CarouselWrapper>
   );

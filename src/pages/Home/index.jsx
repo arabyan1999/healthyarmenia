@@ -3,7 +3,8 @@ import Carousel from "../../components/carousel";
 import ReferenceBlock from "../../components/referenceBlock";
 import Feedback from "../../components/feedback";
 import { diseases, foods } from "../../data";
-import tiensLogo from "../../assets/tiensLogo.jpg";
+import tiensLogo from "../../assets/cover1.jpg";
+import coverLogo from "../../assets/cover2.jpg";
 import tiensProductLogo from "../../assets/tiens-product.jpeg";
 // import tiensResultLogo from "../../assets/results.jpg";
 import Booking from "../../components/booking";
@@ -16,6 +17,7 @@ function Home() {
     const images = [
         tiensProductLogo,
         tiensLogo,
+        coverLogo
         // tiensResultLogo
     ]
 

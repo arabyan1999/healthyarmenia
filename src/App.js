@@ -12,6 +12,7 @@ import NotFound from './pages/Not_found';
 import './App.css';
 import Feedback from './components/feedback';
 import AddingDataToBack from './components/addingDataToBackAsAnAdmin';
+import AddingDiseaseDataToBack from './components/addingDiseaseDataToBackAsAnAdmin';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
               <Route path="feedback" element={<Feedback />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/add-data" element={<AddingDataToBack />} />
+              <Route path="/add-disease" element={<AddingDiseaseDataToBack />} />
             </Routes>
         </div>
       </div>

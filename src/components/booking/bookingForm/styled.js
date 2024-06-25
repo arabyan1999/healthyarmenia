@@ -154,6 +154,7 @@ export const StyledSubmitButton = styled.button`
     margin: 5px;
     .button:disabled {
         background-color: red;
+        cursor: auto;
     }
     @media screen and (max-width: 550px) {
         margin: 0 0 12px 0;

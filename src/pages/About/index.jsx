@@ -42,7 +42,7 @@ function About() {
                         </StyledCenter>
                         <StyledCenter>
                             <StyledCircle>
-                                <p><CountUp end={46} duration={6} /></p>
+                                <p><CountUp end={48} duration={6} /></p>
                             </StyledCircle>
                             <StyledNumbersText>
                                 {t("mln_regular_consumer")}

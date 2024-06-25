@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { createProductApi } from "../../request/requests";
+import { createDiseaseApi } from "../../request/requests";
 
-function AddingDataToBack() {
+function AddingDiseaseDataToBack() {
     const [data, setData] = useState([{lang: "am"}, {lang: "en"}, {lang: "ru"}]);
 
     const setNewData = (prevState, objectKey, objectValue, index) => {
@@ -12,7 +12,7 @@ function AddingDataToBack() {
     }
 
     const onSubmit = () => {
-        createProductApi({ data, filters: "[]", key: data[1]["name"] });
+        createDiseaseApi({ data, key: data[1]["name"] });
     }
 
     useEffect(() => {
@@ -42,70 +42,70 @@ function AddingDataToBack() {
                 />
             </StyledContainer>
 
+            {/* <StyledContainer>
+                <label htmlFor="">About Arm</label>
+                <input type="text" placeholder="About"
+                    onChange={(e) => {
+                        setData(prev => setNewData(prev, "about", e.target.value, 0));
+                    }}
+                />
+                <label htmlFor="">about Eng</label>
+                <input type="text" placeholder="about"
+                    onChange={(e) => {
+                        setData(prev => setNewData(prev, "about", e.target.value, 1));
+                    }}
+                />
+                <label htmlFor="">about Rus</label>
+                <input type="text" placeholder="about"
+                    onChange={(e) => {
+                        setData(prev => setNewData(prev, "about", e.target.value, 2));
+                    }}
+                />
+            </StyledContainer> */}
+
             <StyledContainer>
-                <label htmlFor="">Category Arm</label>
-                <input type="text" placeholder="Category"
+                <label htmlFor="">symptoms Arm</label>
+                <textarea rows="4"placeholder="symptoms"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "category", e.target.value, 0));
+                        setData(prev => setNewData(prev, "symptoms", e.target.value, 0));
                     }}
                 />
-                <label htmlFor="">Category Eng</label>
-                <input type="text" placeholder="Category"
+                <label htmlFor="">symptoms Eng</label>
+                <textarea rows="4"placeholder="symptoms"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "category", e.target.value, 1));
+                        setData(prev => setNewData(prev, "symptoms", e.target.value, 1));
                     }}
                 />
-                <label htmlFor="">Category Rus</label>
-                <input type="text" placeholder="Category"
+                <label htmlFor="">symptoms Rus</label>
+                <textarea rows="4"placeholder="symptoms"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "category", e.target.value, 2));
+                        setData(prev => setNewData(prev, "symptoms", e.target.value, 2));
                     }}
                 />
             </StyledContainer>
 
             <StyledContainer>
-                <label htmlFor="">Compound Arm</label>
-                <textarea rows="4"placeholder="Compound"
+                <label htmlFor="">about Arm</label>
+                <textarea rows="4"placeholder="about"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "compound", e.target.value, 0));
+                        setData(prev => setNewData(prev, "about", e.target.value, 0));
                     }}
                 />
-                <label htmlFor="">Compound Eng</label>
-                <textarea rows="4"placeholder="Compound"
+                <label htmlFor="">about Eng</label>
+                <textarea rows="4"placeholder="about"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "compound", e.target.value, 1));
+                        setData(prev => setNewData(prev, "about", e.target.value, 1));
                     }}
                 />
-                <label htmlFor="">Compound Rus</label>
-                <textarea rows="4"placeholder="Compound"
+                <label htmlFor="">about Rus</label>
+                <textarea rows="4"placeholder="about"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "compound", e.target.value, 2));
-                    }}
-                />
-            </StyledContainer>
-
-            <StyledContainer>
-                <label htmlFor="">Function Arm</label>
-                <textarea rows="4"placeholder="Function"
-                    onChange={(e) => {
-                        setData(prev => setNewData(prev, "function", e.target.value, 0));
-                    }}
-                />
-                <label htmlFor="">Function Eng</label>
-                <textarea rows="4"placeholder="Function"
-                    onChange={(e) => {
-                        setData(prev => setNewData(prev, "function", e.target.value, 1));
-                    }}
-                />
-                <label htmlFor="">Function Rus</label>
-                <textarea rows="4"placeholder="Function"
-                    onChange={(e) => {
-                        setData(prev => setNewData(prev, "function", e.target.value, 2));
+                        setData(prev => setNewData(prev, "about", e.target.value, 2));
                     }}
                 />
             </StyledContainer>
 
-            <StyledContainer>
+            {/* <StyledContainer>
                 <label htmlFor="">Healing properties Arm</label>
                 <textarea rows="4"placeholder="Healing properties"
                     onChange={(e) => {
@@ -124,7 +124,7 @@ function AddingDataToBack() {
                         setData(prev => setNewData(prev, "healingProperties", e.target.value, 2));
                     }}
                 />
-            </StyledContainer>
+            </StyledContainer> */}
             {/* <StyledContainer>
                 <label htmlFor="">Filters</label>
                 <textarea rows="4"placeholder="Healing properties"
@@ -138,7 +138,7 @@ function AddingDataToBack() {
     )
 }
 
-export default AddingDataToBack;
+export default AddingDiseaseDataToBack;
 
 const StyledContainer = styled.div`
     display: flex;

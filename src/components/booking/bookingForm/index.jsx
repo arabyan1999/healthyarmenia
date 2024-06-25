@@ -40,6 +40,7 @@ function BookingForm({ setModal }) {
         
         if (data.name && data.surname && data.phone) {
             setLoading(true);
+            // console.log("response", response);
             try {
                 createBookRequestApi(data)
                     .then(() => setSuccess(true))
@@ -50,7 +51,6 @@ function BookingForm({ setModal }) {
                 setLoading(false);
                 throw err;
             }
-
         }
     };
 
