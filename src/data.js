@@ -1,4 +1,4 @@
-import heartLogo from "./assets/images.jpg";
+import heartLogo from "./assets/heart_arrhythmia.jpg";
 import tempLogo from "./assets/temp.jpg";
 import liverLogo from "./assets/liver.jpg";
 import prostateLogo from "./assets/adenoma_prostate.jpg";
@@ -9,7 +9,7 @@ import diabetLogo from "./assets/diabet.png";
 import hipertoniaLogo from "./assets/hipertonia.jpg";
 import migraineLogo from "./assets/migraine.jpg";
 import dizbakteriozLogo from "./assets/disbakterioz_kishechnika.jpg";
-import mindcalciumLogo from "./assets/mindCalcium.png";
+import mindcalciumLogo from "./assets/calcium_for_brain_nutrition.png";
 import cordycepsLogo from "./assets/cordyceps.jpg";
 import chitozanLogo from "./assets/chitozan.jpg";
 import zincLogo from "./assets/Tiens_Zinc_product.jpg";

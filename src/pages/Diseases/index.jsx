@@ -8,17 +8,26 @@ import { StyledBlock, StyledImage, StyledMenuTitle } from "../../components/refe
 import { StyledBackgroundTransparent } from "../Products/styled";
 import { t } from "i18next";
 import { sliceText } from "../../helpers/helper";
+import { getDiseasesApi } from "../../request/requests";
 
 function DiseasesPage() {
+    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
     useScrollingElement(loading);
+    const lang = localStorage.getItem("lang") || "am";
 
     useEffect(() => {
-        setTimeout(() => {
+        try {
+            getDiseasesApi(lang)
+                .then((res) => setData(res.data.data))
+                .catch((e) => console.log("disease e", e))
+                .finally(() => setLoading(false))
+        } catch (e) {
             setLoading(false);
-        }, 2000);
-    })
+            throw e;
+        }
+    }, [lang]);
 
     if (loading) {
         return (
@@ -45,10 +54,10 @@ function DiseasesPage() {
                             </StyledUlContainer>
                     ))} */}
                     {
-                        diseases.array.map((disease) => 
+                        data.map((disease) => 
                                 (
-                                    <StyledBlock key={disease.id} onClick={() => navigate(`/diseases/${disease.id}`)}>
-                                        <StyledImage src={disease.image} />
+                                    <StyledBlock key={disease.key} onClick={() => navigate(`/diseases/${disease.id}`)}>
+                                        <StyledImage src={require(`../../assets/${disease.key}.jpg`)} />
                                         <StyledMenuTitle>{disease.name}</StyledMenuTitle>
                                         <p>{sliceText(disease.about, 17)}</p>
                                     </StyledBlock>

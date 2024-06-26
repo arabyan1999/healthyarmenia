@@ -7,14 +7,17 @@ import { StyledBackgroundTransparent, StyledButton, StyledNavigation, StyledProd
 import Loader from "../../components/loader";
 import { useScrollingElement } from "../../hooks/use-scrolling-element";
 import { sliceText } from "../../helpers/helper";
+import { getProductsApi } from "../../request/requests";
 
 function ProductsPage() {
-    const [loading, setLoading] = useState(true);
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
     const [activeTab, setActiveTab] = useState("all");
     const [filteredStat, setFilteredState] = useState(foods.array);
     const { t } = useTranslation();
     const navigate = useNavigate();
     useScrollingElement(loading);
+    const lang = localStorage.getItem("lang") || "am";
 
     useEffect(() => {
         if (activeTab === "all") {
@@ -28,9 +31,16 @@ function ProductsPage() {
     }, [activeTab]);
 
     useEffect(() => {
-        setTimeout(() => {
+        setLoading(true);
+        try {
+            getProductsApi(lang)
+                .then((res) => setData(res.data.data))
+                .catch((e) => console.log("products error", e))
+                .finally(() => setLoading(false))
+        } catch (e) {
             setLoading(false);
-        }, 2000);
+            throw e;
+        }
     }, []);
 
     if (loading) {
@@ -43,7 +53,7 @@ function ProductsPage() {
         <StyledBackgroundTransparent>
             <StyledProductsPage>
                 <StyledTitle>Պահպանեք ձեր առողջությունը</StyledTitle>
-                <StyledNavigation>
+                {/* <StyledNavigation>
                     <StyledButton onClick={() => setActiveTab("all")} className={activeTab === "all" && "active"}>
                         {t("all")}
                     </StyledButton>
@@ -53,13 +63,13 @@ function ProductsPage() {
                     <StyledButton onClick={() => setActiveTab("forLoseWeight")} className={activeTab === "forLoseWeight" && "active"}>
                         {t("for_lose_weight")}
                     </StyledButton>
-                </StyledNavigation>
+                </StyledNavigation> */}
                 <StyledProductsContainer>
                     {
-                        filteredStat.map((product) => 
+                        data.map((product) => 
                             (
-                                <StyledBlock key={product.id} onClick={() => navigate(`/products/${product.id}`)}>
-                                    <StyledImage src={product.image} />
+                                <StyledBlock key={product.key} onClick={() => navigate(`/products/${product.id}`)}>
+                                    <StyledImage src={require(`../../assets/${product.key}.png`)} />
                                     <StyledMenuTitle>{product.name}</StyledMenuTitle>
                                     <p>{sliceText(t(product.function), 17)}</p>
                                 </StyledBlock>

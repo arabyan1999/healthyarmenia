@@ -14,16 +14,12 @@ const http = axios.create({
     headers,
 });
 
+export const getDiseasesApi = (lang) => {
+    return http.get(`/get_diseases/${lang}`);
+}
 
-
-export const getDiseaseApi = () => {
-    try {
-        http.get(`/get_translations/disease`)
-            .then((res) => console.log("disease resp ", res))
-            .catch((e) => console.log("disease e", e))
-    } catch (e) {
-        throw e;
-    }
+export const getProductsApi = (lang) => {
+    return http.get(`/get_products/${lang}`);
 }
 
 export const getDiseaseByIdApi = (id) => {
@@ -53,18 +49,6 @@ export const getProductByIdApi = (id) => {
                 // handle error
                 // console.log("product e", e);
             })
-    } catch (e) {
-        throw e;
-    }
-}
-
-export const getProductsApi = () => {
-    try {
-        axios.get('/products')
-            .then(res => console.log("product res ", res))
-            .catch(error => {
-                console.error("products error ", error);
-            });
     } catch (e) {
         throw e;
     }
