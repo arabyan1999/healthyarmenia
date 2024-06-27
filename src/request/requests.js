@@ -38,20 +38,8 @@ export const getDiseaseByIdApi = (id) => {
     }
 }
 
-export const getProductByIdApi = (id) => {
-    try {
-        http.get(`/get_product/${id}`)
-            .then((res) => {
-                // handle success
-                // console.log("product res", res);
-            })
-            .catch((e) => {
-                // handle error
-                // console.log("product e", e);
-            })
-    } catch (e) {
-        throw e;
-    }
+export const getProductByKeyApi = (key, lang) => {
+    return http.get(`/get_product/${key}`);
 }
 
 export const createBookRequestApi = (data) => {

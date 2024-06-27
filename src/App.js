@@ -25,10 +25,10 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="about" element={<About />} />
-              <Route path="products/:id" element={<Product />} />
+              <Route path="product/:key" element={<Product />} />
               <Route path="products" element={<ProductsPage />} />
               <Route path="diseases" element={<DiseasesPage />} />
-              <Route path="diseases/:id" element={<DiseasePage />} />
+              <Route path="disease/:key" element={<DiseasePage />} />
               <Route path="feedback" element={<Feedback />} />
               <Route path="*" element={<NotFound />} />
               <Route path="/add-data" element={<AddingDataToBack />} />

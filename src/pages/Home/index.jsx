@@ -41,7 +41,7 @@ function Home() {
             <Carousel images={images} />
             <StyledContainer>
                 <Foreword />
-                <ReferenceBlock blocks={foods} link="products" />
+                <ReferenceBlock blocks={foods} link="product" />
                 <ReferenceBlock blocks={diseases} link="diseases" />
                 {/* <ReferenceBlock blocks={threatmentData} /> */}
                 <Booking />

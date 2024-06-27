@@ -10,7 +10,7 @@ function DiseasePage() {
     const { t } = useTranslation();
     const { id } = useParams();
     // const [modal, setModal] = useState(false);
-    const disease = diseases.array.find(el => el.id === id);
+    const disease = diseases.array.find(el => el.id == 1);
     return (
         <StyledContainer>
             <StyledMainTitle>

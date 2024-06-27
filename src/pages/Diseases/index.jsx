@@ -55,13 +55,13 @@ function DiseasesPage() {
                     ))} */}
                     {
                         data.map((disease) => 
-                                (
-                                    <StyledBlock key={disease.key} onClick={() => navigate(`/diseases/${disease.id}`)}>
-                                        <StyledImage src={require(`../../assets/${disease.key}.jpg`)} />
-                                        <StyledMenuTitle>{disease.name}</StyledMenuTitle>
-                                        <p>{sliceText(disease.about, 17)}</p>
-                                    </StyledBlock>
-                                )
+                            (
+                                <StyledBlock key={disease.key} onClick={() => navigate(`/disease/${disease.id}`)}>
+                                    <StyledImage src={require(`../../assets/${disease.key}.jpg`)} />
+                                    <StyledMenuTitle>{disease.name}</StyledMenuTitle>
+                                    <p>{sliceText(disease.about, 17)}</p>
+                                </StyledBlock>
+                            )
                         )
                     }
                 </StyledDiseasesContainer>

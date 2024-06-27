@@ -1,27 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { foods } from "../../data";
 import { useTranslation } from "react-i18next";
 import { StyledContentText, StyledLine, StyledProductUpperLeftPart, StyledProductContainer, StyledProductImg, StyledProductUpperPart, StyledTitle, StyledLowerPart, StyledLineSpace, StyledMobileTitle } from "./styled";
-import { getProductByIdApi } from "../../request/requests";
+import { getProductByKeyApi } from "../../request/requests";
+import Loader from "../../components/loader";
 
 function Product() {
-    const { id } = useParams();
+    const { key } = useParams();
     const { t } = useTranslation();
-    const product = foods.array.find((itm) => itm.id === id);
+    // const [product, setProduct] = useState(null);
+    const product = foods.array.find((itm) => itm.id == 6);
+    const lang = localStorage.getItem("lang") || "am";
 
     useEffect(() => {
-        const getProduct = () => (
-            getProductByIdApi(1)
-        )
-
-        getProduct();
+        getProductByKeyApi(key, lang)
+            .then((res) => {
+                // setProduct(res.data.data[0]);
+            })
+            .catch((e) => console.log(e))
     }, []);
+
+    // if (!product) {
+    //     return (
+    //         <Loader />
+    //     )
+    // }
 
     return (
         <StyledProductContainer>
             <StyledProductUpperPart>
                 <StyledMobileTitle>{product.name}</StyledMobileTitle>
+                {/* {!!product?.key && <StyledProductImg src={require(`../../assets/${product.key}.png`)} />} */}
                 <StyledProductImg src={product.image} />
                 <StyledProductUpperLeftPart>
                     <StyledTitle>{product.name}</StyledTitle>

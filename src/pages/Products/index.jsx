@@ -66,10 +66,11 @@ function ProductsPage() {
                 </StyledNavigation> */}
                 <StyledProductsContainer>
                     {
-                        data.map((product) => 
+                        foods.array.map((product) => 
                             (
-                                <StyledBlock key={product.key} onClick={() => navigate(`/products/${product.id}`)}>
-                                    <StyledImage src={require(`../../assets/${product.key}.png`)} />
+                                <StyledBlock key={product.key} onClick={() => navigate(`/product/${product.key}`)}>
+                                    <StyledImage src={product.image} />
+                                    {/* <StyledImage src={require(`../../assets/${product.key}.png`)} /> */}
                                     <StyledMenuTitle>{product.name}</StyledMenuTitle>
                                     <p>{sliceText(t(product.function), 17)}</p>
                                 </StyledBlock>
