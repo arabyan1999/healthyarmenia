@@ -10,7 +10,7 @@ function Product() {
     const { key } = useParams();
     const { t } = useTranslation();
     // const [product, setProduct] = useState(null);
-    const product = foods.array.find((itm) => itm.id == 6);
+    const product = foods.array.find((itm) => itm.id == 1);
     const lang = localStorage.getItem("lang") || "am";
 
     useEffect(() => {

@@ -19,7 +19,7 @@ function ReferenceBlock({ blocks, link }) {
                                 return (
                                     <StyledBlock key={block.id} onClick={!!link ? () => navigate(`/${link}/${block.id}`) : () => {}}>
                                         <StyledImage src={block.image} />
-                                        <StyledMenuTitle>{block.name}</StyledMenuTitle>
+                                        <StyledMenuTitle>{t(block.name)}</StyledMenuTitle>
                                         <p>{sliceText(t(block.about) || t(block.function), 10)}</p>
                                     </StyledBlock>
                                 )
@@ -27,7 +27,7 @@ function ReferenceBlock({ blocks, link }) {
                     })
                 }
             </StyledReferencesBlocks>
-            <StyledRef href={link && `/${link}`}>Ավելին <RightArrow /></StyledRef>
+            <StyledRef href={link && `/${link}`}>{t("more")} <RightArrow /></StyledRef>
         </StyledContainer>
     )
 }

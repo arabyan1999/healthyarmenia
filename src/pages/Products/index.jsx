@@ -34,14 +34,17 @@ function ProductsPage() {
         setLoading(true);
         try {
             getProductsApi(lang)
-                .then((res) => setData(res.data.data))
+                .then((res) => {
+                    console.log(res.data.data)
+                    setData(res.data.data)
+                })
                 .catch((e) => console.log("products error", e))
                 .finally(() => setLoading(false))
         } catch (e) {
             setLoading(false);
             throw e;
         }
-    }, []);
+    }, [t]);
 
     if (loading) {
         return (
@@ -66,7 +69,7 @@ function ProductsPage() {
                 </StyledNavigation> */}
                 <StyledProductsContainer>
                     {
-                        foods.array.map((product) => 
+                        data.map((product, index) => 
                             (
                                 <StyledBlock key={product.key} onClick={() => navigate(`/product/${product.key}`)}>
                                     <StyledImage src={product.image} />

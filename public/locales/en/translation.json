@@ -69,6 +69,9 @@
     "healing_properties_chitozan": "Oncological diseases, incl. with metastases and intoxication. Diabetes, incl. insulin dependent. Liver diseases, incl. cirrhosis. Cardiovascular diseases, incl. hypertension, atherosclerosis, heart attack, stroke. Obesity and other types of lipid metabolism disorders. Diseases of the gastrointestinal tract, incl. stomach and duodenal ulcers, dysbacteriosis, chronic constipation, flatulence. Burns, wounds and other skin injuries. Cosmetology, including plastic.",
     "healing_properties_cordyceps": "Respiratory diseases, pneumonia, emphysema, tuberculosis. Diseases of the genitourinary system: cystitis, pyeloniphritis, glomerulonephritis, enuresis, colpitis. Liver diseases, incl. hepatitis and cirrhosis of the liver. Blood diseases. Autoimmune diseases, incl. rheumatism. Hypoimmune conditions: frequent ARVI, influenza and others. Malignant formations of various organs, even in late stages of the disease, during chemotherapy and radiotherapy. To provide detoxification of the body in various situations, incl. for acute and chronic poisoning, when living in radioactive zones. During organ transplantation (transplantation), it is used as an immunomodulator, reducing the body's resistance to foreign tissues and preventing organ rejection. Premature aging, skin withering. Increased physical activity. In stressful situations.",
     "healing_properties_calcium": "Replenishes calcium deficiency in the body, Prevents the development of osteoporosis, Regulates blood sugar and nutrient balance, Increases physical and mental activity, Strengthens the body's resistance to stress",
+    "heart_arrhythmia_about": "Arrhythmia is a pathological condition in which the frequency, strength and sequence of heart contractions are disturbed. Cardialgia (heart pain) along with rhythm",
+    "pressure_fluctuations_about": "Fluctuations in arterial pressure are caused by changes in vascular tone in response to multiple stimuli. These variations can be conditioned",
+    "cirrhosis_about": "A disease in which the liver cannot function normally due to long-term damage. This damage is characterized by the replacement of normal liver tissue with scar tissue.",
 
     "all": "All",
     "for_sportsmen": "For sportsmen",
@@ -89,6 +92,7 @@
     "book": "Book",
     "success": "Success",
     "booked_successfully": "You're booked call successfuly",
+    "specialist": "A specialist will call within the next two days",
     "error": "Error",
     "something_went_rong": "Please, repeat again",
     "expert_advice": "Expert advice is free",
@@ -97,5 +101,14 @@
     "requested_page_not_found": "THE PAGE YOU REQUESTED WAS NOT FOUND",
 
     "footer_text": "All rights reserved. The information on the site is protected by copyright law.",
-    "footer_text_second_variant": "Tiens Group Co. Ltd. All Rights Reserved."
+    "footer_text_second_variant": "Tiens Group Co. Ltd. All Rights Reserved.",
+
+    "calcium_for_brain_nutrition": "Calcium for brain nutrition",
+    "cordyceps": "Cordyceps",
+    "chitosan": "Chitosan",
+    "heart_arrhythmia": "Heart arrhythmia",
+    "pressure_fluctuations": "Pressure fluctuations",
+    "cirrhosis": "Liver cirrhosis",
+
+    "more": "More"
 }

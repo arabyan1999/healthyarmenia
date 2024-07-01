@@ -15,6 +15,7 @@ function SuccessModal() {
                     <div>
                         <StyledTitle>{t("success")}</StyledTitle>
                         <StyledText>{t("booked_successfully")}</StyledText>
+                        <StyledText>{t("specialist")}</StyledText>
                     </div>
                 </StyledFlex>
             </StyledModal>
