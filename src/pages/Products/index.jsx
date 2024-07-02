@@ -35,7 +35,6 @@ function ProductsPage() {
         try {
             getProductsApi(lang)
                 .then((res) => {
-                    console.log(res.data.data)
                     setData(res.data.data)
                 })
                 .catch((e) => console.log("products error", e))
@@ -55,7 +54,7 @@ function ProductsPage() {
     return (
         <StyledBackgroundTransparent>
             <StyledProductsPage>
-                <StyledTitle>Պահպանեք ձեր առողջությունը</StyledTitle>
+                <StyledTitle>{t("keep_your_health")}</StyledTitle>
                 {/* <StyledNavigation>
                     <StyledButton onClick={() => setActiveTab("all")} className={activeTab === "all" && "active"}>
                         {t("all")}
@@ -69,7 +68,7 @@ function ProductsPage() {
                 </StyledNavigation> */}
                 <StyledProductsContainer>
                     {
-                        data.map((product, index) => 
+                        foods.array.map((product) => 
                             (
                                 <StyledBlock key={product.key} onClick={() => navigate(`/product/${product.key}`)}>
                                     <StyledImage src={product.image} />
