@@ -39,7 +39,7 @@ export const getDiseaseByIdApi = (id) => {
 }
 
 export const getProductByKeyApi = (key, lang) => {
-    return http.get(`/get_product/${key}`);
+    return http.get(`/get_product?key=${key}&lang=${lang}`);
 }
 
 export const createBookRequestApi = (data, lang) => {
