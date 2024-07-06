@@ -22,20 +22,8 @@ export const getProductsApi = (lang) => {
     return http.get(`/get_products/${lang}`);
 }
 
-export const getDiseaseByIdApi = (id) => {
-    try {
-        http.get(`/get_disease/${id}`)
-        .then(function (response) {
-            // handle success
-            // console.log("disease id response", response);
-        })
-        .catch(function (error) {
-            // handle error
-            // console.log("disease id error", error);
-        })
-    } catch (e) {
-        throw e;
-    }
+export const getDiseaseByKeyApi = (key, lang) => {
+    return http.get(`/get_disease?key=${key}&lang=${lang}`);
 }
 
 export const getProductByKeyApi = (key, lang) => {
