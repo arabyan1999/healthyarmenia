@@ -16,7 +16,7 @@ function BookingForm({ setModal }) {
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     useScrollingElement(success);
 
     const typeOfService = [t("narrow_specialist_advice"), t("general_advice_consultation")];
@@ -42,7 +42,7 @@ function BookingForm({ setModal }) {
             setLoading(true);
             // console.log("response", response);
             try {
-                createBookRequestApi(data)
+                createBookRequestApi(data, i18n.language)
                     .then(() => setSuccess(true))
                     .catch(() => setError(true))
                     .finally(() => setLoading(false))

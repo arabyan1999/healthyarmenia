@@ -42,8 +42,8 @@ export const getProductByKeyApi = (key, lang) => {
     return http.get(`/get_product/${key}`);
 }
 
-export const createBookRequestApi = (data) => {
-    return http.post('/create_call_request', data)
+export const createBookRequestApi = (data, lang) => {
+    return http.post('/create_call_request', { data, lang })
 }
 
 export const createProductApi = (data) => {
