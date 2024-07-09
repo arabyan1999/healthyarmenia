@@ -116,9 +116,14 @@ function BookingForm({ setModal }) {
                         type="text"
                         error={phoneError ? 1 : undefined}
                         placeholder={t("telephone") + " *"}
+                        onKeyDown={(event) => {
+                            if (!/[0-9]/.test(event.key) && event.key !== "Backspace") {
+                              event.preventDefault();
+                            }
+                        }}
                         onChange={(e) => {
                             setData(prev => setNewData(prev, "phone", e.target.value));
-                            setPhoneError(false);
+                            setPhoneError(false);   
                         }}
                     />
                 </StyledBlockFlex>
