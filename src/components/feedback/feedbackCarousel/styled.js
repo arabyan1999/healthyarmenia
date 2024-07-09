@@ -30,6 +30,9 @@ export const StyledFeedbackBlock = styled.div`
 export const StyledBlockUpperPart = styled.div`
     display: flex;
     align-items: center;
+    h3 {
+        margin-bottom: 4px;
+    }
 `
 
 export const StyledImageContainer = styled.div`

@@ -12,12 +12,13 @@ const FeedbackCarousel = ({ feedbackData }) => {
           <img src={el.image} />
         </StyledImageContainer>
         <div>
-          <h3>{el.name}</h3>
-          <p>{el.surname}</p>
+          <h3>{el.name} {el.surname}</h3>
+          <p>{el.city}</p>
         </div>
       </StyledBlockUpperPart>
       <StyledComment>
         <p>{el.comment}</p>
+        <p>{el?.ps}</p>
       </StyledComment>
     </StyledFeedbackBlock>
   )
