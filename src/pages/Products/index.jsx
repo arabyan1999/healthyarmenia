@@ -12,29 +12,30 @@ import { getProductsApi } from "../../request/requests";
 function ProductsPage() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [activeTab, setActiveTab] = useState("all");
-    const [filteredStat, setFilteredState] = useState(foods.array);
+    // const [activeTab, setActiveTab] = useState("all");
+    // const [filteredState, setFilteredState] = useState(foods.array);
     const { t } = useTranslation();
     const navigate = useNavigate();
     useScrollingElement(loading);
     const lang = localStorage.getItem("lang") || "am";
 
-    useEffect(() => {
-        if (activeTab === "all") {
-            setFilteredState(foods.array)
-        } else {
-            const f = foods.array.filter((el) => {
-                return el?.filter.find((fil) => fil === activeTab)
-            })
-            setFilteredState(f);
-        }
-    }, [activeTab]);
+    // useEffect(() => {
+    //     if (activeTab === "all") {
+    //         setFilteredState(foods.array)
+    //     } else {
+    //         const f = foods.array.filter((el) => {
+    //             return el?.filter.find((fil) => fil === activeTab)
+    //         })
+    //         setFilteredState(f);
+    //     }
+    // }, [activeTab]);
 
     useEffect(() => {
         setLoading(true);
         try {
             getProductsApi(lang)
                 .then((res) => {
+                    console.log(res.data.data)
                     setData(res.data.data)
                 })
                 .catch((e) => console.log("products error", e))
@@ -68,11 +69,11 @@ function ProductsPage() {
                 </StyledNavigation> */}
                 <StyledProductsContainer>
                     {
-                        foods.array.map((product) => 
+                        data.map((product) => 
                             (
                                 <StyledBlock key={product.key} onClick={() => navigate(`/product/${product.key}`)}>
-                                    <StyledImage src={product.image} />
-                                    {/* <StyledImage src={require(`../../assets/${product.key}.png`)} /> */}
+                                    {/* <StyledImage src={product.image} /> */}
+                                    <StyledImage src={require(`../../assets/${product.key}.jpg`)} />
                                     <StyledMenuTitle>{product.name}</StyledMenuTitle>
                                     <p>{sliceText(t(product.function), 17)}</p>
                                 </StyledBlock>

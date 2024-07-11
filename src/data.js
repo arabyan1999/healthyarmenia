@@ -9,23 +9,23 @@ import diabetLogo from "./assets/diabet.png";
 import hipertoniaLogo from "./assets/hipertonia.jpg";
 import migraineLogo from "./assets/migraine.jpg";
 import dizbakteriozLogo from "./assets/disbakterioz_kishechnika.jpg";
-import mindcalciumLogo from "./assets/calcium_for_brain_nutrition.png";
+
+import teaLogo from "./assets/anti-lipid_tea.jpg";
+import mindcalciumLogo from "./assets/calcium_for_brain_nutrition.jpg";
+import ikanLogo from "./assets/ikan.jpg";
 import cordycepsLogo from "./assets/cordyceps.jpg";
-import chitozanLogo from "./assets/chitozan.jpg";
-import zincLogo from "./assets/Tiens_Zinc_product.jpg";
-import spirulinaLogo from "./assets/Spirulina_capsules_tiens.jpg";
-import ikanLogo from "./assets/Ikang.png";
-import kholikanLogo from "./assets/Tiens_grape_extract_product.jpg";
-import teaLogo from "./assets/antilipid_tea.png";
+import chitozanLogo from "./assets/chitosan.jpg";
+import zincLogo from "./assets/zink.jpg";
+import spirulinaLogo from "./assets/spirulina.jpg";
+import kholikanLogo from "./assets/huolikang.jpg";
 import calciumLogo from "./assets/Tiens_with_calcium_and_vitamins.jpg";
-import childcalciumLogo from "./assets/child_calcium.jpg";
+import childcalciumLogo from "./assets/calcium_for_children.jpg";
 import veikanLogo from "./assets/Tiens_Vitality_Softgels.jpg";
+
 import doctorImg1 from "./assets/doctor1.jpg";
 import doctorImg2 from "./assets/doctor2.jpg";
 import doctorImg3 from "./assets/doctor3.jpg";
-import portraitImg1 from "./assets/portrait1.jpg";
-import portraitImg2 from "./assets/portrait2.jpg";
-import portraitImg3 from "./assets/portrait3.jpg";
+import feedbackImg1 from "./assets/feedbackImg1.jpg";
 import thyroidTreatmentImg from "./assets/thyroidtreatment.webp";
 
 export const CommonDiseases = {
@@ -352,7 +352,7 @@ export const professors = {
 }
 
 export const feedbackData = [
-    { image: portraitImg1, name: 'Սոֆյա', surname: "Johnson", city: "ք․ Վանաձոր", comment: "Ունեյի հաճախակի գլխացավեր, եղանակի փոփոխության հետ մեկտեղ զգալի ցավեր էին առաջանում ծնկների հատվածում, ստամոքսի հատվածում՝ այրոց, լյարդում մկանային կծկոցներ և ծակոցներ։ Քանի որ դիաբետիկ եմ անոթային համակարգի հետ կապված ունեյի ոտքերի հատվածում այտուցվածություն, որը հիմնականում լինում է դիաբետիկների մոտ։ Օգտվեցի Հայաստանում տիբեթյան բժշկության մասնագետների հետազոտությունից և առաջարկվող բուժումներից։ Օգտագործեցի՝ ցինկ, գլխուղեղի սնուցման կալցիում, հակալիպիդային թեյ։ Մեկ շաբաթ անց թեթևացավ ոտքերի ցավը և այտուցը, անցավ գլխացավերը, բարելավելով նյութափոխանակությունը, զգում էի էներգիայի մեծ առկայություն, որի շնորհիվ չկար գերհոգնածություն։ Օգտագործեցի նաև խիտոզան, որը նշանակված էր ստամոքսի այտուցի համար, օրգանիզմումս սկսվում էր նախախոցային պրոցես։ 3 օրվա օգտագործումից հետո արդեն գտնվում է հանգիստ վիճակում, նշանակված էր 100 կապսուլա, որի շնորհիվ նաև փակվեց ստամոքսի խոցը։", ps: "Շնորհակալություն մասնագետներին և բժշկությանը, որը գործում է Հայաստանում:"},
+    { image: feedbackImg1, name: 'Սոֆյա', surname: "Գրիգորյան", city: "ք․ Վանաձոր", comment: "Ունեյի հաճախակի գլխացավեր, եղանակի փոփոխության հետ մեկտեղ զգալի ցավեր էին առաջանում ծնկների հատվածում, ստամոքսի հատվածում՝ այրոց, լյարդում մկանային կծկոցներ և ծակոցներ։ Քանի որ դիաբետիկ եմ անոթային համակարգի հետ կապված ունեյի ոտքերի հատվածում այտուցվածություն, որը հիմնականում լինում է դիաբետիկների մոտ։ Օգտվեցի Հայաստանում տիբեթյան բժշկության մասնագետների հետազոտությունից և առաջարկվող բուժումներից։ Օգտագործեցի՝ ցինկ, գլխուղեղի սնուցման կալցիում, հակալիպիդային թեյ։ Մեկ շաբաթ անց թեթևացավ ոտքերի ցավը և այտուցը, անցավ գլխացավերը, բարելավելով նյութափոխանակությունը, զգում էի էներգիայի մեծ առկայություն, որի շնորհիվ չկար գերհոգնածություն։ Օգտագործեցի նաև խիտոզան, որը նշանակված էր ստամոքսի այտուցի համար, օրգանիզմումս սկսվում էր նախախոցային պրոցես։ 3 օրվա օգտագործումից հետո արդեն գտնվում է հանգիստ վիճակում, նշանակված էր 100 կապսուլա, որի շնորհիվ նաև փակվեց ստամոքսի խոցը։", ps: "Շնորհակալություն մասնագետներին և բժշկությանը, որը գործում է Հայաստանում:"},
     // { image: portraitImg2, name: 'Jane', surname: "Smith", comment: "Content is intended to stand out on a page. So, if a designer or client is reviewing a template and its layout, they can easily become distracted by the writing and lose focus of the design itself." },
     // { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
     // { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },

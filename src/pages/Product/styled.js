@@ -42,6 +42,11 @@ export const StyledProductUpperLeftPart = styled.div`
     }
 `
 
+export const StyledProductImgContainer = styled.div`
+    width: auto;
+    height: auto;
+`
+
 export const StyledProductImg = styled.img`
     width: 400px;
     height: 400px;
