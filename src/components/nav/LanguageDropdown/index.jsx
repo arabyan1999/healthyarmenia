@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import armflag from "../../../assets/armflag.svg";
+import flagArm from "../../../assets/Flag_of_Armenia.png";
 import rusflag from "../../../assets/rusflag.svg";
 import ukflag from "../../../assets/ukflag.svg";
 // import { StyledLanguageFropdown } from './styled';
@@ -32,7 +33,7 @@ import './dropdown.css'; // Import your CSS file for styling
 
 const Dropdown = () => {
   // const items = [{title: "ՀԱՅ", value: "am"}, {title: "ENG", value: "en"}, {title: "РУС", value: "ru"}]
-  const items = [{title: armflag, value: "am"}, {title: ukflag, value: "en"}, {title: rusflag, value: "ru"}]
+  const items = [{title: flagArm, value: "am"}, {title: ukflag, value: "en"}, {title: rusflag, value: "ru"}]
   const [isOpen, setIsOpen] = useState(false);
   // const [selectedLang, setSelectedLang] = useState("ՀԱՅ");
   const [selectedLang, setSelectedLang] = useState(rusflag);
@@ -77,7 +78,9 @@ const Dropdown = () => {
       {isOpen && (
         <ul className="dropdown-menu">
           {items.filter(el => el.title !== selectedLang).map((item, index) => (
-            <li key={index} onClick={() => {changeLanguage(item)}}><img className='image' src={item.title} /></li>
+            <li key={index} onClick={() => {changeLanguage(item)}}>
+              <img className='image' src={item.title} />
+            </li>
           ))}
         </ul>
       )}
