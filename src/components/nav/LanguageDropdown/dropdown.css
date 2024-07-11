@@ -10,6 +10,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  outline: 1px solid black;
 }
 
 .dropdown-toggle {
