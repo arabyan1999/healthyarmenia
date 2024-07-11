@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { foods } from "../../data";
 import { useTranslation } from "react-i18next";
 import { StyledContentText, StyledLine, StyledProductUpperLeftPart, StyledProductContainer, StyledProductImg, StyledProductUpperPart, StyledTitle, StyledLowerPart, StyledLineSpace, StyledMobileTitle, StyledProductImgContainer } from "./styled";
 import { getProductByKeyApi } from "../../request/requests";
@@ -10,17 +9,15 @@ function Product() {
     const { key } = useParams();
     const { t } = useTranslation();
     const [product, setProduct] = useState(null);
-    // const product = foods.array.find((itm) => itm.id == 6);
     const lang = localStorage.getItem("lang") || "am";
 
     useEffect(() => {
         getProductByKeyApi(key, lang)
             .then((res) => {
-                console.log(res.data.data[0]);
                 setProduct(res.data.data[0]);
             })
             .catch((e) => console.log(e))
-    }, []);
+    }, [t]);
 
     if (!product) {
         return (
@@ -35,7 +32,6 @@ function Product() {
                 <StyledProductImgContainer>
                     {!!product?.key && <StyledProductImg src={require(`../../assets/${product.key}.jpg`)} />}
                 </StyledProductImgContainer>
-                {/* <StyledProductImg src={product.image} /> */}
                 <StyledProductUpperLeftPart>
                     <StyledTitle>{product.name}</StyledTitle>
                     <StyledLine />
