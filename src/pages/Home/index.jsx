@@ -42,7 +42,7 @@ function Home() {
             <StyledContainer>
                 <Foreword />
                 <ReferenceBlock blocks={foods} link="product" />
-                <ReferenceBlock blocks={diseases} link="diseases" />
+                <ReferenceBlock blocks={diseases} link="disease" />
                 {/* <ReferenceBlock blocks={threatmentData} /> */}
                 <Booking />
                 {/* <ReferenceBlock blocks={professors} /> */}

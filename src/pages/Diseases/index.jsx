@@ -20,14 +20,17 @@ function DiseasesPage() {
     useEffect(() => {
         try {
             getDiseasesApi(lang)
-                .then((res) => setData(res.data.data))
+                .then((res) => {
+                    console.log(res.data.data)
+                    setData(res.data.data)
+                })
                 .catch((e) => console.log("disease e", e))
                 .finally(() => setLoading(false))
         } catch (e) {
             setLoading(false);
             throw e;
         }
-    }, [lang]);
+    }, [t]);
 
     if (loading) {
         return (
@@ -56,7 +59,7 @@ function DiseasesPage() {
                     {
                         data.map((disease) => 
                             (
-                                <StyledBlock key={disease.key} onClick={() => navigate(`/disease/${disease.id}`)}>
+                                <StyledBlock key={disease.key} onClick={() => navigate(`/disease/${disease.key}`)}>
                                     <StyledImage src={require(`../../assets/${disease.key}.jpg`)} />
                                     <StyledMenuTitle>{disease.name}</StyledMenuTitle>
                                     <p>{sliceText(disease.about, 17)}</p>
