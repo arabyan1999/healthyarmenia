@@ -36,7 +36,7 @@
 }
 
 .dropdown:hover .dropdown-menu {
-  height: min-content;
+  height: fit-content;
   opacity: 1;
   transform: translateY(0);
 }
@@ -50,9 +50,12 @@
 }
 
 .dropdown-menu li {
-  padding: 0 5px 4px;
+  padding: 5px 4px;
   cursor: pointer;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dropdown-menu li:hover {

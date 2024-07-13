@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import armflag from "../../../assets/armflag.svg";
 import flagArm from "../../../assets/Flag_of_Armenia.png";
 import rusflag from "../../../assets/rusflag.svg";
 import ukflag from "../../../assets/ukflag.svg";
@@ -36,7 +35,7 @@ const Dropdown = () => {
   const items = [{title: flagArm, value: "am"}, {title: ukflag, value: "en"}, {title: rusflag, value: "ru"}]
   const [isOpen, setIsOpen] = useState(false);
   // const [selectedLang, setSelectedLang] = useState("ՀԱՅ");
-  const [selectedLang, setSelectedLang] = useState(rusflag);
+  const [selectedLang, setSelectedLang] = useState(flagArm);
   const { i18n } = useTranslation();
 
   const toggleDropdown = () => {
