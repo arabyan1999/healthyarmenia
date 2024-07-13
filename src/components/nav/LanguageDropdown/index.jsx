@@ -72,13 +72,17 @@ const Dropdown = () => {
     // </div>
     <div className="dropdown" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
       <div className="dropdown-toggle">
-        <img className='image' src={selectedLang} alt="lang" />
+        <div className="image-container">
+          <img className='image' src={selectedLang} alt="lang" />
+        </div>
       </div>
       {isOpen && (
         <ul className="dropdown-menu">
           {items.filter(el => el.title !== selectedLang).map((item, index) => (
             <li key={index} onClick={() => {changeLanguage(item)}}>
-              <img className='image' src={item.title} />
+              <div className="image-container">
+                <img className='image' src={item.title} />
+              </div>
             </li>
           ))}
         </ul>

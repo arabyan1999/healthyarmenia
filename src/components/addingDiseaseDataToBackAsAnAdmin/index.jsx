@@ -16,7 +16,7 @@ function AddingDiseaseDataToBack() {
     }
 
     useEffect(() => {
-        // console.log(data);
+        console.log(data);
     }, [data]);
 
     return (
@@ -104,35 +104,29 @@ function AddingDiseaseDataToBack() {
                     }}
                 />
             </StyledContainer>
-
-            {/* <StyledContainer>
-                <label htmlFor="">Healing properties Arm</label>
-                <textarea rows="4"placeholder="Healing properties"
+            <StyledContainer>
+                <label htmlFor="">relevant products</label>
+                <input
+                    type="text"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "healingProperties", e.target.value, 0));
+                        setData(prev => setNewData(prev, "p_key", e.target.value, 0));
                     }}
                 />
-                <label htmlFor="">Healing properties Eng</label>
-                <textarea rows="4"placeholder="Healing properties"
+                <label htmlFor="">relevant products</label>
+                <input
+                    type="text"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "healingProperties", e.target.value, 1));
+                        setData(prev => setNewData(prev, "p_key", e.target.value, 1));
                     }}
                 />
-                <label htmlFor="">Healing properties Rus</label>
-                <textarea rows="4"placeholder="Healing properties"
+                <label htmlFor="">relevant products</label>
+                <input
+                    type="text"
                     onChange={(e) => {
-                        setData(prev => setNewData(prev, "healingProperties", e.target.value, 2));
+                        setData(prev => setNewData(prev, "p_key", e.target.value, 2));
                     }}
                 />
-            </StyledContainer> */}
-            {/* <StyledContainer>
-                <label htmlFor="">Filters</label>
-                <textarea rows="4"placeholder="Healing properties"
-                    onChange={(e) => {
-                        // setData(prev => setNewData(prev, "filters", e.target.value));
-                    }}
-                />
-            </StyledContainer> */}
+            </StyledContainer>
             <button onClick={() => onSubmit()}>Send data</button>
         </StyledContainer>
     )

@@ -6,11 +6,19 @@
   padding: 0 5px;
 }
 
+.image-container {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
 .image {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  outline: 1px solid black;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border: 1px solid black;
 }
 
 .dropdown-toggle {
