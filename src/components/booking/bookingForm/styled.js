@@ -118,8 +118,9 @@ export const StyledBlockFlex = styled(StyledFlex)`
 `
 
 export const StyledSpan = styled.span`
-    color: #777;
-    font-size: 16px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
 `
 
 export const StyledTextarea = styled.textarea`

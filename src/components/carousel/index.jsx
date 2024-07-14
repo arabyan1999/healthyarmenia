@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
-import { CarouselWrapper, Image} from "./styled"
+import { CarouselWrapper} from "./styled"
 import './Carousel.css';
 
 function Carousel({ images }) {
@@ -8,19 +8,19 @@ function Carousel({ images }) {
 
   return (
     <CarouselWrapper className="carousel">
-      {/* <SimpleImageSlider
+      <SimpleImageSlider
         width="100%"
         height="100%"
         images={images}
-        // autoPlay={true}
-        // showBullets
-        // showNavs
+        autoPlay={true}
+        showBullets
         onStartSlide = {(index) => {
           setImageNum(index);
         }}
-        // autoPlayDelay={4}
-      /> */}
-      <Image src={images[0]} alt='discount' />
+        autoPlayDelay={6}
+        className="image-slider"
+      />
+      {/* <Image src={images[0]} alt='discount' /> */}
     </CarouselWrapper>
   );
 }

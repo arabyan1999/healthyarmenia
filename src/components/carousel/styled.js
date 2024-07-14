@@ -7,6 +7,11 @@ export const CarouselWrapper = styled.div`
   margin: 0 auto;
   overflow: hidden;
   height: 500px;
+
+  .image-slider {
+    
+  }
+
   @media screen and (max-width: 1000px) {
     height: 350px;
   }

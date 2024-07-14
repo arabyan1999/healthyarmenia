@@ -3,10 +3,9 @@ import Carousel from "../../components/carousel";
 import ReferenceBlock from "../../components/referenceBlock";
 import Feedback from "../../components/feedback";
 import { diseases, foods } from "../../data";
-import tiensLogo from "../../assets/cover1.jpg";
-import coverLogo from "../../assets/cover2.jpg";
 import tiensProductLogo from "../../assets/tiens-product.jpeg";
-// import tiensResultLogo from "../../assets/results.jpg";
+import t2 from "../../assets/t2.jpg";
+import t4 from "../../assets/t4.jpg";
 import Booking from "../../components/booking";
 import Foreword from "../../components/foreword";
 import { StyledContainer } from "./styled";
@@ -16,9 +15,8 @@ import Loader from "../../components/loader";
 function Home() {
     const images = [
         tiensProductLogo,
-        tiensLogo,
-        coverLogo
-        // tiensResultLogo
+        t2,
+        t4,
     ]
 
     const [loading, setLoading] = useState(true);
