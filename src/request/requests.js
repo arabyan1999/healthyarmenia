@@ -8,7 +8,7 @@ const headers = {
 };
 
 const http = axios.create({
-    baseURL: 'http://localhost:8000/api',
+    baseURL: 'http://tiensofficial.am/api',
     responseType: 'json',
     // withCredentials: true,
     headers,
