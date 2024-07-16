@@ -8,7 +8,7 @@ const headers = {
 };
 
 const http = axios.create({
-    baseURL: 'http://tiensofficial.am/api',
+    baseURL: 'https://api.tiensofficial.am/api',
     responseType: 'json',
     // withCredentials: true,
     headers,
