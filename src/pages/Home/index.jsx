@@ -4,8 +4,9 @@ import ReferenceBlock from "../../components/referenceBlock";
 import Feedback from "../../components/feedback";
 import { diseases, foods } from "../../data";
 import tiensProductLogo from "../../assets/tiens-product.jpeg";
-import t2 from "../../assets/t2.jpg";
-import t4 from "../../assets/t4.jpg";
+import t1 from "../../assets/t2.jpg";
+import t2 from "../../assets/t4.jpg";
+import t3 from "../../assets/TiensImage.webp";
 import Booking from "../../components/booking";
 import Foreword from "../../components/foreword";
 import { StyledContainer } from "./styled";
@@ -14,9 +15,10 @@ import Loader from "../../components/loader";
 
 function Home() {
     const images = [
+        t1,
         tiensProductLogo,
         t2,
-        t4,
+        t3,
     ]
 
     const [loading, setLoading] = useState(true);
