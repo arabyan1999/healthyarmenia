@@ -40,7 +40,6 @@ function BookingForm({ setModal }) {
         
         if (data.name && data.surname && data.phone) {
             setLoading(true);
-            // console.log("response", response);
             try {
                 createBookRequestApi(data, i18n.language)
                     .then(() => setSuccess(true))

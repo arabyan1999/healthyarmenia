@@ -35,11 +35,13 @@ function ProductsPage() {
         try {
             getProductsApi(lang)
                 .then((res) => {
-                    console.log(res.data.data)
-                    setData(res.data.data)
+                    setData(res.data.data);
+                    setLoading(false);
+                    return res.json();
                 })
-                .catch((e) => console.log("products error", e))
-                .finally(() => setLoading(false))
+                .catch((e) => {
+                    console.log("products error", e);
+                })
         } catch (e) {
             setLoading(false);
             throw e;
@@ -69,7 +71,7 @@ function ProductsPage() {
                 </StyledNavigation> */}
                 <StyledProductsContainer>
                     {
-                        data.map((product) => 
+                        data?.map((product) => 
                             (
                                 <StyledBlock key={product.key} onClick={() => navigate(`/product/${product.key}`)}>
                                     {/* <StyledImage src={product.image} /> */}
