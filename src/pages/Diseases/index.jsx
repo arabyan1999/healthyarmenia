@@ -21,8 +21,7 @@ function DiseasesPage() {
         try {
             getDiseasesApi(lang)
                 .then((res) => {
-                    console.log(res.data.data)
-                    setData(res.data.data)
+                    setData(res.data.data);
                 })
                 .catch((e) => console.log("disease e", e))
                 .finally(() => setLoading(false))

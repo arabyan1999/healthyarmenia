@@ -1,10 +1,5 @@
 import axios from "axios";
 
-// const headers = {
-//     'Content-Type': 'text/xml; Charset=utf-8',
-//     'Cache-Control': 'no-cache',
-//     "Accept" : "application/json"
-// }
 const headers = {
     "Content-Type" : "application/json",
     "Accept" : "application/json"
@@ -12,9 +7,7 @@ const headers = {
 
 const http = axios.create({
     baseURL: 'https://api.tiensofficial.am/api',
-    // baseURL: 'http://localhost:8000/api',
     responseType: 'json',
-    // withCredentials: true,
     headers,
 });
 

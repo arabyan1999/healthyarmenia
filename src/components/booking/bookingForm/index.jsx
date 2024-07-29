@@ -42,8 +42,12 @@ function BookingForm({ setModal }) {
             setLoading(true);
             try {
                 createBookRequestApi(data, i18n.language)
-                    .then(() => setSuccess(true))
-                    .catch(() => setError(true))
+                    .then(() => {
+                        setSuccess(true);
+                    })
+                    .catch(() => {
+                        setError(true);
+                    })
                     .finally(() => setLoading(false))
             } catch(err) {
                 setError(true);
