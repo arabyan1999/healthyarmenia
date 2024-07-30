@@ -11,14 +11,14 @@ import Loader from "../../components/loader";
 function DiseasePage() {
     const { t } = useTranslation();
     const { key } = useParams();
-    // const [disease, setDisease] = useState(false);
-    const disease = diseases.array.find(el => el.id == 1);
+    const [disease, setDisease] = useState(false);
+    // const disease = diseases.array.find(el => el.id == 1);
     const lang = localStorage.getItem("lang") || "am";
 
     useEffect(() => {
         getDiseaseByKeyApi(key, lang)
             .then((res) => {
-                // setDisease(res.data.data[0]);
+                setDisease(res.data.data[0]);
             })
             .catch((e) => console.log(e))
     }, [t]);

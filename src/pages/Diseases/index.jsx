@@ -56,11 +56,11 @@ function DiseasesPage() {
                             </StyledUlContainer>
                     ))} */}
                     {
-                        diseases.array.map((disease) => 
+                        data.map((disease) => 
                             (
                                 <StyledBlock key={disease.key} onClick={() => navigate(`/disease/${disease.key}`)}>
-                                    {/* <StyledImage src={require(`../../assets/${disease.key}.jpg`)} /> */}
-                                    <StyledImage src={disease.image} />
+                                    <StyledImage src={require(`../../assets/${disease.key}.jpg`)} />
+                                    {/* <StyledImage src={disease.image} /> */}
                                     <StyledMenuTitle>{disease.name}</StyledMenuTitle>
                                     <p>{sliceText(disease.about, 17)}</p>
                                 </StyledBlock>
