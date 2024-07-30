@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-// import { diseases } from "../../data";
+import { diseases } from "../../data";
 import { StyledContentText } from "../Product/styled";
 import { StyledBlock, StyledBlockTitle, StyledCenterText, StyledContainer, StyledImgContainer, StyledMainTitle, StyledRefButton } from "./styled";
 import { getDiseaseByKeyApi } from "../../request/requests";
@@ -11,14 +11,14 @@ import Loader from "../../components/loader";
 function DiseasePage() {
     const { t } = useTranslation();
     const { key } = useParams();
-    const [disease, setDisease] = useState(false);
-    // const disease = diseases.array.find(el => el.id == 1);
+    // const [disease, setDisease] = useState(false);
+    const disease = diseases.array.find(el => el.id == 1);
     const lang = localStorage.getItem("lang") || "am";
 
     useEffect(() => {
         getDiseaseByKeyApi(key, lang)
             .then((res) => {
-                setDisease(res.data.data[0]);
+                // setDisease(res.data.data[0]);
             })
             .catch((e) => console.log(e))
     }, [t]);
