@@ -3,7 +3,7 @@ import tempLogo from "./assets/pressure_fluctuations.jpg";
 import liverLogo from "./assets/cirrhosis.jpg";
 import prostateLogo from "./assets/adenoma_prostate.jpg";
 import artrosartritLogo from "./assets/arthritis_and_arthrosis.jpg";
-import aterosklerozLogo from "./assets/ateroskleroz.jpg";
+import aterosklerozLogo from "./assets/atherosclerosis.jpg";
 import astmaLogo from "./assets/bronchial_asthma.jpg";
 import diabetLogo from "./assets/diabetes.png";
 import hipertoniaLogo from "./assets/hipertonia.jpg";
