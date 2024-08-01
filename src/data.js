@@ -6,7 +6,7 @@ import artrosartritLogo from "./assets/arthritis_and_arthrosis.jpg";
 import aterosklerozLogo from "./assets/atherosclerosis.jpg";
 import astmaLogo from "./assets/bronchial_asthma.jpg";
 import diabetLogo from "./assets/diabetes.jpg";
-import hipertoniaLogo from "./assets/hipertonia.jpg";
+import hipertoniaLogo from "./assets/hypertension.jpg";
 import migraineLogo from "./assets/migraine.jpg";
 import dizbakteriozLogo from "./assets/intestinal_dysbacteriosis.jpg";
 
