@@ -46,11 +46,22 @@ export const StyledCenterText = styled.p`
     text-align: center;
     padding-top: 40px;
     font-size: 18px;
+    font-weight: 700;
 `
 
 export const StyledRefButton = styled.button`
+    position: relative;
     border: unset;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 18px;
     font-weight: 700;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+    }
 `

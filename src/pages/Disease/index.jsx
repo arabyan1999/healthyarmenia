@@ -6,7 +6,7 @@ import { StyledContentText } from "../Product/styled";
 import { StyledBlock, StyledBlockTitle, StyledCenterText, StyledContainer, StyledImgContainer, StyledMainTitle, StyledRefButton } from "./styled";
 import { getDiseaseByKeyApi } from "../../request/requests";
 import Loader from "../../components/loader";
-// import { ContactModal } from "../../components/nav/contactModal";
+import { ContactModal } from "../../components/nav/contactModal";
 
 function DiseasePage() {
     const { t } = useTranslation();
@@ -14,6 +14,7 @@ function DiseasePage() {
     const [disease, setDisease] = useState(false);
     // const disease = diseases.array.find(el => el.id == 1);
     const lang = localStorage.getItem("lang") || "am";
+    const [modal, setModal] = useState(false);
 
     useEffect(() => {
         getDiseaseByKeyApi(key, lang)
@@ -67,8 +68,10 @@ function DiseasePage() {
                     {disease.treatment}
                 </StyledContentText>
             </StyledBlock> */}
-            {/* <StyledCenterText>Հիվանդության կանխարգելման և/կամ բուժման մասին տեղեկություն ստանալու համար <StyledRefButton onClick={() => setModal(true)}>գրանցվեք հղումով</StyledRefButton></StyledCenterText>
-            {modal && <ContactModal setModal={setModal} />} */}
+            <StyledCenterText>
+                {t("to_obtain_information_about_disease")}{" "}
+            <StyledRefButton onClick={() => setModal(true)}>{t("register_with_the_link")}</StyledRefButton></StyledCenterText>
+            {modal && <ContactModal setModal={setModal} />}
         </StyledContainer>
     )
 }

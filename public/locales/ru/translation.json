@@ -111,5 +111,8 @@
     "pressure_fluctuations": "Колебания давления",
     "cirrhosis": "Цирроз печени",
 
-    "more": "Подробнее"
+    "more": "Подробнее",
+    
+    "to_obtain_information_about_disease": "Для получения информации о профилактике и/или лечении заболеваний",
+    "register_with_the_link": "зарегистрируйтесь по ссылке"
 }
