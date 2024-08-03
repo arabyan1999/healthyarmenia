@@ -7,6 +7,7 @@ import tiensProductLogo from "../../assets/tiens-product.jpeg";
 import t1 from "../../assets/t2.jpg";
 import t2 from "../../assets/t4.jpg";
 import t3 from "../../assets/TiensImage.webp";
+import t4 from "../../assets/tiens_nice_2_0.jpg";
 import Booking from "../../components/booking";
 import Foreword from "../../components/foreword";
 import { StyledContainer } from "./styled";
@@ -17,7 +18,8 @@ function Home() {
     const images = [
         t1,
         tiensProductLogo,
-        t2,
+        // t2,
+        t4,
         t3,
     ]
 

@@ -73,7 +73,7 @@ function ProductsPage() {
                     {
                         data?.map((product) => 
                             (
-                                <StyledBlock key={product.key} onClick={() => navigate(`/product/${product.key}`)}>
+                                <StyledBlock key={product.key} href={`/product/${product.key}`}>
                                     {/* <StyledImage src={product.image} /> */}
                                     <StyledImage src={require(`../../assets/${product.key}.jpg`)} />
                                     <StyledMenuTitle>{product.name}</StyledMenuTitle>

@@ -58,7 +58,7 @@ function DiseasesPage() {
                     {
                         data.map((disease) => 
                             (
-                                <StyledBlock key={disease.key} onClick={() => navigate(`/disease/${disease.key}`)}>
+                                <StyledBlock key={disease.key} href={`/disease/${disease.key}`}>
                                     <StyledImage src={require(`../../assets/${disease.key}.jpg`)} />
                                     {/* <StyledImage src={disease.image} /> */}
                                     <StyledMenuTitle>{disease.name}</StyledMenuTitle>

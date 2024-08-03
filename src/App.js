@@ -31,8 +31,8 @@ function App() {
               <Route path="disease/:key" element={<DiseasePage />} />
               <Route path="feedback" element={<Feedback />} />
               <Route path="*" element={<NotFound />} />
-              <Route path="/add-data" element={<AddingDataToBack />} />
-              <Route path="/add-disease" element={<AddingDiseaseDataToBack />} />
+              {/* <Route path="/add-data" element={<AddingDataToBack />} />
+              <Route path="/add-disease" element={<AddingDiseaseDataToBack />} /> */}
             </Routes>
         </div>
       </div>

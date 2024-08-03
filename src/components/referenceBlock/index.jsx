@@ -17,7 +17,7 @@ function ReferenceBlock({ blocks, link }) {
                     blocks.array.map((block, index) => {
                         if (index <=2) {
                                 return (
-                                    <StyledBlock key={block.id} onClick={!!link ? () => navigate(`/${link}/${block.key}`) : () => {}}>
+                                    <StyledBlock key={block.id} href={!!link ? `/${link}/${block.key}` : null}>
                                         <StyledImage src={block.image} />
                                         <StyledMenuTitle>{t(block.name)}</StyledMenuTitle>
                                         <p>{sliceText(t(block.about) || t(block.function), 10)}</p>

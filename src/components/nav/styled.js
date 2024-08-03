@@ -74,8 +74,27 @@ export const StyledHomeLink = styled.a`
 `
 
 export const StyledLink = styled(StyledHomeLink)`
-    &:hover {
+    /* &:hover {
         text-decoration: underline;
+    } */
+    position: relative;
+    &:hover::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+    }
+    &.active::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
     }
 `
 
@@ -85,8 +104,24 @@ export const StyledButton = styled.button`
     font-size: 16px;
     color: #333;
     margin-right: 30px;
-    &:hover {
-        text-decoration: underline;
+    position: relative;
+    &:hover::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+    }
+    &.active::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
     }
 `
 

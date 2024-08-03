@@ -50,7 +50,7 @@ export const StyledMenuTitle = styled.h3`
     font-size: 22px;
 `
 
-export const StyledBlock = styled.div`
+export const StyledBlock = styled.a`
     width: 100%;
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
@@ -61,6 +61,8 @@ export const StyledBlock = styled.div`
     cursor: pointer;
     border-radius: 10px;
     transition: all 0.5s ease;
+    text-decoration: none;
+    color: #333;
     &:hover {
         transform: scale(1.05);
         @media screen and (max-width: 700px) {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyledBurger, StyledButton, StyledHeader, StyledHomeLink, StyledLink, StyledNavigationBar, StyledTitle } from './styled';
 import LanguageDropdown from './LanguageDropdown';
@@ -6,9 +6,17 @@ import { ReactComponent as TiensLogo } from "../../assets/logo.svg";
 import { ContactModal } from './contactModal';
 
 function NavigationBar() {
+  
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [modal, setModal] = useState(false);
+  const [path, setPaht] = useState("");
+  
+  useEffect(() => {
+    setPaht(window.location.pathname);
+  }, [window.location.pathname]);
+
+
   return (
     <StyledHeader>
       <StyledHomeLink href="/">
@@ -27,13 +35,18 @@ function NavigationBar() {
             <TiensLogo />
           </StyledHomeLink>
         </StyledTitle> */}
-        <StyledLink href="/about">{t("about")}</StyledLink>
-        <StyledLink href="/diseases">{t("diseases")}</StyledLink>
-        <StyledLink href="/products">{t("product")}</StyledLink>
-        <StyledLink href={window.location.pathname === "/" ? "#feedback" : "/feedback"} onClick={() => setIsOpen(false)}>
-          {t("feedback")}
-        </StyledLink>
-        <StyledButton onClick={() => setModal(true)}>{t("contact")}</StyledButton>
+        <StyledLink href="/about" className={path === "/about" ? "active" : ""}>{t("about")}</StyledLink>
+        <StyledLink href="/diseases" className={path === "/diseases" ? "active" : ""}>{t("diseases")}</StyledLink>
+        <StyledLink href="/products" className={path === "/products" ? "active" : ""}>{t("product")}</StyledLink>
+        <StyledLink href="/feedback" className={path === "/feedback" ? "active" : ""}>{t("feedback")}</StyledLink>
+        <StyledButton
+          onClick={() => {
+            setModal(true);
+            setIsOpen(false);
+          }}
+        >
+          {t("contact")}
+        </StyledButton>
         <LanguageDropdown />
       </StyledNavigationBar>
       {modal && <ContactModal setModal={setModal} />}
