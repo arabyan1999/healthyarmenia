@@ -71,6 +71,8 @@
     "healing_properties_calcium": "Replenishes calcium deficiency in the body, Prevents the development of osteoporosis, Regulates blood sugar and nutrient balance, Increases physical and mental activity, Strengthens the body's resistance to stress",
     "heart_arrhythmia_about": "Arrhythmia is a pathological condition in which the frequency, strength and sequence of heart contractions are disturbed. Cardialgia (heart pain) along with rhythm",
     "pressure_fluctuations_about": "Fluctuations in arterial pressure are caused by changes in vascular tone in response to multiple stimuli. These variations can be conditioned",
+    "prostatate_adenoma": "Adenoma prostate",
+    "prostatate_adenoma_about": "Prostate adenoma is a benign tumor of the prostate that is caused by hyperplastic changes in the paraurethral glands (located in the urethra of the prostate). In the case of prostate adenoma, its internal cells gradually increase and multiply, compressing the urethral canal. Because of this, the process of urination is disrupted. Over time, bladder congestion becomes permanent, leading to acute or chronic urinary retention and increasing the risk of cystitis, urethritis, pyelonephritis, and renal failure. The pathology occurs in every 4th man over 40 and every second man over 50. The disease is not oncological, but the term 'benign' does not exclude the possibility of the tumor turning into cancer.",
     "cirrhosis_about": "A disease in which the liver cannot function normally due to long-term damage. This damage is characterized by the replacement of normal liver tissue with scar tissue.",
     "keep_your_health": "Keep your health",
 
@@ -114,5 +116,6 @@
     "more": "More",
 
     "to_obtain_information_about_disease": "To obtain information about disease prevention and/or treatment",
+    "to_obtain_information_about_product": "For detailed information and advice on food and health",
     "register_with_the_link": "register with the link"
 }

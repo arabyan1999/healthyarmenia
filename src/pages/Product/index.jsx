@@ -4,12 +4,15 @@ import { useTranslation } from "react-i18next";
 import { StyledContentText, StyledLine, StyledProductUpperLeftPart, StyledProductContainer, StyledProductImg, StyledProductUpperPart, StyledTitle, StyledLowerPart, StyledLineSpace, StyledMobileTitle, StyledProductImgContainer } from "./styled";
 import { getProductByKeyApi } from "../../request/requests";
 import Loader from "../../components/loader";
+import { StyledCenterText, StyledRefButton } from "../Disease/styled";
+import { ContactModal } from "../../components/nav/contactModal";
 
 function Product() {
     const { key } = useParams();
     const { t } = useTranslation();
     const [product, setProduct] = useState(null);
     const lang = localStorage.getItem("lang") || "am";
+    const [modal, setModal] = useState(false);
 
     useEffect(() => {
         getProductByKeyApi(key, lang)
@@ -54,6 +57,10 @@ function Product() {
                     {t(product.healingProperties)}
                 </StyledContentText>
             </StyledLowerPart>
+            <StyledCenterText>
+                {t("to_obtain_information_about_product")}{" "}
+            <StyledRefButton onClick={() => setModal(true)}>{t("register_with_the_link")}</StyledRefButton></StyledCenterText>
+            {modal && <ContactModal setModal={setModal} />}
         </StyledProductContainer>
     )
 }
