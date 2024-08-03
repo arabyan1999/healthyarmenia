@@ -51,33 +51,6 @@ function About() {
                     </StyledCenterFlex>
                 </StyledBlock>
                 <StyledBlock>
-                    {/* <StyledBlockTitle>
-                        {t("chairman_li")}
-                    </StyledBlockTitle> */}
-                    <StyledFlex>
-                        <StyledLeftText>
-                            {t("about_li")}
-                        </StyledLeftText>
-                    </StyledFlex>
-                    <StyledMarginBottom />
-                    <StyledFlex>
-                        <div>
-                            <h2>{t("message_from_chairman_li")}</h2>
-                            <StyledMarginBottom />
-                            <StyledSecondaryTitle>{t("health_dream")}</StyledSecondaryTitle>
-                            <div>
-                                <StyledLeftText>
-                                    {t("chairman_message_content")}
-                                </StyledLeftText>
-                                <StyledSignContainer>
-                                    <StyledRightAlignText>{t("chairman_of_tiens_group")}</StyledRightAlignText>
-                                </StyledSignContainer>
-                            </div>
-                        </div>
-                        <StyledHeadImage src={headLogo} alt="" />
-                    </StyledFlex>
-                </StyledBlock>
-                <StyledBlock>
                     <StyledBlockTitle>
                         {t("hight_standard")}
                     </StyledBlockTitle>
@@ -124,8 +97,34 @@ function About() {
                         </StyledLeftText>
                     </StyledFlex>
                 </StyledBlock>
-                
                 <StyledMarginBottom />
+                <StyledBlock>
+                    {/* <StyledBlockTitle>
+                        {t("chairman_li")}
+                    </StyledBlockTitle> */}
+                    <StyledFlex>
+                        <StyledLeftText>
+                            {t("about_li")}
+                        </StyledLeftText>
+                    </StyledFlex>
+                    <StyledMarginBottom />
+                    <StyledFlex>
+                        <div>
+                            <h2>{t("message_from_chairman_li")}</h2>
+                            <StyledMarginBottom />
+                            <StyledSecondaryTitle>{t("health_dream")}</StyledSecondaryTitle>
+                            <div>
+                                <StyledLeftText>
+                                    {t("chairman_message_content")}
+                                </StyledLeftText>
+                                <StyledSignContainer>
+                                    <StyledRightAlignText>{t("chairman_of_tiens_group")}</StyledRightAlignText>
+                                </StyledSignContainer>
+                            </div>
+                        </div>
+                        <StyledHeadImage src={headLogo} alt="" />
+                    </StyledFlex>
+                </StyledBlock>
             </StyledContent>
         </StyledAboutPage>
     )
