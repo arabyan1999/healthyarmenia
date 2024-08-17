@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { StyledBlock, StyledCentrelizedText, StyledContainer, StyledFirstTitle, StyledFlex, StyledImg, StyledSecondaryTitle, StyledText, StyledTitle } from "./styled";
+import { StyledBlock, StyledContainer, StyledFirstTitle, StyledFlex, StyledImg, StyledSecondaryTitle, StyledText } from "./styled";
 import FourReason from "../fourReasons";
 import { StyledLi } from "../fourReasons/styled";
 import detoxImage from "../../assets/detox.jpg";

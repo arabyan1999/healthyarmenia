@@ -11,8 +11,8 @@ import Footer from './components/footer_component';
 import NotFound from './pages/Not_found';
 import './App.css';
 import Feedback from './components/feedback';
-import AddingDataToBack from './components/addingDataToBackAsAnAdmin';
-import AddingDiseaseDataToBack from './components/addingDiseaseDataToBackAsAnAdmin';
+// import AddingDataToBack from './components/addingDataToBackAsAnAdmin';
+// import AddingDiseaseDataToBack from './components/addingDiseaseDataToBackAsAnAdmin';
 
 function App() {
 

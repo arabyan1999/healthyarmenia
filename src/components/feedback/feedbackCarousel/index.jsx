@@ -9,7 +9,7 @@ const FeedbackCarousel = ({ feedbackData }) => {
     <StyledFeedbackBlock>
       <StyledBlockUpperPart>
         <StyledImageContainer>
-          <img src={el.image} />
+          <img src={el.image} alt={el.image} />
         </StyledImageContainer>
         <div>
           <h3>{el.name} {el.surname}</h3>
@@ -32,6 +32,7 @@ const FeedbackCarousel = ({ feedbackData }) => {
               <Feedback el={el} key={index} />
             )  
           }
+          return;
         } else {
           return (
             <Feedback el={el} key={index} />
