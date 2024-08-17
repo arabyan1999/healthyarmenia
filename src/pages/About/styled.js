@@ -10,6 +10,7 @@ export const StyledTitle = styled.h1`
     text-align: center;
     font-size: 42px;
     margin-bottom: 20px;
+    text-transform: uppercase;
 `
 
 export const StyledContent = styled.div`

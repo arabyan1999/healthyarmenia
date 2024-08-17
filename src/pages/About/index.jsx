@@ -11,7 +11,7 @@ function About() {
     const { t } = useTranslation();
     return (
         <StyledAboutPage>
-            <StyledTitle>TIENS</StyledTitle>
+            <StyledTitle>tiens</StyledTitle>
             <StyledBlock>
                 <StyledImage src={headquarterLogo} alt="headquarter" />
             </StyledBlock>
