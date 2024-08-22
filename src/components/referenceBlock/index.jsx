@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { StyledBlock, StyledContainer, StyledRef, StyledReferencesBlocks, StyledMainTitle, StyledMenuTitle, StyledImage } from "./styled";
 import { ReactComponent as RightArrow } from "../../assets/right-arrow-svgrepo-com.svg";
@@ -7,7 +6,6 @@ import { sliceText } from "../../helpers/helper";
 
 function ReferenceBlock({ blocks, link }) {
     const { t } = useTranslation();
-    const navigate = useNavigate();
 
     return (
         <StyledContainer>

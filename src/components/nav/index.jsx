@@ -30,14 +30,9 @@ function NavigationBar() {
         <div className="bar3"></div>
       </StyledBurger>
       <StyledNavigationBar is_open={isOpen ? 1 : undefined}>
-        {/* <StyledTitle>
-          <StyledHomeLink href="/" className='mobileLogo'>
-            <TiensLogo />
-          </StyledHomeLink>
-        </StyledTitle> */}
         <StyledLink href="/about" className={path === "/about" ? "active" : ""}>{t("about")}</StyledLink>
-        <StyledLink href="/diseases" className={path === "/diseases" ? "active" : ""}>{t("diseases")}</StyledLink>
-        <StyledLink href="/products" className={path === "/products" ? "active" : ""}>{t("product")}</StyledLink>
+        <StyledLink href="/diseases" className={path.includes("/disease") ? "active" : ""}>{t("diseases")}</StyledLink>
+        <StyledLink href="/products" className={path.includes("/product") ? "active" : ""}>{t("product")}</StyledLink>
         <StyledLink href="/feedback" className={path === "/feedback" ? "active" : ""}>{t("feedback")}</StyledLink>
         <StyledButton
           onClick={() => {

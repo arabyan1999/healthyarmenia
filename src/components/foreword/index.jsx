@@ -11,9 +11,6 @@ function Foreword() {
         <StyledContainer>
             <StyledBlock>
                 <StyledFirstTitle>{t("why_our_services")}</StyledFirstTitle>
-                {/* <StyledCentrelizedText>
-                    Stex klini mi hat poqr text
-                </StyledCentrelizedText> */}
                 <ol>
                     <StyledLi>
                         {t("choice_reason_one")}
@@ -29,10 +26,6 @@ function Foreword() {
                     </StyledLi>
                 </ol>
             </StyledBlock>
-            {/* <StyledTitle>{t("main_idea")} {t("hard_work")}</StyledTitle>
-            <StyledText mb>{t("deteriorating_environmental_conditions")}</StyledText>
-            <StyledText mb>{t("site_provides_valuable_information")}</StyledText> */}
-
             <StyledSecondaryTitle>
                 {t("detox")}
             </StyledSecondaryTitle>

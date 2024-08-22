@@ -73,7 +73,6 @@ function About() {
                 </StyledFlex>
                 <StyledFlex>
                     <StyledCertificates>
-                        {/* <StyledCertificateImg src={certificate1} /> */}
                         {
                             certificates.map((el) => (
                                 <StyledCertificateImg src={require(`../../assets/${el}.jpg`)} onClick={() => window.open(require(`../../assets/${el}.jpg`))} />  
@@ -99,9 +98,6 @@ function About() {
                 </StyledBlock>
                 <StyledMarginBottom />
                 <StyledBlock>
-                    {/* <StyledBlockTitle>
-                        {t("chairman_li")}
-                    </StyledBlockTitle> */}
                     <StyledFlex>
                         <StyledLeftText>
                             {t("about_li")}

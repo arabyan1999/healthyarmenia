@@ -108,12 +108,6 @@ function BookingForm({ setModal }) {
                     />
                 </StyledBlockFlex>
                 <StyledBlockFlex>
-                    {/* <StyledInput
-                        className="input"
-                        type="text"
-                        placeholder={t("email")}
-                        onChange={(e) => setData(prev => setNewData(prev, "email", e.target.value))}
-                    /> */}
                     <StyledInput
                         className="input"
                         type="text"
@@ -130,13 +124,6 @@ function BookingForm({ setModal }) {
                         }}
                     />
                 </StyledBlockFlex>
-                {/* <StyledBlockFlex>
-                    <StyledSelect placeholder="Choose a service">
-                        <StyledOption>{t("narrow_specialist_advice")}</StyledOption>
-                        <option>{t("general_advice_consultation")}</option>
-                        <option>{t("prophylactic_examination")}</option>
-                    </StyledSelect>
-                </StyledBlockFlex> */}
                 <StyledBlockFlex>
                     <StyledCustomSelect className="custom-select">
                         <StyledSelected className="select-selected" not_empty={!!data.service_type  ? true : undefined} onClick={() => setOpen(prev => !prev)}>
