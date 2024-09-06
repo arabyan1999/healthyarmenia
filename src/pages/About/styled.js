@@ -84,7 +84,7 @@ export const StyledFlex = styled.div`
 export const StyledCenterFlex = styled(StyledFlex)`
     justify-content: space-around;
     flex-wrap: wrap;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 900px) {
         flex-direction: column;
         align-items: center;   
     }
