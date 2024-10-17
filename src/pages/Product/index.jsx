@@ -59,7 +59,8 @@ function Product() {
             </StyledLowerPart>
             <StyledCenterText>
                 {t("to_obtain_information_about_product")}{" "}
-            <StyledRefButton onClick={() => setModal(true)}>{t("register_with_the_link")}</StyledRefButton></StyledCenterText>
+                <StyledRefButton onClick={() => setModal(true)}>{t("register_with_the_link")}</StyledRefButton>
+            </StyledCenterText>
             {modal && <ContactModal setModal={setModal} />}
         </StyledProductContainer>
     )

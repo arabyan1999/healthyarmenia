@@ -52,6 +52,7 @@ export const StyledCenterText = styled.p`
 export const StyledRefButton = styled.button`
     position: relative;
     border: unset;
+    background: transparent;
     /* text-decoration: underline; */
     font-size: 18px;
     font-weight: 700;

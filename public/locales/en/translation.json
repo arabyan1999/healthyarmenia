@@ -1,6 +1,6 @@
 {
     "about": "About us",
-    "product": "Food",
+    "product": "Eco food",
     "discount": "Discount",
     "contact": "Contact",
     "feedback": "Feedback",
@@ -24,7 +24,7 @@
     "sign_four": "Weight gain",
 
     "common_diseases_title": "Common diseases",
-    "diseases": "Diseases",
+    "diseases": "Our treatments",
     "description": "Description",
     "symptoms": "Symptoms",
 
@@ -117,5 +117,11 @@
 
     "to_obtain_information_about_disease": "To obtain information about disease prevention and/or treatment",
     "to_obtain_information_about_product": "For detailed information and advice on food and health",
-    "register_with_the_link": "register with the link"
+    "to_obtain_about": "For a free consultation by a specialist",
+    "to_obtain_about_product": "For detailed information on the product and its effects",
+    "register_with_the_link": "register with the link",
+    "below_some_examples_of_treatments": "Below are some examples of our treatments",
+    "thanks_to_tibetan_medicine_specialist": "Thanks to Tibetan medicine specialists, you will receive radical treatment for the following and many other problems",
+    "tiens_products_are_made": "Tiens company products are made from natural raw materials and do not contain chemical additives",
+    "info_about_eco_food": "Below you will find brief information about eco foods (composition, medicinal properties and effect on the body)"
 }

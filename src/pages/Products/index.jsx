@@ -6,10 +6,13 @@ import Loader from "../../components/loader";
 import { useScrollingElement } from "../../hooks/use-scrolling-element";
 import { sliceText } from "../../helpers/helper";
 import { getProductsApi } from "../../request/requests";
+import { StyledCenterText, StyledRefButton } from "../Disease/styled";
+import { ContactModal } from "../../components/nav/contactModal";
 
 function ProductsPage() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [modal, setModal] = useState(false);
     const { t } = useTranslation();
     useScrollingElement(loading);
     const lang = localStorage.getItem("lang") || "am";
@@ -42,6 +45,15 @@ function ProductsPage() {
         <StyledBackgroundTransparent>
             <StyledProductsPage>
                 <StyledTitle>{t("keep_your_health")}</StyledTitle>
+                <StyledCenterText>
+                    <p>{t("tiens_products_are_made")}</p>
+                    <p>{t("info_about_eco_food")}</p>
+                </StyledCenterText>
+                <StyledCenterText>
+                    {t("to_obtain_about_product")}{" "}
+                    <StyledRefButton onClick={() => setModal(true)}>{t("register_with_the_link")}</StyledRefButton>
+                </StyledCenterText>
+                {modal && <ContactModal setModal={setModal} />}
                 <StyledProductsContainer>
                     {
                         data?.map((product) => 

@@ -10,7 +10,7 @@ import DiseasePage from './pages/Disease';
 import Footer from './components/footer_component';
 import NotFound from './pages/Not_found';
 import './App.css';
-import Feedback from './components/feedback';
+// import Feedback from './components/feedback';
 // import AddingDataToBack from './components/addingDataToBackAsAnAdmin';
 // import AddingDiseaseDataToBack from './components/addingDiseaseDataToBackAsAnAdmin';
 
@@ -29,7 +29,7 @@ function App() {
               <Route path="products" element={<ProductsPage />} />
               <Route path="diseases" element={<DiseasesPage />} />
               <Route path="disease/:key" element={<DiseasePage />} />
-              <Route path="feedback" element={<Feedback />} />
+              {/* <Route path="feedback" element={<Feedback />} /> */}
               <Route path="*" element={<NotFound />} />
               {/* <Route path="/add-data" element={<AddingDataToBack />} />
               <Route path="/add-disease" element={<AddingDiseaseDataToBack />} /> */}
