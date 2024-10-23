@@ -17,6 +17,7 @@ export const StyledBackgroundTransparent = styled.div`
 
 export const StyledTitle = styled.h2`
     text-align: center;
+    color: #333;
 `
 
 export const StyledNavigation = styled.div`

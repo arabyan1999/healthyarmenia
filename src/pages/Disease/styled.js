@@ -47,15 +47,16 @@ export const StyledCenterText = styled.p`
     padding-top: 40px;
     font-size: 18px;
     font-weight: 700;
+    color: #333;
 `
 
 export const StyledRefButton = styled.button`
     position: relative;
     border: unset;
     background: transparent;
-    /* text-decoration: underline; */
     font-size: 18px;
     font-weight: 700;
+    color: #333;
     &::before {
         content: "";
         width: 100%;

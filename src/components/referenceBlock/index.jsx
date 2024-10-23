@@ -9,7 +9,7 @@ function ReferenceBlock({ blocks, link }) {
 
     return (
         <StyledContainer>
-            <StyledMainTitle>{link === "product" ? t("biologic_actives_that_help") : t("common_diseases_title")}</StyledMainTitle>
+            <StyledMainTitle>{link === "product" ? t("biologic_actives_that_help") : t("diseases")}</StyledMainTitle>
             <StyledReferencesBlocks>
                 {
                     blocks.array.map((block, index) => {

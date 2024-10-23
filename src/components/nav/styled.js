@@ -74,10 +74,9 @@ export const StyledHomeLink = styled.a`
 `
 
 export const StyledLink = styled(StyledHomeLink)`
-    /* &:hover {
-        text-decoration: underline;
-    } */
     position: relative;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     &:hover::before {
         content: "";
         width: 100%;
@@ -105,6 +104,8 @@ export const StyledButton = styled.button`
     color: #333;
     margin-right: 30px;
     position: relative;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     &:hover::before {
         content: "";
         width: 100%;

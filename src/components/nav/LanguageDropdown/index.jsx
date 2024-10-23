@@ -3,38 +3,11 @@ import { useTranslation } from 'react-i18next';
 import flagArm from "../../../assets/Flag_of_Armenia.png";
 import rusflag from "../../../assets/rusflag.svg";
 import ukflag from "../../../assets/ukflag.svg";
-// import { StyledLanguageFropdown } from './styled';
-
-// function LanguageDropdown() {
-//   const [selectedLanguage, setSelectedLanguage] = useState('am');
-
-//   const { t, i18n } = useTranslation();
-
-//   const handleLanguageChange = (e) => {
-//     setSelectedLanguage(e.target.value);
-//     i18n.changeLanguage(e.target.value);
-//   };
-
-//   return (
-//     <StyledLanguageFropdown>
-//       <select id="language-select" value={selectedLanguage} onChange={(e) => handleLanguageChange(e)}>
-//         <option value="am">AM</option>
-//         <option value="ru">RU</option>
-//         <option value="en">EN</option>
-//       </select>
-//     </StyledLanguageFropdown>
-//   );
-// }
-
-// export default LanguageDropdown;
-
-import './dropdown.css'; // Import your CSS file for styling
+import './dropdown.css';
 
 const Dropdown = () => {
-  // const items = [{title: "ՀԱՅ", value: "am"}, {title: "ENG", value: "en"}, {title: "РУС", value: "ru"}]
   const items = [{title: flagArm, value: "am"}, {title: ukflag, value: "en"}, {title: rusflag, value: "ru"}]
   const [isOpen, setIsOpen] = useState(false);
-  // const [selectedLang, setSelectedLang] = useState("ՀԱՅ");
   const [selectedLang, setSelectedLang] = useState(flagArm);
   const { i18n } = useTranslation();
 
@@ -58,18 +31,6 @@ const Dropdown = () => {
   }, []);
 
   return (
-    // <div className="dropdown" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-    //   <div className="dropdown-toggle">
-    //     {selectedLang}
-    //   </div>
-    //   {isOpen && (
-    //     <ul className="dropdown-menu">
-    //       {items.filter(el => el.title !== selectedLang).map((item, index) => (
-    //         <li key={index} onClick={() => {changeLanguage(item)}}>{item.title}</li>
-    //       ))}
-    //     </ul>
-    //   )}
-    // </div>
     <div className="dropdown" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
       <div className="dropdown-toggle">
         <div className="image-container">
