@@ -50,6 +50,10 @@ export const StyledCenterText = styled.p`
     color: #333;
 `
 
+export const StyledMarginTopP = styled.p`
+    margin-top: 20px;
+`
+
 export const StyledRefButton = styled.button`
     position: relative;
     border: unset;

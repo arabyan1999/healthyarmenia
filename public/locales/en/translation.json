@@ -1,6 +1,6 @@
 {
     "about": "About us",
-    "product": "Eco food",
+    "product": "Medicines",
     "discount": "Discount",
     "contact": "Contact",
     "feedback": "Feedback",
@@ -8,7 +8,7 @@
     "videos": "Videos",
 
     "why_our_services": "WHY CHOOSE TIBETAN MEDICINE?",
-    "choice_reason_one": "Eco food has no side and negative effects on organs and organism",
+    "choice_reason_one": "The product of Tiens company has no side and negative effects on organs and organism",
     "choice_reason_two": "Not addictive",
     "choice_reason_three": "Does not contain hormones, preservatives and dyes, thanks to which a high therapeutic effect is maintained",
     "choice_reason_four": "The therapeutic effect lasts for years",
@@ -123,8 +123,8 @@
     "register_with_the_link": "register with the link",
     "below_some_examples_of_treatments": "Below are some examples of our treatments",
     "thanks_to_tibetan_medicine_specialist": "Thanks to Tibetan medicine specialists, you will receive radical treatment for the following and many other problems",
-    "tiens_products_are_made": "Tiens company products are made from natural raw materials and do not contain chemical additives",
-    "info_about_eco_food": "Below you will find brief information about eco foods (composition, medicinal properties and effect on the body)",
+    "tiens_products_are_made": "Tiens company products are made from natural raw materials and do not contain chemical additives.",
+    "info_about_eco_food": "Below you will find brief information about products (composition, medicinal properties and effect on the body).",
     "soon": "Coming soon",
     "in_this_section": "In this section you will find videos where our customers talk about their problems and their solutions"
 }
