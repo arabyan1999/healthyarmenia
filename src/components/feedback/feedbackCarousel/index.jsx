@@ -39,9 +39,9 @@ const FeedbackCarousel = ({ feedbackData }) => {
           )
         }
       })}
-      {(window.location.pathname !== "/feedback") ? (
+      {/* {(window.location.pathname !== "/feedback") ? (
         <StyledFeedbackRef href={"/feedback"}>{t("all_feedbacks")} <RightArrow /></StyledFeedbackRef>
-      ) : null}
+      ) : null} */}
     </StyledFeedackContainer>
   );
 };

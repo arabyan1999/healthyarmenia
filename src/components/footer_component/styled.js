@@ -9,17 +9,14 @@ export const StyledFoot = styled.div`
     align-items: center;
     justify-content: center;
     align-self: flex-end;
-    /* position: absolute;
-    bottom: 0;
-    margin-top: 100px; */
-    @media screen and (max-width: 554px) {
+    @media screen and (max-width: 1170px) {
         flex-direction: column;
     }
 `
 
 export const StyledText = styled.p`
     margin-right: 45px;
-    @media screen and (max-width: 554px) {
+    @media screen and (max-width: 1170px) {
         margin-right: 0;
         margin-bottom: 10px;
     }
