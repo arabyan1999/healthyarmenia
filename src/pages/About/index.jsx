@@ -97,7 +97,7 @@ function About() {
                     </StyledFlex>
                 </StyledBlock>
                 <StyledMarginBottom />
-                <StyledBlock>
+                {/* <StyledBlock>
                     <StyledFlex>
                         <StyledLeftText>
                             {t("about_li")}
@@ -120,7 +120,7 @@ function About() {
                         </div>
                         <StyledHeadImage src={headLogo} alt="" />
                     </StyledFlex>
-                </StyledBlock>
+                </StyledBlock> */}
             </StyledContent>
         </StyledAboutPage>
     )
