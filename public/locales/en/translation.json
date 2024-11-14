@@ -1,6 +1,6 @@
 {
     "about": "About us",
-    "product": "Medicines",
+    "product": "Products",
     "discount": "Discount",
     "contact": "Contact",
     "feedback": "Feedback",
@@ -105,7 +105,7 @@
     "requested_page_not_found": "THE PAGE YOU REQUESTED WAS NOT FOUND",
 
     "footer_text": "All rights reserved. The information on the site is protected by copyright law.",
-    "footer_text_second_variant": "Tiens Group Co. Ltd. All Rights Reserved.",
+    "footer_text_second_variant": "Tiens Group",
 
     "calcium_for_brain_nutrition": "Calcium for brain nutrition",
     "cordyceps": "Cordyceps",

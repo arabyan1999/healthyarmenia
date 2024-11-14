@@ -19,6 +19,7 @@ const Dropdown = () => {
     setSelectedLang(item.title);
     i18n.changeLanguage(item.value);
     localStorage.setItem("lang", item.value);
+    setIsOpen(false);
   }
 
   useEffect(() => {

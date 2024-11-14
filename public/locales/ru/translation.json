@@ -1,6 +1,6 @@
 {
     "about": "О нас",
-    "product": "Лекарства",
+    "product": "Продукты",
     "discount": "Скидки",
     "contact": "Контакт",
     "feedback": "Отзывы",
@@ -105,11 +105,11 @@
     "requested_page_not_found": "ЗАПРОШЕННАЯ ВАМИ СТРАНИЦА НЕ НАЙДЕНА",
 
     "footer_text": "Все права защищены. Информация сайта защищена законом об авторских правах.",
-    "footer_text_second_variant": "Компания «Tiens Group» ООО. Все права защищены.",
+    "footer_text_second_variant": "Tiens Group",
 
     "calcium_for_brain_nutrition": "Кальций для питания мозга",
     "cordyceps": "Кордицепс",
-    "chitosan": "Житозан",
+    "chitosan": "Хитозан",
     "heart_arrhythmia": "Аритмия сердца",
     "pressure_fluctuations": "Колебания давления",
     "cirrhosis": "Цирроз печени",

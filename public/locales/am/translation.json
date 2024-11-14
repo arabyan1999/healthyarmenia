@@ -1,6 +1,6 @@
 {
     "about": "Մեր մասին",
-    "product": "Դեղամիջոցներ",
+    "product": "Արտադրանք",
     "discount": "Զեղչեր",
     "contact": "Կապ մեզ հետ",
     "feedback": "Մեկնաբանություններ",
@@ -105,7 +105,7 @@
     "requested_page_not_found": "ՁԵՐ ՓՆՏՐԱԾ ԷՋԸ ՉԻ ԳՏՆՎԵԼ",
 
     "footer_text": "Բոլոր իրավունքները պաշտպանված են. Կայքի տեղեկատվությունը պաշտպանված է հեղինակային իրավունքի մասին օրենքով:",
-    "footer_text_second_variant": "Tiens Group Co. ՍՊԸ։ Բոլոր իրավունքները պաշտպանված են։",
+    "footer_text_second_variant": "Tiens Group",
 
     "calcium_for_brain_nutrition": "Գլխուղեղի սնուցման կալցիում",
     "cordyceps": "Կարդիցեպս",
