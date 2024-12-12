@@ -86,8 +86,15 @@ export const StyledRef = styled(StyledRefBlock)`
     font-size: 18px;
     font-weight: 700;
     align-self: end;
-    &:hover {
-        text-decoration: underline;
+    position: relative;
+    &:hover::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
     }
     @media screen and (max-width: 500px) {
         align-self: center;

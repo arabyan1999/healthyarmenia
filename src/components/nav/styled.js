@@ -83,7 +83,7 @@ export const StyledLink = styled(StyledHomeLink)`
         height: 2px;
         background: #333;
         position: absolute;
-        bottom: -2px;
+        bottom: -3px;
         left: 0;
     }
     &.active::before {
@@ -112,7 +112,7 @@ export const StyledButton = styled.button`
         height: 2px;
         background: #333;
         position: absolute;
-        bottom: -2px;
+        bottom: -3px;
         left: 0;
     }
     &.active::before {

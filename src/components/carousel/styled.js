@@ -7,6 +7,7 @@ export const CarouselWrapper = styled.div`
   margin: 0 auto;
   overflow: hidden;
   height: 500px;
+  border-radius: 10px;
 
   .image-slider {
     
