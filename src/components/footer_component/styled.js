@@ -21,3 +21,10 @@ export const StyledText = styled.p`
         margin-bottom: 10px;
     }
 `
+
+export const StyledPhoneLink = styled.a`
+    span {
+        white-space:nowrap;
+    }
+    text-decoration: none
+`
