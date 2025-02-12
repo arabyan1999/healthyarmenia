@@ -15,6 +15,7 @@ export const StyledFoot = styled.div`
 `
 
 export const StyledText = styled.p`
+    width: fit-content;
     margin-right: 45px;
     @media screen and (max-width: 1170px) {
         margin-right: 0;

@@ -9,7 +9,10 @@ function Footer() {
     // const year = (new Date()).getFullYear();
     return (
         <StyledFoot>
-            <StyledText>{t("technical_support")}: <StyledPhoneLink href="tel:+37491177960"><span>+(374)&nbsp;91177960</span></StyledPhoneLink></StyledText>
+            <div>
+                <StyledText>{t("technical_support")}: <StyledPhoneLink href="tel:+37491177960">+(374)&nbsp;91177960</StyledPhoneLink></StyledText>
+                <StyledText>{t("working_hours")}: 10:00-17:00</StyledText>
+            </div>
             {/* <StyledText>© 1993-{year} {t("footer_text_second_variant")}</StyledText> */}
             {/* © {t("footer_text")} */}
             <div>
