@@ -2,6 +2,7 @@
     "about": "About us",
     "product": "Products",
     "discount": "Discount",
+    "results": "Results",
     "contact": "Contact",
     "feedback": "Feedback",
     "health_school": "Health school",
@@ -116,6 +117,10 @@
     "cirrhosis": "Liver cirrhosis",
 
     "more": "More",
+    "treatment_results": "Product results",
+    "psoriasis": "Psoriasis",
+    "vaskulitis": "Vasculitis",
+    "eczema": "Eczema",
 
     "to_obtain_information_about_disease": "To obtain information about disease prevention and/or treatment",
     "to_obtain_information_about_product": "For detailed information and advice on food and health",

@@ -2,6 +2,7 @@
     "about": "О нас",
     "product": "Продукты",
     "discount": "Скидки",
+    "results": "Результаты",
     "contact": "Контакт",
     "feedback": "Отзывы",
     "health_school": "Школа здоровье",
@@ -116,6 +117,10 @@
     "cirrhosis": "Цирроз печени",
 
     "more": "Подробнее",
+    "treatment_results": "Результаты продуктов",
+    "psoriasis": "Псориаз",
+    "vaskulitis": "Васкулит",
+    "eczema": "Экзема",
     
     "to_obtain_information_about_disease": "Для получения информации о профилактике и/или лечении заболеваний",
     "to_obtain_information_about_product": "Для получения подробной информации и советов по вопросам питания и здоровья",

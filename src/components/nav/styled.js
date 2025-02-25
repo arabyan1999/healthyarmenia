@@ -34,16 +34,16 @@ export const StyledNavigationBar = styled.nav`
     justify-content: space-between;
     align-items: center;
     margin-right: 20px;
-    @media only screen and (max-width: 1120px) {
+    @media only screen and (max-width: 1160px) {
         margin-right: 0;
     }
     .mobileLogo {
-        @media only screen and (min-width: 1120px) {
+        @media only screen and (min-width: 1160px) {
             display: none;
         }
     }
 
-    @media only screen and (max-width: 1119px) {
+    @media only screen and (max-width: 1159px) {
         flex-direction: column;
         position: fixed;
         top: 60px;
@@ -152,7 +152,7 @@ export const StyledBurger = styled.div`
         transform: ${({ is_open }) => !!is_open && "rotate(45deg) translate(-5px, -5px)"};
     }
 
-    @media only screen and (min-width: 1120px) {
+    @media only screen and (min-width: 1159px) {
         display: none;
     }
 `
