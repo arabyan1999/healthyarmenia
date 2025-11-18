@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { StyledRef } from '../../referenceBlock/styled';
 
 export const StyledFeedackContainer = styled.div`
-    background: #137d52;
+    background: #99c09b;
+    // background-image: linear-gradient(147deg, #f9fcff 0%, #99c09b 234%);
     padding: 40px 100px;
     display: flex;
     flex-direction: column;

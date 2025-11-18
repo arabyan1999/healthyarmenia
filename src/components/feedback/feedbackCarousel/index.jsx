@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyledBlockUpperPart, StyledComment, StyledFeedackContainer, StyledFeedbackBlock, StyledFeedbackRef, StyledImageContainer } from './styled';
-import { ReactComponent as RightArrow } from "../../../assets/right-arrow-svgrepo-com.svg";
+// import { ReactComponent as RightArrow } from "../../../assets/right-arrow-svgrepo-com.svg";
 
 const FeedbackCarousel = ({ feedbackData }) => {
   const { t } = useTranslation();
@@ -12,12 +12,12 @@ const FeedbackCarousel = ({ feedbackData }) => {
           <img src={el.image} alt={el.image} />
         </StyledImageContainer>
         <div>
-          <h3>{el.name} {el.surname}</h3>
-          <p>{el.city}</p>
+          <h3>{t(el.name)}</h3>
+          <p>{t(el.city)}</p>
         </div>
       </StyledBlockUpperPart>
       <StyledComment>
-        <p>{el.comment}</p>
+        <p>{t(el.comment)}</p>
         <p>{el?.ps}</p>
       </StyledComment>
     </StyledFeedbackBlock>
@@ -39,9 +39,6 @@ const FeedbackCarousel = ({ feedbackData }) => {
           )
         }
       })}
-      {/* {(window.location.pathname !== "/feedback") ? (
-        <StyledFeedbackRef href={"/feedback"}>{t("all_feedbacks")} <RightArrow /></StyledFeedbackRef>
-      ) : null} */}
     </StyledFeedackContainer>
   );
 };

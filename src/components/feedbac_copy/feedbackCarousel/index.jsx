@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { StyledBlockUpperPart, StyledButtonConainer, StyledComment, StyledFeedackContainer, StyledFeedbackBlock, StyledImageContainer } from './styled';
+import { useTranslation } from 'react-i18next';
 
 const FeedbackCarousel = ({ feedbackData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useTranslation();
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === feedbackData.length - 1 ? 0 : prevIndex + 1));
@@ -26,7 +28,7 @@ const FeedbackCarousel = ({ feedbackData }) => {
                 </div>
             </StyledBlockUpperPart>
             <StyledComment>
-                <p>{feedbackData[currentIndex].comment}</p>
+                <p>{t(feedbackData[currentIndex].comment)}</p>
             </StyledComment>
         </StyledFeedbackBlock>
         <StyledButtonConainer onClick={handlePrev}>{"<"}</StyledButtonConainer>

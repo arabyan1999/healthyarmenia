@@ -26,6 +26,8 @@ import doctorImg1 from "./assets/doctor1.jpg";
 import doctorImg2 from "./assets/doctor2.jpg";
 import doctorImg3 from "./assets/doctor3.jpg";
 import feedbackImg1 from "./assets/feedbackImg1.jpg";
+import portraitImg2 from "./assets/susanna_vardanyan.jpg";
+import feedbackImg3 from "./assets/meri_manukyan.jpg";
 import thyroidTreatmentImg from "./assets/thyroidtreatment.webp";
 
 export const CommonDiseases = {
@@ -353,13 +355,9 @@ export const professors = {
 }
 
 export const feedbackData = [
-    { image: feedbackImg1, name: 'Սոֆյա', surname: "Գրիգորյան", city: "ք․ Վանաձոր", comment: "Ունեի հաճախակի գլխացավեր, եղանակի փոփոխության հետ մեկտեղ զգալի ցավեր էին առաջանում ծնկների հատվածում, ստամոքսի հատվածում՝ այրոց, լյարդում մկանային կծկոցներ և ծակոցներ։ Քանի որ դիաբետիկ եմ անոթային համակարգի հետ կապված ունեի ոտքերի հատվածում այտուցվածություն, որը հիմնականում լինում է դիաբետիկների մոտ։ Օգտվեցի Հայաստանում տիբեթյան բժշկության մասնագետների հետազոտությունից և առաջարկվող բուժումներից։ Մեկ շաբաթ անց թեթևացավ ոտքերի ցավը և այտուցը, անցավ գլխացավերը, բարելավելով նյութափոխանակությունը, զգում էի էներգիայի մեծ առկայություն, որի շնորհիվ չկար գերհոգնածություն։ Ունեի նաև ստամոքսի խոց։ 3 օրվա օգտագործումից հետո արդեն գտնվում է հանգիստ վիճակում, բնական դեղաբույսերով պատրաստված արտադրանքի շնորհիվ նաև փակվեց ստամոքսի խոցը։", ps: "Շնորհակալություն մասնագետներին և բժշկությանը, որը գործում է Հայաստանում:"},
-    // { image: portraitImg2, name: 'Jane', surname: "Smith", comment: "Content is intended to stand out on a page. So, if a designer or client is reviewing a template and its layout, they can easily become distracted by the writing and lose focus of the design itself." },
-    // { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
-    // { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
-    // { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
-    // { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
-    // { image: portraitImg3, name: "John", surname: "Doe", comment: "Even as we developed new technologies in the 20th and 21st centuries, Lorem Ipsum endured as our preferred filler text. In the 1960s, the text was printed on dry-transfer sheets and used by architects." },
+    { image: portraitImg2, name: 'susanna_vardanyan', city: "susanna_city", comment: "susanna_feedback" },
+    { image: feedbackImg1, name: 'sofi_grigoryan', city: "sofi_city", comment: "sofi_feedback"},
+    // { image: feedbackImg3, name: 'meri_manukyan', city: "meri_city", comment: "meri_feedback"},
 ];
   
 export const threatmentData = {
