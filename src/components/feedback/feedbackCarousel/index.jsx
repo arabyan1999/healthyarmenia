@@ -18,7 +18,7 @@ const FeedbackCarousel = ({ feedbackData }) => {
       </StyledBlockUpperPart>
       <StyledComment>
         <p>{t(el.comment)}</p>
-        <p>{el?.ps}</p>
+        {el.ps && <p>{el.ps}</p>}
       </StyledComment>
     </StyledFeedbackBlock>
   )

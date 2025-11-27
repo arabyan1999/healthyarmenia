@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { TailSpin } from "react-loader-spinner";
 import { SelectItems, StyledBlockFlex, StyledBookingForm, StyledCustomSelect, StyledForm, StyledInput, StyledSelected, StyledSpan, StyledSubmitButton, StyledTextarea, StyledTitle } from "./styled";
 import SuccessModal from "../successModal";
-// import { useScrollingElement } from "../../../hooks/use-scrolling-element";
 import { createBookRequestApi } from "../../../request/requests";
 import ErrorModal from "../errorModal";
 
@@ -17,7 +16,6 @@ function BookingForm({ setModal }) {
     const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
     const { t, i18n } = useTranslation();
-    // useScrollingElement(success);
 
     const typeOfService = [t("narrow_specialist_advice"), t("general_advice_consultation")];
 

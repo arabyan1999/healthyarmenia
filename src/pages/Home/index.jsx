@@ -42,7 +42,7 @@ function Home() {
                 <ReferenceBlock blocks={foods} link="product" />
                 <ReferenceBlock blocks={diseases} link="disease" />
                 <Booking />
-                {/* <Feedback /> */}
+                <Feedback />
             </StyledContainer>
         </div>
     )

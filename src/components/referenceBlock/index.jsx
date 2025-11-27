@@ -12,16 +12,14 @@ function ReferenceBlock({ blocks, link }) {
             <StyledMainTitle>{link === "product" ? t("biologic_actives_that_help") : t("diseases")}</StyledMainTitle>
             <StyledReferencesBlocks>
                 {
-                    blocks.array.map((block, index) => {
-                        if (index <=2) {
-                                return (
-                                    <StyledBlock key={block.id} href={!!link ? `/${link}/${block.key}` : null}>
-                                        <StyledImage src={block.image} />
-                                        <StyledMenuTitle>{t(block.name)}</StyledMenuTitle>
-                                        <p>{sliceText(t(block.about) || t(block.function), 10)}</p>
-                                    </StyledBlock>
-                                )
-                        }
+                    blocks.array.map(function (block) {
+                        return (
+                            <StyledBlock key={block.id} href={!!link ? `/${link}/${block.key}` : null}>
+                                <StyledImage src={block.image} />
+                                <StyledMenuTitle>{t(block.name)}</StyledMenuTitle>
+                                <p>{sliceText(t(block.about) || t(block.function), 10)}</p>
+                            </StyledBlock>
+                        )
                     })
                 }
             </StyledReferencesBlocks>

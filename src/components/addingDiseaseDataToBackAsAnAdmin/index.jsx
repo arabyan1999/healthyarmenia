@@ -42,27 +42,6 @@ function AddingDiseaseDataToBack() {
                 />
             </StyledContainer>
 
-            {/* <StyledContainer>
-                <label htmlFor="">About Arm</label>
-                <input type="text" placeholder="About"
-                    onChange={(e) => {
-                        setData(prev => setNewData(prev, "about", e.target.value, 0));
-                    }}
-                />
-                <label htmlFor="">about Eng</label>
-                <input type="text" placeholder="about"
-                    onChange={(e) => {
-                        setData(prev => setNewData(prev, "about", e.target.value, 1));
-                    }}
-                />
-                <label htmlFor="">about Rus</label>
-                <input type="text" placeholder="about"
-                    onChange={(e) => {
-                        setData(prev => setNewData(prev, "about", e.target.value, 2));
-                    }}
-                />
-            </StyledContainer> */}
-
             <StyledContainer>
                 <label htmlFor="">symptoms Arm</label>
                 <textarea rows="4"placeholder="symptoms"
